@@ -8,7 +8,7 @@ A VRM 3D character in your VS Code sidebar that reacts to Claude Code / GitHub C
 
 📖 Read the story behind this project on DEV.to:
 - **v1** → [AI Avatar (VS Code Extension)](https://dev.to/webdeveloperhyper/ai-avatar-meet-your-ideal-girlfriendboyfriend-for-free-21n5)
-- **v2** → coming soon!
+- **v2** → [AI Avatar v2 with Pose Editor (VS Code Extension)](https://dev.to/webdeveloperhyper/ai-avatar-v2-with-pose-editor-vs-code-extension-38n2)
 
 ---
 
