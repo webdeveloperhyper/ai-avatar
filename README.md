@@ -9,6 +9,7 @@ A VRM 3D character in your VS Code sidebar that reacts to Claude Code / GitHub C
 📖 Read the story behind this project on DEV.to:
 - **v1** → [AI Avatar (VS Code Extension)](https://dev.to/webdeveloperhyper/ai-avatar-meet-your-ideal-girlfriendboyfriend-for-free-21n5)
 - **v2** → [AI Avatar v2 with Pose Editor (VS Code Extension)](https://dev.to/webdeveloperhyper/ai-avatar-v2-with-pose-editor-vs-code-extension-38n2)
+- **v4** → [😊How to Get Cheered Up 24/7 (AI Avatar v4 with Animation Editor (Chrome Extension + VS Code Extension))](https://dev.to/webdeveloperhyper/how-to-get-cheered-up-247-ai-avatar-v4-with-animation-editor-chrome-extension-vs-code-2f07) 
 
 ---
 
@@ -18,7 +19,7 @@ A VRM 3D character in your VS Code sidebar that reacts to Claude Code / GitHub C
 - 🔀 **Watcher switching** — switch between watching Claude Code or GitHub Copilot *(v2)*
 - 🔄 **Change Avatar** — swap your VRM character anytime with the button at the top
 - 💃 **Animations** — play `.vrma` motion clips or custom JSON poses; 3-state button: off / Default / Custom *(v2)*
-- 🧍 **Pose Editor** — create and save custom poses directly in the panel *(v2)*
+- 🎬 **Animation Editor** — create multi-keyframe animations with in / hold / out timing *(v4)*
 - 🎥 **OrbitControls** — drag to rotate, scroll to zoom, right-click to pan
 - 👀 **Eye tracking** — eyes and head follow your mouse cursor when idle
 - 💬 **Lipsync** — mouth animates while Claude is replying
@@ -77,18 +78,24 @@ The pack includes 7 animations: Show full body, Greeting, Peace sign, Shoot, Spi
 
 ---
 
-## Pose Editor *(v2)*
+## Animation Editor *(v4)*
 
-Click **Edit Pose** to open the pose editor overlay:
+Click **Edit Animation** to open the animation editor overlay:
 
 - Select a body part from the dropdown
 - Use the **axis button** to switch between X / Y / Z rotation
 - Drag the **slider** (or type a value) to rotate the bone
-- Click **Save** to write the pose to `pose-editor.json` in the animation folder
+- Add multiple keyframes with the **+** button to build a full animation sequence *(v4)*
+- Each keyframe has In (fade in), Hold, and Out (fade out, last keyframe only) timing *(v4)*
+- Navigate keyframes with the **< >** buttons *(v4)*
+- Press **Play** to preview the full animation (in → hold → out) exactly as it plays normally *(v4)*
+- Click **Save** to write the animation to a JSON file in the animation folder
 - Click **Reload** to restore the last saved values
-- The edited pose is added to the animation pool and plays randomly like any other animation
+- The saved animation is added to the pool and plays randomly like any other animation
 
-On first use a default pose file is created automatically — no file picker needed.
+A file picker appears when you click **Edit Animation** *(v4)*:
+- **First time:** Cancel the file picker to open a default animation
+- **Next time:** Pick an existing JSON file to load and edit
 
 ---
 
@@ -167,5 +174,14 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 - GitHub Copilot watcher support
 - Watcher switching (Claude ↔ Copilot)
 
-**v3 — in progress**
+**v3** ✅
 - 🌐 Chrome extension version
+- Various fixes and adjustments
+
+**v4** ✅
+- Pose Editor upgraded to full Animation Editor
+- Multi-keyframe timeline with in / hold / out timing
+- Various fixes and adjustments
+
+**v5** — coming soon
+- 🎉 More fun updates
