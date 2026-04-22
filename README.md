@@ -188,7 +188,7 @@ VS Codeのサイドバーに表示されるVRM 3Dキャラクターが、Claude 
 - **v1** → [AI Avatar (VS Code拡張機能)](https://dev.to/webdeveloperhyper/ai-avatar-meet-your-ideal-girlfriendboyfriend-for-free-21n5)
 - **v2** → [AI Avatar v2 ポーズエディタ付き](https://dev.to/webdeveloperhyper/ai-avatar-v2-with-pose-editor-vs-code-extension-38n2)
 - **v4** → [AI Avatar v4 アニメーションエディタ付き](https://dev.to/webdeveloperhyper/how-to-get-cheered-up-247-ai-avatar-v4-with-animation-editor-chrome-extension-vs-code-2f07)
-- **v6** → (近日公開)
+- **v6** → [🦸スーパーヒーローに応援してもらおう (AI Avatar v6: Chrome拡張機能 + VS Code拡張機能)](https://dev.to/webdeveloperhyper/let-superheroes-cheer-you-up-ai-avatar-v6-chrome-extension-vs-code-extension-2ak7)
 
 ---
 
