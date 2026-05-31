@@ -15,7 +15,7 @@ A VRM 3D character in your VS Code sidebar that reacts to Claude Code / GitHub C
 - **v4** → [😊How to Get Cheered Up 24/7 (AI Avatar v4 with Animation Editor (Chrome Extension + VS Code Extension))](https://dev.to/webdeveloperhyper/how-to-get-cheered-up-247-ai-avatar-v4-with-animation-editor-chrome-extension-vs-code-2f07)
 - **v6** → [🦸Let Superheroes Cheer You Up (AI Avatar v6: Chrome Extension + VS Code Extension)](https://dev.to/webdeveloperhyper/let-superheroes-cheer-you-up-ai-avatar-v6-chrome-extension-vs-code-extension-2ak7)
 - **v7** → [🫡We'll Support You with All Our Might (AI Avatar v7: Pose Capture and More (VS Code and Chrome Extension))](https://dev.to/webdeveloperhyper/well-support-you-with-all-our-might-ai-avatar-v7-pose-capture-and-more-vs-code-and-chrome-3aab)
-- **v8** → coming soon!
+- **v9** → coming soon!
 
 ---
 
@@ -37,6 +37,7 @@ A VRM 3D character in your VS Code sidebar that reacts to Claude Code / GitHub C
 - ❤️ **Positive word reactions** *(VS Code only)* — heart counter, smile, and heart overlay animation when positive words are detected; broken heart and head shake on negative words *(v7)*
 - 🔍 **Prompt Checker [Beta]** *(VS Code only)* — paste any AI prompt and get instant rule-based feedback on clarity, specificity, and structure *(v7)*
 - 🦁 **Giant Mode** *(Chrome only)* — float the avatar as a draggable, resizable overlay over any web page *(v7)*
+- 🤖 **AI Chat** — always-visible chat input at the bottom of the panel; ask the avatar anything; replies appear as speech bubbles and trigger animations; supports Gemini API and Ollama *(v9)*
 
 ---
 
@@ -127,6 +128,40 @@ Click **Edit Animation** to open the animation editor as a full VS Code tab:
 
 ---
 
+## AI Chat *(v9)*
+
+A chat input is always visible at the bottom of the panel. Type a message and press **→** to send. The avatar animates and shows the reply as a wide speech bubble.
+
+Click the **⚙** button next to the input to open chat history, provider settings, and system prompt.
+
+**Providers**
+- **Gemini** — cloud API; requires a free API key from [Google AI Studio](https://aistudio.google.com/)
+- **Ollama** — runs locally on your machine; no API key needed; install from [ollama.com](https://ollama.com)
+
+  After installing Ollama, pull the model once before use:
+  ```
+  ollama pull qwen2.5:3b
+  ```
+
+  > **Note:** The first message is slow — Ollama loads the model from disk into RAM on initial use. Subsequent messages in the same session are much faster once the model is in memory.
+  >
+  > **Model choice:** Smaller models (e.g. `qwen2.5:1.5b`) respond faster but with simpler replies. Larger models (e.g. `qwen2.5:7b`) are slower but give more detailed, accurate answers. Change the model in ⚙ settings.
+  >
+  > **Tip:** Keep questions short and focused — lightweight models (local or Gemini Flash) handle concise prompts best.
+
+  **Chrome only:** Ollama blocks requests from browser extensions by default. Fix it once:
+  1. Win+R → type `sysdm.cpl` → Advanced → Environment Variables → New
+  2. Name: `OLLAMA_ORIGINS` / Value: `*`
+  3. Quit Ollama from the system tray → relaunch it — no reboot needed
+
+**Settings** (⚙ button)
+- Switch provider with the Gemini / Ollama toggle
+- Enter your Gemini API key (stored securely, never committed)
+- Set the model name (default: `gemini-3.1-flash-lite` / `qwen2.5:3b`)
+- Edit the system prompt — default: cheerful 1-sentence coding companion with emoji
+
+---
+
 ## Watcher *(v2)*
 
 Click the **Switch Watcher** button to toggle between watching **Claude Code** and **GitHub Copilot** activity.
@@ -213,7 +248,12 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 - 🎨 Random Editor — zone-split pattern JSON editor inside the Animation Editor (Body & Arms / Legs / Fingers zones)
 - 🎬 Animation Editor update — now opens as a full-screen tab; three-camera view (RIGHT / FRONT / LEFT), image reference layout, bone arc trail, zone preset buttons, JSON to VRMA export
 
-**v9** — Now Creating!
+**v9** ✅
+- 🤖 AI Chat — always-visible chat input; ask the avatar anything; replies appear as wide speech bubbles and trigger animations; supports Gemini API and Ollama (local)
+- 🎛️ Panel layout redesign — collapsible toolbar behind ⚙ gear
+- 🐛 Fixed flaky positive/negative word detection *(VS Code only)* — now reliably catches keywords in your messages to Claude Code
+
+**v10** — Now Creating!
 - 🎉 More fun updates
 
 ---
@@ -233,7 +273,7 @@ VS Codeのサイドバーに表示されるVRM 3Dキャラクターが、Claude 
 - **v4** → [AI Avatar v4 アニメーションエディタ付き](https://dev.to/webdeveloperhyper/how-to-get-cheered-up-247-ai-avatar-v4-with-animation-editor-chrome-extension-vs-code-2f07)
 - **v6** → [🦸スーパーヒーローに応援してもらおう (AI Avatar v6)](https://dev.to/webdeveloperhyper/let-superheroes-cheer-you-up-ai-avatar-v6-chrome-extension-vs-code-extension-2ak7)
 - **v7** → [🫡全力でサポートします！ (AI Avatar v7)](https://dev.to/webdeveloperhyper/well-support-you-with-all-our-might-ai-avatar-v7-pose-capture-and-more-vs-code-and-chrome-3aab)
-- **v8** → coming soon!
+- **v9** → coming soon!
 
 ---
 
@@ -255,6 +295,7 @@ VS Codeのサイドバーに表示されるVRM 3Dキャラクターが、Claude 
 - ❤️ **ポジティブワード反応** *（VS Code限定）* — ポジティブワード検出時にハートカウンター・スマイル・ハートオーバーレイアニメーション；ネガティブワードには割れたハートと首振り *(v7)*
 - 🔍 **プロンプトチェッカー [Beta]** *（VS Code限定）* — AIプロンプトを貼り付けるだけで、明確さ・具体性・構造をルールベースで即チェック *(v7)*
 - 🦁 **ジャイアントモード** *（Chrome限定）* — ドラッグ・リサイズ可能なオーバーレイとしてアバターをどのページにも表示 *(v7)*
+- 🤖 **AIチャット** — パネル下部に常時表示されるチャット入力；アバターに何でも質問できる；返答は吹き出しで表示してアニメーションも発動；Gemini APIとOllama対応 *(v9)*
 
 ---
 
@@ -345,6 +386,40 @@ VRMAアニメーションファイルはライセンスの都合上、拡張機�
 
 ---
 
+## AIチャット *(v9)*
+
+チャット入力欄がパネル下部に常時表示されます。メッセージを入力して **→** を押すと送信。アバターがアニメーションし、返答を大きな吹き出しで表示します。
+
+入力欄横の **⚙** ボタンでチャット履歴・プロバイダー設定・システムプロンプトを開けます。
+
+**プロバイダー**
+- **Gemini** — クラウドAPI；[Google AI Studio](https://aistudio.google.com/) で無料のAPIキーを取得
+- **Ollama** — ローカルで動作；APIキー不要；[ollama.com](https://ollama.com) からインストール
+
+  インストール後、使用前に一度モデルをダウンロードしてください：
+  ```
+  ollama pull qwen2.5:3b
+  ```
+
+  > **注意：** 最初のメッセージは遅いですが正常です — Ollamaは起動時にモデルをディスクからRAMに読み込みます。同じセッション中の2回目以降はモデルがメモリに残るため、大幅に速くなります。
+  >
+  > **モデルの選び方：** 小さいモデル（例：`qwen2.5:1.5b`）は速いが回答がシンプル。大きいモデル（例：`qwen2.5:7b`）は遅いが精度が高く詳細な回答が得られます。⚙ 設定からモデルを変更できます。
+  >
+  > **ヒント：** 質問は短く簡潔にまとめると効果的です — ローカルモデルもGemini Flashも、シンプルなプロンプトに最も適しています。
+
+  **Chrome限定：** OllamaはデフォルトでChrome拡張機能からのアクセスをブロックします。一度だけ設定が必要：
+  1. Win+R → `sysdm.cpl` → 詳細設定 → 環境変数 → 新規
+  2. 変数名：`OLLAMA_ORIGINS` / 値：`*`
+  3. タスクトレイのOllamaを終了 → 再起動（PCの再起動は不要）
+
+**設定**（⚙ボタン）
+- Gemini / Ollamaトグルでプロバイダーを切り替え
+- Gemini APIキーを入力（安全に保存され、コミットされません）
+- モデル名を設定（デフォルト：`gemini-3.1-flash-lite` / `qwen2.5:3b`）
+- システムプロンプトを編集 — デフォルト：絵文字付き1文で励ます陽気なコーディング仲間
+
+---
+
 ## ウォッチャー *(v2)*
 
 **Switch Watcher** ボタンで **Claude Code** と **GitHub Copilot** の監視を切り替えます。
@@ -431,5 +506,10 @@ VRMAアニメーションファイルはライセンスの都合上、拡張機�
 - 🎨 ランダムエディタ — アニメーションエディタ内のゾーン分割パターンJSONエディタ（ボディ＆アーム / 脚 / 指ゾーン）
 - 🎬 アニメーションエディタ アップデート — フルスクリーンタブとして起動；3方向カメラ表示（RIGHT / FRONT / LEFT）、参考画像レイアウト、ボーン弧トレイル、ゾーンプリセットボタン、JSON to VRMAエクスポート
 
-**v9** — 開発中！
+**v9** ✅
+- 🤖 AIチャット — 常時表示のチャット入力；アバターに何でも質問できる；返答は大きな吹き出しでアニメーション付き；Gemini APIとOllama（ローカル）対応
+- 🎛️ パネルレイアウト刷新 — ⚙ギアでツールバーを折りたたみ
+- 🐛 ポジティブ/ネガティブワード検出の不安定さを修正 *（VS Code限定）* — Claude Codeへのメッセージのキーワードを確実に検出するように改善
+
+**v10** — 開発中！
 - 🎉 お楽しみに
