@@ -2,7 +2,9 @@
 
 (日本語の説明は下部をご覧ください / Japanese version below)
 
-A VRM 3D character in your VS Code sidebar that reacts to Claude Code / GitHub Copilot AI activity. Animations and speech bubbles all run without AI too.
+A VRM 3D character that lives in your **VS Code sidebar** (reacts to Claude Code / GitHub Copilot) or **browser side panel** (reacts to ChatGPT / Claude). Animations and speech bubbles all run without AI too.
+
+[![AI Avatar v9 Demo](https://img.youtube.com/vi/WOBhUQAm3HM/maxresdefault.jpg)](https://www.youtube.com/shorts/WOBhUQAm3HM)
 
 🎉 Thank you for 100+ installs on VS Code!  
 🛒 **[Download from VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=web-developer-hyper.ai-avatar)**
@@ -15,16 +17,19 @@ A VRM 3D character in your VS Code sidebar that reacts to Claude Code / GitHub C
 - **v4** → [😊How to Get Cheered Up 24/7 (AI Avatar v4 with Animation Editor (Chrome Extension + VS Code Extension))](https://dev.to/webdeveloperhyper/how-to-get-cheered-up-247-ai-avatar-v4-with-animation-editor-chrome-extension-vs-code-2f07)
 - **v6** → [🦸Let Superheroes Cheer You Up (AI Avatar v6: Chrome Extension + VS Code Extension)](https://dev.to/webdeveloperhyper/let-superheroes-cheer-you-up-ai-avatar-v6-chrome-extension-vs-code-extension-2ak7)
 - **v7** → [🫡We'll Support You with All Our Might (AI Avatar v7: Pose Capture and More (VS Code and Chrome Extension))](https://dev.to/webdeveloperhyper/well-support-you-with-all-our-might-ai-avatar-v7-pose-capture-and-more-vs-code-and-chrome-3aab)
-- **v9** → coming soon!
+- **v10** → coming soon!
 
 ---
 
 ## Features
 
-- 🎭 **Live reactions** — character automatically reacts when Claude Code / GitHub Copilot is thinking or responds
-- 🔀 **Watcher switching** — switch between watching Claude Code or GitHub Copilot *(v2)*
-- 🔄 **Change Avatar** — swap your VRM character anytime with the button at the top
-- 💃 **Animations** — play `.vrma` motion clips or custom JSON poses; 5-state button: off / Default / Random *(v7)*/ Custom *(v2)*/ Random Custom *(v8)*
+<img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/main.png" width="50%">
+
+- 🎭 **Live reactions** — character automatically reacts when you send a message to AI
+- 🔀 **Watcher switching** *(VS Code only)* — switch between watching Claude Code or GitHub Copilot *(v2)*
+- 🔄 **Change Avatar** — swap your `VRM` character anytime with the button at the top
+- 💃 **Animations** — play `.vrma` motion clips or custom JSON poses; 5 separate toggle buttons: Off / Default / Random *(v7)* / Custom *(v2)* / Custom Random *(v8)* *(v10)*
+- 💬 **AI Speech Bubble** *(VS Code only)* — toggle Fixed/AI mode; in AI mode the character reacts to Claude Code activity with context-aware speech *(v10)*
 - 🎬 **Animation Editor** — multi-keyframe timeline with in / hold / out timing *(v4)*; all 30 finger bones *(v5)*; values in degrees *(v5)*
 - 🎨 **Random Editor** — edit zone-split pattern JSON directly in the Animation Editor; Body & Arms / Legs / Fingers zones, add/delete/navigate patterns *(v8)*
 - 🎥 **OrbitControls** — drag to rotate, scroll to zoom, right-click to pan
@@ -43,9 +48,18 @@ A VRM 3D character in your VS Code sidebar that reacts to Claude Code / GitHub C
 
 ## Getting Started
 
-No setup needed — comes with a built-in sample character. Just install and open VS Code.
+No setup needed — comes with a built-in sample character.
 
-To open the panel, click the **AI Avatar icon** in the activity bar on the side of VS Code.
+**VS Code**
+1. Install from the VS Code Marketplace
+2. Click the **AI Avatar icon** in the activity bar to open the sidebar
+3. Use Claude Code or GitHub Copilot — your avatar reacts automatically
+
+**Chrome**
+1. Install from the Chrome Web Store
+2. Pin it to the toolbar
+3. Click the **AI Avatar icon** and open the Side Panel
+4. Chat on ChatGPT or Claude — your avatar reacts automatically
 
 ---
 
@@ -62,17 +76,15 @@ v6 adds new sample characters — three girls and two boys — plus cute, cool, 
 
 ## Animations *(v2)*
 
-The **Animation** button cycles through four states:
+There are five animation buttons. Click one to activate it — the active button is highlighted. The selected state is remembered across restarts.
 
-| State | Label | Behavior |
-|---|---|---|
-| Off | `Animation` (dim) | No motion clips play |
-| Default | `Animation: Default` | Plays the built-in sample poses included with the extension |
-| Random | `Animation: Random` | Generates random poses from built-in zone patterns *(v7)* |
-| Custom | `Animation: Custom` | Opens a folder picker — plays `.vrma` and `.json` pose files from your chosen folder |
-| Random Custom | `Random: Custom` | Pick a custom `random-custom.json` — generates random poses from your own zone patterns *(v8)* |
-
-The selected state and custom folder are remembered across restarts.
+| Button | Behavior |
+|---|---|
+| `Animation: Off` | No motion clips play |
+| `Animation: Default` | Plays the built-in sample poses included with the extension |
+| `Animation: Random` | Generates random poses from built-in zone patterns *(v7)* |
+| `Animation: Custom` | Opens a file picker — plays `.vrma` and `.json` pose files from your chosen folder |
+| `Animation: Custom Random` | Pick a custom `random-custom.json` — generates random poses from your own zone patterns *(v8)* |
 
 **Using `.vrma` clips from VRoid Project:**
 
@@ -90,6 +102,8 @@ The pack includes 7 animations: Show full body, Greeting, Peace sign, Shoot, Spi
 ---
 
 ## Animation Editor *(v4+)*
+
+[![Animation Editor](https://img.youtube.com/vi/igydSW2kMAI/maxresdefault.jpg)](https://www.youtube.com/watch?v=igydSW2kMAI)
 
 Click **Edit Animation** to open the animation editor as a full VS Code tab:
 
@@ -132,6 +146,8 @@ Click **Edit Animation** to open the animation editor as a full VS Code tab:
 
 A chat input is always visible at the bottom of the panel. Type a message and press **→** to send. The avatar animates and shows the reply as a wide speech bubble.
 
+<img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/ai-chat.png" width="50%">
+
 Click the **⚙** button next to the input to open chat history, provider settings, and system prompt.
 
 **Providers**
@@ -162,7 +178,7 @@ Click the **⚙** button next to the input to open chat history, provider settin
 
 ---
 
-## Watcher *(v2)*
+## Watcher *(VS Code only)* *(v2)*
 
 Click the **Switch Watcher** button to toggle between watching **Claude Code** and **GitHub Copilot** activity.
 
@@ -180,7 +196,15 @@ Click the **Messages** button to edit the messages shown in the speech bubble wh
 
 ---
 
-## Using with Claude Code VS Code Extension
+## Giant Mode *(Chrome only)*
+
+Click the **Giant Mode** button to float the avatar as a draggable, resizable overlay over any web page. The avatar reacts to AI activity detected on the page.
+
+![Giant Mode](https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/giant-mode.png)
+
+---
+
+## Using with Claude Code VS Code Extension *(VS Code only)*
 
 You can display both panels side by side at the same time:
 
@@ -191,7 +215,7 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 
 ---
 
-## Requirements
+## Requirements *(VS Code only)*
 
 - VS Code 1.85+
 - [Claude Code](https://claude.ai/code) CLI or VS Code extension (for automatic reactions)
@@ -254,13 +278,20 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 - 🐛 Fixed flaky positive/negative word detection *(VS Code only)* — now reliably catches keywords in your messages to Claude Code
 
 **v10** — Now Creating!
+- 💬 AI Speech Bubble *(VS Code only)* — toggle between Fixed and AI mode; in AI mode the character reacts to Claude Code activity with context-aware speech; messages customizable
+- 🎛️ Toolbar redesign — 4 fixed rows always visible; animation split into 5 separate toggle buttons (Off / Default / Random / Custom / Custom Random); Positive Words and Negative Words as direct buttons
+- 🎭 Improved idle & thinking animations — random idle head micro-tilt every 6–10s; thinking state now shows a natural Z-axis pondering tilt with gentle oscillation
+
+**v11** — Coming soon!
 - 🎉 More fun updates
 
 ---
 
 # AI Avatar（日本語）
 
-VS Codeのサイドバーに表示されるVRM 3Dキャラクターが、Claude Code / GitHub Copilotの動作に反応します。AIなしでもアニメーションや吹き出しが動作します。
+**VS Codeサイドバー**（Claude Code / GitHub Copilotに反応）または**ブラウザサイドパネル**（ChatGPT / Claudeに反応）に表示されるVRM 3Dキャラクターです。AIなしでもアニメーションや吹き出しが動作します。
+
+[![AI Avatar v9 デモ動画](https://img.youtube.com/vi/WOBhUQAm3HM/maxresdefault.jpg)](https://www.youtube.com/shorts/WOBhUQAm3HM)
 
 🎉 VS Code版100インストール達成！ありがとうございます！  
 🛒 **[VS Code Marketplaceからダウンロード](https://marketplace.visualstudio.com/items?itemName=web-developer-hyper.ai-avatar)**
@@ -273,16 +304,19 @@ VS Codeのサイドバーに表示されるVRM 3Dキャラクターが、Claude 
 - **v4** → [AI Avatar v4 アニメーションエディタ付き](https://dev.to/webdeveloperhyper/how-to-get-cheered-up-247-ai-avatar-v4-with-animation-editor-chrome-extension-vs-code-2f07)
 - **v6** → [🦸スーパーヒーローに応援してもらおう (AI Avatar v6)](https://dev.to/webdeveloperhyper/let-superheroes-cheer-you-up-ai-avatar-v6-chrome-extension-vs-code-extension-2ak7)
 - **v7** → [🫡全力でサポートします！ (AI Avatar v7)](https://dev.to/webdeveloperhyper/well-support-you-with-all-our-might-ai-avatar-v7-pose-capture-and-more-vs-code-and-chrome-3aab)
-- **v9** → coming soon!
+- **v10** → coming soon!
 
 ---
 
 ## 機能一覧
 
+<img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/main.png" width="50%">
+
 - 🎭 **リアクション** — Claude Code / GitHub Copilotが考え中または返答したとき自動でキャラクターが反応
-- 🔀 **ウォッチャー切り替え** — Claude CodeとGitHub Copilotの監視を切り替え *(v2)*
-- 🔄 **アバター変更** — 上部のボタンでVRMキャラクターをいつでも変更可能
-- 💃 **アニメーション** — `.vrma`モーションクリップやカスタムJSONポーズを再生；5段階ボタン：オフ / デフォルト / ランダム *(v7)*/ カスタム *(v2)*/ ランダムカスタム *(v8)*
+- 🔀 **ウォッチャー切り替え** *（VS Code限定）* — Claude CodeとGitHub Copilotの監視を切り替え *(v2)*
+- 🔄 **アバター変更** — 上部のボタンで`VRM`キャラクターをいつでも変更可能
+- 💃 **アニメーション** — `.vrma`モーションクリップやカスタムJSONポーズを再生；5つの独立トグルボタン：Off / Default / Random *(v7)* / Custom *(v2)* / Custom Random *(v8)* *(v10)*
+- 💬 **AI吹き出し** *（VS Code限定）* — Fixed/AIモードを切り替え；AIモードでは Claude Code の活動に反応してコンテキストに応じた発言をする *(v10)*
 - 🎬 **アニメーションエディタ** — 複数キーフレームタイムライン（In / Hold / Outタイミング） *(v4)*；全30指ボーン対応 *(v5)*；度数表示 *(v5)*
 - 🎨 **ランダムエディタ** — アニメーションエディタ内でゾーン分割パターンJSONを直接編集；ボディ＆アーム / 脚 / 指ゾーン、パターンの追加・削除・ナビゲーション *(v8)*
 - 🎥 **オービットコントロール** — ドラッグで回転、スクロールでズーム、右クリックでパン
@@ -301,9 +335,18 @@ VS Codeのサイドバーに表示されるVRM 3Dキャラクターが、Claude 
 
 ## はじめ方
 
-セットアップ不要 — サンプルキャラクターが最初から入っています。インストールしてVS Codeを開くだけです。
+セットアップ不要 — サンプルキャラクターが最初から入っています。
 
-パネルを開くには、VS Codeのサイドバーにある **AI Avatarアイコン** をクリックしてください。
+**VS Code**
+1. VS Code Marketplaceからインストール
+2. アクティビティバーの **AI Avatarアイコン** をクリックしてサイドバーを開く
+3. Claude CodeまたはGitHub Copilotを使う — アバターが自動で反応
+
+**Chrome**
+1. Chrome ウェブストアからインストール
+2. ツールバーにピン留め
+3. **AI Avatarアイコン** をクリックしてサイドパネルを開く
+4. ChatGPTまたはClaudeでチャット — アバターが自動で反応
 
 ---
 
@@ -320,17 +363,15 @@ v6では新しいサンプルキャラクター（女の子3体・男の子2体�
 
 ## アニメーション *(v2)*
 
-**Animation** ボタンで4つの状態を切り替えます：
+5つのアニメーションボタンがあります。クリックで有効化 — 有効なボタンはハイライト表示されます。選択した状態は再起動後も保持されます。
 
-| 状態 | ラベル | 動作 |
-|---|---|---|
-| オフ | `Animation`（暗い） | モーションクリップを再生しない |
-| デフォルト | `Animation: Default` | 拡張機能付属のサンプルポーズを再生 |
-| ランダム | `Animation: Random` | 内蔵ゾーンパターンからランダムにポーズを生成 *(v7)* |
-| カスタム | `Animation: Custom` | フォルダを選択し `.vrma` と `.json` ポーズファイルを再生 |
-| ランダムカスタム | `Random: Custom` | カスタム `random-custom.json` を選択 — 独自ゾーンパターンからランダムにポーズを生成 *(v8)* |
-
-選択した状態とカスタムフォルダは再起動後も保持されます。
+| ボタン | 動作 |
+|---|---|
+| `Animation: Off` | モーションクリップを再生しない |
+| `Animation: Default` | 拡張機能付属のサンプルポーズを再生 |
+| `Animation: Random` | 内蔵ゾーンパターンからランダムにポーズを生成 *(v7)* |
+| `Animation: Custom` | ファイルを選択し `.vrma` と `.json` ポーズファイルを再生 |
+| `Animation: Custom Random` | カスタム `random-custom.json` を選択 — 独自ゾーンパターンからランダムにポーズを生成 *(v8)* |
 
 **VRoid Projectの `.vrma` クリップを使う：**
 
@@ -348,6 +389,8 @@ VRMAアニメーションファイルはライセンスの都合上、拡張機�
 ---
 
 ## アニメーションエディタ *(v4+)*
+
+[![Animation Editor](https://img.youtube.com/vi/igydSW2kMAI/maxresdefault.jpg)](https://www.youtube.com/watch?v=igydSW2kMAI)
 
 **Edit Animation** をクリックするとVS Codeの専用タブとしてエディタが開きます：
 
@@ -390,6 +433,8 @@ VRMAアニメーションファイルはライセンスの都合上、拡張機�
 
 チャット入力欄がパネル下部に常時表示されます。メッセージを入力して **→** を押すと送信。アバターがアニメーションし、返答を大きな吹き出しで表示します。
 
+<img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/ai-chat.png" width="50%">
+
 入力欄横の **⚙** ボタンでチャット履歴・プロバイダー設定・システムプロンプトを開けます。
 
 **プロバイダー**
@@ -420,7 +465,7 @@ VRMAアニメーションファイルはライセンスの都合上、拡張機�
 
 ---
 
-## ウォッチャー *(v2)*
+## ウォッチャー *(VS Code限定)* *(v2)*
 
 **Switch Watcher** ボタンで **Claude Code** と **GitHub Copilot** の監視を切り替えます。
 
@@ -438,7 +483,15 @@ VRMAアニメーションファイルはライセンスの都合上、拡張機�
 
 ---
 
-## Claude Code VS Code拡張機能と一緒に使う
+## ジャイアントモード *（Chrome限定）*
+
+**Giant Mode** ボタンをクリックすると、アバターをドラッグ・リサイズ可能なオーバーレイとしてどのウェブページにも表示できます。ページ上のAI活動を検出してアバターが反応します。
+
+![ジャイアントモード](https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/giant-mode.png)
+
+---
+
+## Claude Code VS Code拡張機能と一緒に使う *（VS Code限定）*
 
 両方のパネルを同時に並べて表示できます：
 
@@ -449,7 +502,7 @@ VRMAアニメーションファイルはライセンスの都合上、拡張機�
 
 ---
 
-## 動作要件
+## 動作要件 *（VS Code限定）*
 
 - VS Code 1.85以上
 - [Claude Code](https://claude.ai/code) CLIまたはVS Code拡張機能（自動反応に必要）
@@ -512,4 +565,9 @@ VRMAアニメーションファイルはライセンスの都合上、拡張機�
 - 🐛 ポジティブ/ネガティブワード検出の不安定さを修正 *（VS Code限定）* — Claude Codeへのメッセージのキーワードを確実に検出するように改善
 
 **v10** — 開発中！
+- 💬 AI吹き出し *（VS Code限定）* — FixedとAIモードを切り替え；AIモードではClaude Codeの活動に反応してキャラクターがコンテキストに応じた発言をする；メッセージはカスタマイズ可能
+- 🎛️ ツールバーリデザイン — 4行固定表示；アニメーションを5つの独立したトグルボタンに分割（Off / Default / Random / Custom / Custom Random）；ポジティブワード・ネガティブワードをダイレクトボタンに
+- 🎭 アイドル・思考アニメーション改善 — アイドル時に6〜10秒ごとランダムな頭の微傾き；思考中は自然なZ軸の首かしげポーズとゆっくりした揺れを追加
+
+**v11** — 近日公開！
 - 🎉 お楽しみに
