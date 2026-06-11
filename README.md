@@ -4,6 +4,7 @@
 
 A VRM 3D character that lives in your **VS Code sidebar** (reacts to Claude Code / GitHub Copilot) or **browser side panel** (reacts to ChatGPT / Claude). Animations and speech bubbles all run without AI too.
 
+YouTube Demo ↓
 [![AI Avatar v9 Demo](https://img.youtube.com/vi/WOBhUQAm3HM/maxresdefault.jpg)](https://www.youtube.com/shorts/WOBhUQAm3HM)
 
 🎉 Thank you for 100+ installs on VS Code!  
@@ -18,6 +19,7 @@ A VRM 3D character that lives in your **VS Code sidebar** (reacts to Claude Code
 - **v6** → [🦸Let Superheroes Cheer You Up (AI Avatar v6: Chrome Extension + VS Code Extension)](https://dev.to/webdeveloperhyper/let-superheroes-cheer-you-up-ai-avatar-v6-chrome-extension-vs-code-extension-2ak7)
 - **v7** → [🫡We'll Support You with All Our Might (AI Avatar v7: Pose Capture and More (VS Code and Chrome Extension))](https://dev.to/webdeveloperhyper/well-support-you-with-all-our-might-ai-avatar-v7-pose-capture-and-more-vs-code-and-chrome-3aab)
 - **v10** → coming soon!
+- **v11** → coming soon!
 
 ---
 
@@ -43,6 +45,11 @@ A VRM 3D character that lives in your **VS Code sidebar** (reacts to Claude Code
 - 🔍 **Prompt Checker [Beta]** *(VS Code only)* — paste any AI prompt and get instant rule-based feedback on clarity, specificity, and structure *(v7)*
 - 🦁 **Giant Mode** *(Chrome only)* — float the avatar as a draggable, resizable overlay over any web page *(v7)*
 - 🤖 **AI Chat** — always-visible chat input at the bottom of the panel; ask the avatar anything; replies appear as speech bubbles and trigger animations; supports Gemini API and Ollama *(v9)*
+- 🗣️ **Text-to-Speech** — Speech:Off / Speech:API (Web Speech API) / Speech:AI (Gemini TTS, uses your API key) *(v11)*
+- 🧠 **Contextual speech bubbles** — character reacts to special days (EN/JP separate lists), session count milestones, coding gap, session length, day of week, and time of day *(v11)*
+- 🎭 **AI Style** — Cute / Energetic / Cool character modes *(v11)*
+- 🌐 **Lang toggle** — single `Lang: EN/JP` button controls bubble language and chat language together *(v11)*
+- 🕺 **Richer idle animations** — random cycle picks from neck tilt / body tilt / whole-body gravity lean each interval *(v11)*
 
 ---
 
@@ -103,6 +110,7 @@ The pack includes 7 animations: Show full body, Greeting, Peace sign, Shoot, Spi
 
 ## Animation Editor *(v4+)*
 
+YouTube Demo ↓
 [![Animation Editor](https://img.youtube.com/vi/igydSW2kMAI/maxresdefault.jpg)](https://www.youtube.com/watch?v=igydSW2kMAI)
 
 Click **Edit Animation** to open the animation editor as a full VS Code tab:
@@ -175,6 +183,63 @@ Click the **⚙** button next to the input to open chat history, provider settin
 - Enter your Gemini API key (stored securely, never committed)
 - Set the model name (default: `gemini-3.1-flash-lite` / `qwen2.5:3b`)
 - Edit the system prompt — default: cheerful 1-sentence coding companion with emoji
+
+---
+
+## Text-to-Speech *(v11)*
+
+Three speech modes — select one at a time:
+
+| Button | Behavior |
+|---|---|
+| `Speech: Off` | Silent — no audio |
+| `Speech: API` | Web Speech API — browser built-in voices, works offline, available on VS Code and Chrome |
+| `Speech: AI` | Gemini TTS — natural neural voices via Gemini API (requires API key from AI Chat settings) |
+
+Two voice options apply to both modes:
+
+| Button | Voice |
+|---|---|
+| `Speech: Female` | Aoede — warm, bright |
+| `Speech: Male` | Charon — calm, cool |
+
+Speech:AI requires the same Gemini API key used for AI Chat. If no key is set, Speech:AI silently falls back to no audio.
+
+---
+
+## Contextual Speech Bubbles *(v11)*
+
+The speech bubble checks a priority chain before showing a message. Higher-priority conditions fire first; each fires at most once per session:
+
+| Priority | Condition | Example |
+|---|---|---|
+| 1 | Special day (holiday) | "Happy Halloween! 🎃" |
+| 2 | Session count milestone | "10th reaction today! 🎉" |
+| 3 | Long gap since last reaction | "Welcome back! Missed you 💕" |
+| 4 | Long session | "You've been at it for an hour! 🔥" |
+| 5 | Day of week | "Happy Monday! Let's go! ⚡" |
+| 6 | Time of day | "Good morning! ☀️" |
+| 7 | AI / fixed pool | Normal reaction message |
+
+EN and JP use separate message pools and separate special day lists (Western vs Japanese holidays).
+
+---
+
+## AI Style *(v11)*
+
+Three character personality modes — select one at a time:
+
+| Button | Tone | Emoji |
+|---|---|---|
+| `AI Style: Cute` | Warm, sweet, encouraging | 💕 ✨ |
+| `AI Style: Energetic` | Enthusiastic, high-energy, motivating | 🔥 ⚡ |
+| `AI Style: Cool` | Calm, confident, minimal | ✓ 🎯 |
+
+Switching style automatically updates both:
+- The **speech bubble** AI prompt (short reaction lines)
+- The **chat system prompt** (full chat replies)
+
+Available on VS Code and Chrome.
 
 ---
 
@@ -277,12 +342,19 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 - 🎛️ Panel layout redesign — collapsible toolbar behind ⚙ gear
 - 🐛 Fixed flaky positive/negative word detection *(VS Code only)* — now reliably catches keywords in your messages to Claude Code
 
-**v10** — Now Creating!
+**v10** ✅
 - 💬 AI Speech Bubble *(VS Code only)* — toggle between Fixed and AI mode; in AI mode the character reacts to Claude Code activity with context-aware speech; messages customizable
 - 🎛️ Toolbar redesign — 4 fixed rows always visible; animation split into 5 separate toggle buttons (Off / Default / Random / Custom / Custom Random); Positive Words and Negative Words as direct buttons
 - 🎭 Improved idle & thinking animations — random idle head micro-tilt every 6–10s; thinking state now shows a natural Z-axis pondering tilt with gentle oscillation
 
-**v11** — Coming soon!
+**v11** ✅
+- 🗣️ Text-to-Speech — Speech:Off / Speech:API (Web Speech API) / Speech:AI (Gemini TTS)
+- 🧠 Contextual speech bubbles — character reacts to special days (EN/JP), session count milestones, coding gaps, session length, day of week, and time of day
+- 🎭 AI Style — Cute / Energetic / Cool modes
+- 🌐 Lang toggle — single button controls bubble language and chat language together
+- 🕺 Richer idle animations — random cycle picks from neck tilt / body tilt / whole-body gravity lean
+
+**v12** — Coming soon!
 - 🎉 More fun updates
 
 ---
@@ -291,6 +363,7 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 
 **VS Codeサイドバー**（Claude Code / GitHub Copilotに反応）または**ブラウザサイドパネル**（ChatGPT / Claudeに反応）に表示されるVRM 3Dキャラクターです。AIなしでもアニメーションや吹き出しが動作します。
 
+YouTube Demo ↓
 [![AI Avatar v9 デモ動画](https://img.youtube.com/vi/WOBhUQAm3HM/maxresdefault.jpg)](https://www.youtube.com/shorts/WOBhUQAm3HM)
 
 🎉 VS Code版100インストール達成！ありがとうございます！  
@@ -305,6 +378,7 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 - **v6** → [🦸スーパーヒーローに応援してもらおう (AI Avatar v6)](https://dev.to/webdeveloperhyper/let-superheroes-cheer-you-up-ai-avatar-v6-chrome-extension-vs-code-extension-2ak7)
 - **v7** → [🫡全力でサポートします！ (AI Avatar v7)](https://dev.to/webdeveloperhyper/well-support-you-with-all-our-might-ai-avatar-v7-pose-capture-and-more-vs-code-and-chrome-3aab)
 - **v10** → coming soon!
+- **v11** → coming soon!
 
 ---
 
@@ -330,6 +404,11 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 - 🔍 **プロンプトチェッカー [Beta]** *（VS Code限定）* — AIプロンプトを貼り付けるだけで、明確さ・具体性・構造をルールベースで即チェック *(v7)*
 - 🦁 **ジャイアントモード** *（Chrome限定）* — ドラッグ・リサイズ可能なオーバーレイとしてアバターをどのページにも表示 *(v7)*
 - 🤖 **AIチャット** — パネル下部に常時表示されるチャット入力；アバターに何でも質問できる；返答は吹き出しで表示してアニメーションも発動；Gemini APIとOllama対応 *(v9)*
+- 🗣️ **音声読み上げ（TTS）** — Speech:Off / Speech:API（Web Speech API）/ Speech:AI（Gemini TTS、APIキーを使用） *(v11)*
+- 🧠 **コンテキスト吹き出し** — 特別な日（EN/JP別リスト）、セッション数マイルストーン、反応間隔、セッション時間、曜日、時間帯に応じた吹き出し *(v11)*
+- 🎭 **AIスタイル** — Cute / Energetic / Coolの3つのキャラクターモード *(v11)*
+- 🌐 **言語切り替え** — `Lang: EN/JP` 1つのボタンで吹き出しとチャットの言語を同時に切り替え *(v11)*
+- 🕺 **豊かなアイドルアニメーション** — 首の傾き / 体の傾き / 重力リーンをランダムにサイクル *(v11)*
 
 ---
 
@@ -390,6 +469,7 @@ VRMAアニメーションファイルはライセンスの都合上、拡張機�
 
 ## アニメーションエディタ *(v4+)*
 
+YouTube Demo ↓
 [![Animation Editor](https://img.youtube.com/vi/igydSW2kMAI/maxresdefault.jpg)](https://www.youtube.com/watch?v=igydSW2kMAI)
 
 **Edit Animation** をクリックするとVS Codeの専用タブとしてエディタが開きます：
@@ -462,6 +542,63 @@ VRMAアニメーションファイルはライセンスの都合上、拡張機�
 - Gemini APIキーを入力（安全に保存され、コミットされません）
 - モデル名を設定（デフォルト：`gemini-3.1-flash-lite` / `qwen2.5:3b`）
 - システムプロンプトを編集 — デフォルト：絵文字付き1文で励ます陽気なコーディング仲間
+
+---
+
+## 音声読み上げ（TTS） *(v11)*
+
+3つのモードから1つを選択：
+
+| ボタン | 動作 |
+|---|---|
+| `Speech: Off` | 無音 |
+| `Speech: API` | Web Speech API — ブラウザ内蔵音声、オフライン動作可、VS Code・Chrome両対応 |
+| `Speech: AI` | Gemini TTS — Gemini APIによる自然な音声（AIチャット設定のAPIキーを使用） |
+
+2つのボイス設定：
+
+| ボタン | ボイス |
+|---|---|
+| `Speech: Female` | Aoede — 明るく温かい |
+| `Speech: Male` | Charon — 落ち着いてクール |
+
+Speech:AIにはAIチャットと同じGemini APIキーが必要です。キーが未設定の場合は無音になります。
+
+---
+
+## コンテキスト吹き出し *(v11)*
+
+吹き出しはメッセージを表示する前に優先度チェーンを確認します。高優先度の条件が先に発動し、各条件はセッション中1回のみ：
+
+| 優先度 | 条件 | 例 |
+|---|---|---|
+| 1 | 特別な日（祝日） | "Happy Halloween! 🎃" |
+| 2 | セッション数マイルストーン | "今日10回目のリアクション！🎉" |
+| 3 | 前回の反応からの間隔 | "おかえり！待ってたよ 💕" |
+| 4 | セッションの長さ | "1時間も頑張ってるね！🔥" |
+| 5 | 曜日 | "月曜日！一緒に頑張ろう！⚡" |
+| 6 | 時間帯 | "おはよう！☀️" |
+| 7 | AI / 通常プール | 通常のリアクションメッセージ |
+
+ENとJPはメッセージプールと特別な日リストが別々（西洋の祝日 vs 日本の祝日）。
+
+---
+
+## AIスタイル *(v11)*
+
+3つのキャラクターモードから1つを選択：
+
+| ボタン | トーン | 絵文字 |
+|---|---|---|
+| `AI Style: Cute` | 温かく、かわいく、励ます | 💕 ✨ |
+| `AI Style: Energetic` | 熱狂的、ハイエネルギー、やる気を引き出す | 🔥 ⚡ |
+| `AI Style: Cool` | 落ち着いて、自信を持って、シンプルに | ✓ 🎯 |
+
+スタイルを切り替えると以下の両方が自動更新されます：
+- **吹き出し**のAIプロンプト（短いリアクションセリフ）
+- **チャット**のシステムプロンプト（チャット返答のトーン）
+
+VS CodeとChrome両対応。
 
 ---
 
@@ -564,10 +701,17 @@ VRMAアニメーションファイルはライセンスの都合上、拡張機�
 - 🎛️ パネルレイアウト刷新 — ⚙ギアでツールバーを折りたたみ
 - 🐛 ポジティブ/ネガティブワード検出の不安定さを修正 *（VS Code限定）* — Claude Codeへのメッセージのキーワードを確実に検出するように改善
 
-**v10** — 開発中！
+**v10** ✅
 - 💬 AI吹き出し *（VS Code限定）* — FixedとAIモードを切り替え；AIモードではClaude Codeの活動に反応してキャラクターがコンテキストに応じた発言をする；メッセージはカスタマイズ可能
 - 🎛️ ツールバーリデザイン — 4行固定表示；アニメーションを5つの独立したトグルボタンに分割（Off / Default / Random / Custom / Custom Random）；ポジティブワード・ネガティブワードをダイレクトボタンに
 - 🎭 アイドル・思考アニメーション改善 — アイドル時に6〜10秒ごとランダムな頭の微傾き；思考中は自然なZ軸の首かしげポーズとゆっくりした揺れを追加
 
-**v11** — 近日公開！
+**v11** ✅
+- 🗣️ 音声読み上げ（TTS）— Speech:Off / Speech:API（Web Speech API）/ Speech:AI（Gemini TTS）
+- 🧠 コンテキスト吹き出し — 特別な日（EN/JP別）、セッション数マイルストーン、反応間隔、セッション時間、曜日、時間帯
+- 🎭 AIスタイル — Cute / Energetic / Coolモード
+- 🌐 言語切り替え — 1つのボタンで吹き出しとチャットの言語を同時に切り替え
+- 🕺 豊かなアイドルアニメーション — 首の傾き / 体の傾き / 重力リーンをランダムにサイクル
+
+**v12** — 近日公開！
 - 🎉 お楽しみに
