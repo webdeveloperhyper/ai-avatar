@@ -15,11 +15,11 @@ YouTube Demo ↓
 📖 Read the story behind this project on DEV.to:
 - **v1** → [AI Avatar (VS Code Extension)](https://dev.to/webdeveloperhyper/ai-avatar-meet-your-ideal-girlfriendboyfriend-for-free-21n5)
 - **v2** → [AI Avatar v2 with Pose Editor (VS Code Extension)](https://dev.to/webdeveloperhyper/ai-avatar-v2-with-pose-editor-vs-code-extension-38n2)
-- **v4** → [😊How to Get Cheered Up 24/7 (AI Avatar v4 with Animation Editor (Chrome Extension + VS Code Extension))](https://dev.to/webdeveloperhyper/how-to-get-cheered-up-247-ai-avatar-v4-with-animation-editor-chrome-extension-vs-code-2f07)
-- **v6** → [🦸Let Superheroes Cheer You Up (AI Avatar v6: Chrome Extension + VS Code Extension)](https://dev.to/webdeveloperhyper/let-superheroes-cheer-you-up-ai-avatar-v6-chrome-extension-vs-code-extension-2ak7)
+- **v3,v4** → [😊How to Get Cheered Up 24/7 (AI Avatar v4 with Animation Editor (Chrome Extension + VS Code Extension))](https://dev.to/webdeveloperhyper/how-to-get-cheered-up-247-ai-avatar-v4-with-animation-editor-chrome-extension-vs-code-2f07)
+- **v5,v6** → [🦸Let Superheroes Cheer You Up (AI Avatar v6: Chrome Extension + VS Code Extension)](https://dev.to/webdeveloperhyper/let-superheroes-cheer-you-up-ai-avatar-v6-chrome-extension-vs-code-extension-2ak7)
 - **v7** → [🫡We'll Support You with All Our Might (AI Avatar v7: Pose Capture and More (VS Code and Chrome Extension))](https://dev.to/webdeveloperhyper/well-support-you-with-all-our-might-ai-avatar-v7-pose-capture-and-more-vs-code-and-chrome-3aab)
-- **v10** → [🎥AI Chat, AI Cheering Messages, and Animation Editor Hyper (AI Avatar v10: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/ai-chat-ai-cheering-messages-and-animation-editor-hyper-ai-avatar-v10-vs-code-and-chrome-1noo)
-- **v11** → coming soon!
+- **v8,v9,v10** → [🎥AI Chat, AI Cheering Messages, and Animation Editor Hyper (AI Avatar v10: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/ai-chat-ai-cheering-messages-and-animation-editor-hyper-ai-avatar-v10-vs-code-and-chrome-1noo)
+- **v11,v12,v13** → coming soon!
 
 ---
 
@@ -45,11 +45,12 @@ YouTube Demo ↓
 - 🔍 **Prompt Checker [Beta]** *(VS Code only)* — paste any AI prompt and get instant rule-based feedback on clarity, specificity, and structure *(v7)*
 - 🦁 **Giant Mode** *(Chrome only)* — float the avatar as a draggable, resizable overlay over any web page *(v7)*
 - 🤖 **AI Chat** — always-visible chat input at the bottom of the panel; ask the avatar anything; replies appear as speech bubbles and trigger animations; supports Gemini API and Ollama *(v9)*
-- 🗣️ **Text-to-Speech** — Speech:Off / Speech:API (Web Speech API) / Speech:AI (Gemini TTS, uses your API key) *(v11)*
+- 🗣️ **Text-to-Speech** — Speech:Off / Speech:API (Web Speech API) / Speech:AI (Gemini TTS, uses your API key) *(v11)* / Speech:Local (Kokoro EN + VOICEVOX JP) *(v13)*
 - 🧠 **Contextual speech bubbles** — character reacts to special days (EN/JP separate lists), session count milestones, coding gap, session length, day of week, and time of day *(v11)*
 - 🎭 **AI Style** — Cute / Energetic / Cool character modes *(v11)*
 - 🌐 **Lang toggle** — single `Lang: EN/JP` button controls bubble language and chat language together *(v11)*
 - 🕺 **Richer idle animations** — random cycle picks from neck tilt / body tilt / whole-body gravity lean each interval *(v11)*
+- 🪙 **Millionaire Mode** — 3D coin or diamond fountain bursts from the avatar on every reaction *(v12)*
 
 ---
 
@@ -207,6 +208,30 @@ Speech:AI requires the same Gemini API key used for AI Chat. If no key is set, S
 
 ---
 
+## Speech:Local *(v13)*
+
+Offline TTS — no API key or internet required. Select **Speech:Local** in the Speech radio group.
+
+Two engines run depending on language:
+
+| Lang | Engine | Requirement |
+|---|---|---|
+| `Lang: EN` | **Kokoro** — lightweight English neural TTS, runs fully in-browser | None — model downloads automatically (~85 MB on first use) |
+| `Lang: JP` | **VOICEVOX** — high-quality Japanese TTS with character voices | You must **download and install VOICEVOX yourself** (free), then keep it running |
+
+**Kokoro** downloads and caches the model on first use, then warms it up so the first response is instant. No further downloads after the initial load.
+
+**VOICEVOX setup (required for JP):**
+1. Download VOICEVOX from [voicevox.hiroshiba.jp](https://voicevox.hiroshiba.jp/) (free, Windows / Mac / Linux)
+2. Install and launch it — it runs as a local server on port 50021
+3. Keep VOICEVOX running while using Speech:Local with Lang: JP
+
+If VOICEVOX is not running when you switch to JP+Local, a status message appears in the panel. Start VOICEVOX and it connects automatically on the next message.
+
+Voice gender (Female / Male) applies to both engines.
+
+---
+
 ## Contextual Speech Bubbles *(v11)*
 
 The speech bubble checks a priority chain before showing a message. Higher-priority conditions fire first; each fires at most once per session:
@@ -240,6 +265,20 @@ Switching style automatically updates both:
 - The **chat system prompt** (full chat replies)
 
 Available on VS Code and Chrome.
+
+---
+
+## Millionaire Mode *(v12)*
+
+Select a mode with the **Millionaire** radio buttons in the toolbar:
+
+| Option | Behavior |
+|---|---|
+| `Off` | No fountain (default) |
+| `Coin` | 3D gold coins burst from the avatar on every reaction |
+| `Diamond` | 3D pink crystal diamonds burst from the avatar on every reaction |
+
+The **Millionaire: Sound** button toggles a chime sound for each burst — coin plays a short C6 ring, diamond plays a longer crystal chime. The sound button is disabled when Millionaire is set to Off.
 
 ---
 
@@ -354,7 +393,16 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 - 🌐 Lang toggle — single button controls bubble language and chat language together
 - 🕺 Richer idle animations — random cycle picks from neck tilt / body tilt / whole-body gravity lean
 
-**v12** — Coming soon!
+**v12** ✅
+- 🪙 Millionaire Mode — 3D coin or diamond fountain bursts from the avatar on every reaction
+- 🎛️ Radio group UI — animation, AI style, speech, provider, and millionaire controls redesigned as inline radio buttons
+
+**v13** ✅
+- 🗣️ Speech:Local — Kokoro (EN offline TTS, no API key needed) + VOICEVOX (JP local TTS)
+- 💬 Bubble On/Off toggle — hide speech bubbles while keeping TTS audio active
+- 🤖 Bubble:AI — contextual messages (special days, time of day, etc.) now go through AI in AI mode
+
+**v14** — Now creating!
 - 🎉 More fun updates
 
 ---
@@ -374,12 +422,12 @@ YouTube Demo ↓
 📖 開発ストーリーはDEV.toで読めます：
 - **v1** → [AI Avatar (VS Code拡張機能)](https://dev.to/webdeveloperhyper/ai-avatar-meet-your-ideal-girlfriendboyfriend-for-free-21n5)
 - **v2** → [AI Avatar v2 ポーズエディタ付き](https://dev.to/webdeveloperhyper/ai-avatar-v2-with-pose-editor-vs-code-extension-38n2)
-- **v4** → [AI Avatar v4 アニメーションエディタ付き](https://dev.to/webdeveloperhyper/how-to-get-cheered-up-247-ai-avatar-v4-with-animation-editor-chrome-extension-vs-code-2f07)
-- **v6** → [🦸スーパーヒーローに応援してもらおう (AI Avatar v6)](https://dev.to/webdeveloperhyper/let-superheroes-cheer-you-up-ai-avatar-v6-chrome-extension-vs-code-extension-2ak7)
+- **v3,v4** → [AI Avatar v4 アニメーションエディタ付き](https://dev.to/webdeveloperhyper/how-to-get-cheered-up-247-ai-avatar-v4-with-animation-editor-chrome-extension-vs-code-2f07)
+- **v5,v6** → [🦸スーパーヒーローに応援してもらおう (AI Avatar v6)](https://dev.to/webdeveloperhyper/let-superheroes-cheer-you-up-ai-avatar-v6-chrome-extension-vs-code-extension-2ak7)
 - **v7** → [🫡全力でサポートします！ (AI Avatar v7)](https://dev.to/webdeveloperhyper/well-support-you-with-all-our-might-ai-avatar-v7-pose-capture-and-more-vs-code-and-chrome-3aab)
-- **v10** → [🎥AIチャット、AI応援メッセージ、アニメーションエディタ ハイパー (AI Avatar v10: VS
+- **v8,v9,v10** → [🎥AIチャット、AI応援メッセージ、アニメーションエディタ ハイパー (AI Avatar v10: VS
   Code・Chrome拡張機能)](https://dev.to/webdeveloperhyper/ai-chat-ai-cheering-messages-and-animation-editor-hyper-ai-avatar-v10-vs-code-and-chrome-1noo)
-- **v11** → coming soon!
+- **v11,v12,v13** → coming soon!
 
 ---
 
@@ -405,11 +453,12 @@ YouTube Demo ↓
 - 🔍 **プロンプトチェッカー [Beta]** *（VS Code限定）* — AIプロンプトを貼り付けるだけで、明確さ・具体性・構造をルールベースで即チェック *(v7)*
 - 🦁 **ジャイアントモード** *（Chrome限定）* — ドラッグ・リサイズ可能なオーバーレイとしてアバターをどのページにも表示 *(v7)*
 - 🤖 **AIチャット** — パネル下部に常時表示されるチャット入力；アバターに何でも質問できる；返答は吹き出しで表示してアニメーションも発動；Gemini APIとOllama対応 *(v9)*
-- 🗣️ **音声読み上げ（TTS）** — Speech:Off / Speech:API（Web Speech API）/ Speech:AI（Gemini TTS、APIキーを使用） *(v11)*
+- 🗣️ **音声読み上げ（TTS）** — Speech:Off / Speech:API（Web Speech API）/ Speech:AI（Gemini TTS、APIキーを使用） *(v11)* / Speech:Local（Kokoro EN + VOICEVOX JP） *(v13)*
 - 🧠 **コンテキスト吹き出し** — 特別な日（EN/JP別リスト）、セッション数マイルストーン、反応間隔、セッション時間、曜日、時間帯に応じた吹き出し *(v11)*
 - 🎭 **AIスタイル** — Cute / Energetic / Coolの3つのキャラクターモード *(v11)*
 - 🌐 **言語切り替え** — `Lang: EN/JP` 1つのボタンで吹き出しとチャットの言語を同時に切り替え *(v11)*
 - 🕺 **豊かなアイドルアニメーション** — 首の傾き / 体の傾き / 重力リーンをランダムにサイクル *(v11)*
+- 🪙 **ミリオネアモード** — リアクションのたびにアバターから3Dコインまたはダイヤモンドの噴水が出る *(v12)*
 
 ---
 
@@ -567,6 +616,30 @@ Speech:AIにはAIチャットと同じGemini APIキーが必要です。キー�
 
 ---
 
+## Speech:Local *(v13)*
+
+オフラインTTS — APIキーもインターネット接続も不要。Speechラジオグループで **Speech:Local** を選択します。
+
+言語に応じて2つのエンジンが動作します：
+
+| 言語 | エンジン | 必要環境 |
+|---|---|---|
+| `Lang: EN` | **Kokoro** — ブラウザ内で完結する軽量英語ニューラルTTS | なし — モデルは初回使用時に自動ダウンロード（約85 MB） |
+| `Lang: JP` | **VOICEVOX** — キャラクターボイス対応の高品質日本語TTS | **VOICEVOXを自分でダウンロード・インストール**（無料）して起動しておく必要があります |
+
+**Kokoro** は初回使用時にモデルをダウンロード・キャッシュし、ウォームアップを行うことで初回レスポンスを高速化します。2回目以降は追加ダウンロード不要です。
+
+**VOICEVOXのセットアップ（JP使用時に必須）：**
+1. [voicevox.hiroshiba.jp](https://voicevox.hiroshiba.jp/) からVOICEVOXを無料ダウンロード（Windows / Mac / Linux対応）
+2. インストールして起動 — ポート50021でローカルサーバーとして動作します
+3. Lang: JPでSpeech:Localを使用する間はVOICEVOXを起動したままにしてください
+
+JP+Local切り替え時にVOICEVOXが起動していない場合、パネルにステータスメッセージが表示されます。VOICEVOXを起動すれば次のメッセージから自動接続します。
+
+音声の性別（Female / Male）は両エンジンに適用されます。
+
+---
+
 ## コンテキスト吹き出し *(v11)*
 
 吹き出しはメッセージを表示する前に優先度チェーンを確認します。高優先度の条件が先に発動し、各条件はセッション中1回のみ：
@@ -600,6 +673,20 @@ ENとJPはメッセージプールと特別な日リストが別々（西洋の�
 - **チャット**のシステムプロンプト（チャット返答のトーン）
 
 VS CodeとChrome両対応。
+
+---
+
+## ミリオネアモード *(v12)*
+
+ツールバーの **Millionaire** ラジオボタンでモードを選択：
+
+| オプション | 動作 |
+|---|---|
+| `Off` | 噴水なし（デフォルト） |
+| `Coin` | リアクションのたびにアバターから3Dゴールドコインが噴き出す |
+| `Diamond` | リアクションのたびにアバターから3Dピンクダイヤモンドが噴き出す |
+
+**Millionaire: Sound** ボタンでバーストごとのチャイムサウンドをオン／オフできます。MillionaireがOffのときはサウンドボタンは無効になります。
 
 ---
 
@@ -714,5 +801,14 @@ VS CodeとChrome両対応。
 - 🌐 言語切り替え — 1つのボタンで吹き出しとチャットの言語を同時に切り替え
 - 🕺 豊かなアイドルアニメーション — 首の傾き / 体の傾き / 重力リーンをランダムにサイクル
 
-**v12** — 近日公開！
+**v12** ✅
+- 🪙 ミリオネアモード — リアクションのたびにアバターから3Dコインまたはダイヤモンドの噴水が出る
+- 🎛️ ラジオボタンUI — アニメーション、AIスタイル、音声、プロバイダー、ミリオネアのコントロールをインラインラジオボタンに刷新
+
+**v13** ✅
+- 🗣️ Speech:Local — Kokoro（ENオフラインTTS、APIキー不要）+ VOICEVOX（JP ローカルTTS）
+- 💬 吹き出しOn/Offトグル — TTS音声を維持しながら吹き出しを非表示にできる
+- 🤖 Bubble:AI — 特別な日・時間帯などのコンテキストメッセージもAIモードで処理されるように改善
+
+**v14** — Now creating!
 - 🎉 お楽しみに
