@@ -80,6 +80,37 @@ Click the **Change Avatar** button at the top of the sidebar to pick a `.vrm` fi
 v6 adds new sample characters — three girls and two boys — plus cute, cool, and funny pose packs.
 ([free download from GitHub Releases](https://github.com/webdeveloperhyper/ai-avatar/releases))
 
+**Joyful Colors** is a group that is gathered with a mission to cheer developers and other people up and make them feel happy. They will cheer you up 24/7 through VS Code extension and Chrome (Edge) extension. Let's take a look at the superhero characters!
+
+<img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/sweet-purple.png" width="10%">
+
+↑ **Sweet Purple** (Creater: Blue)
+Bright and cheerful.
+Wants to be a famous pop star and eat yummy things.
+Makes cute poses.
+
+<img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink.png" width="10%">
+
+↑ **Candy Pink** (Creater: Hyper)
+Another face of the sample avatar (Ninja Girl).
+kind and considerate.
+Good at making fake smiles.
+Makes cute poses.
+
+<img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/maximum-blue.png" width="10%">
+
+↑ **Maximum Blue** (Creater: Blue)
+Active and full of energy.
+Girls fall in love when their eyes meet his.
+Makes cool poses.
+
+<img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/hyper-yellow.png" width="10%">
+ 
+↑ **Hyper Yellow** (Creater: Blue)
+Always trying to make a cool app, but always ends up making a silly app.
+He thinks Purple and Pink like him, but they are just using him.
+Makes silly poses.
+
 ---
 
 ## Animations *(v2)*
@@ -487,6 +518,37 @@ YouTube Demo ↓
 
 v6では新しいサンプルキャラクター（女の子3体・男の子2体）とポーズパック（かわいい・クール・おもしろ）を追加しました。
 （[GitHubリリースから無料ダウンロード](https://github.com/webdeveloperhyper/ai-avatar/releases)）
+
+**Joyful Colors** は、開発者をはじめ多くの人を元気にして幸せな気持ちにすることをミッションに集まったグループです。VS Code拡張機能とChrome（Edge）拡張機能を通じて24時間365日あなたを応援します。スーパーヒーローキャラクターたちを紹介します！
+
+<img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/sweet-purple.png" width="10%">
+
+↑ **Sweet Purple**（制作：Blue）
+明るく元気なキャラクター。
+有名なアイドルになって美味しいものを食べることを夢見ています。
+かわいいポーズが得意。
+
+<img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink.png" width="10%">
+
+↑ **Candy Pink**（制作：Hyper）
+サンプルアバター（Ninja Girl）の別バージョン。
+優しくて思いやりがあります。
+作り笑いが得意。
+かわいいポーズが得意。
+
+<img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/maximum-blue.png" width="10%">
+
+↑ **Maximum Blue**（制作：Blue）
+活発でエネルギーあふれるキャラクター。
+目が合った女の子は恋に落ちてしまいます。
+クールなポーズが得意。
+
+<img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/hyper-yellow.png" width="10%">
+ 
+↑ **Hyper Yellow**（制作：Blue）
+いつもカッコいいアプリを作ろうと挑戦するが、なぜかいつもふざけたアプリになってしまいます。
+Purple と Pink が自分のことを好きだと思っているが、実際には利用されているだけ。
+変なポーズが得意。
 
 ---
 
