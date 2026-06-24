@@ -4,7 +4,7 @@
 
 A VRM 3D character that lives in your **VS Code sidebar** (reacts to Claude Code / GitHub Copilot) or **browser side panel** (reacts to ChatGPT / Claude). Animations and speech bubbles all run without AI too.
 
-YouTube Demo ↓
+Click for the YouTube demo ↓
 [![AI Avatar v9 Demo](https://img.youtube.com/vi/WOBhUQAm3HM/maxresdefault.jpg)](https://www.youtube.com/shorts/WOBhUQAm3HM)
 
 🎉 Thank you for 100+ installs on VS Code!  
@@ -19,7 +19,7 @@ YouTube Demo ↓
 - **v5,v6** → [🦸Let Superheroes Cheer You Up (AI Avatar v6: Chrome Extension + VS Code Extension)](https://dev.to/webdeveloperhyper/let-superheroes-cheer-you-up-ai-avatar-v6-chrome-extension-vs-code-extension-2ak7)
 - **v7** → [🫡We'll Support You with All Our Might (AI Avatar v7: Pose Capture and More (VS Code and Chrome Extension))](https://dev.to/webdeveloperhyper/well-support-you-with-all-our-might-ai-avatar-v7-pose-capture-and-more-vs-code-and-chrome-3aab)
 - **v8,v9,v10** → [🎥AI Chat, AI Cheering Messages, and Animation Editor Hyper (AI Avatar v10: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/ai-chat-ai-cheering-messages-and-animation-editor-hyper-ai-avatar-v10-vs-code-and-chrome-1noo)
-- **v11,v12,v13** → coming soon!
+- **v11,v12,v13,v14** → coming soon!
 
 ---
 
@@ -51,6 +51,7 @@ YouTube Demo ↓
 - 🌐 **Lang toggle** — single `Lang: EN/JP` button controls bubble language and chat language together *(v11)*
 - 🕺 **Richer idle animations** — random cycle picks from neck tilt / body tilt / whole-body gravity lean each interval *(v11)*
 - 🪙 **Millionaire Mode** — 3D coin or diamond fountain bursts from the avatar on every reaction *(v12)*
+- 🎢 **Roller Coaster Mode** — avatar rides a 3D roller coaster in Default, Rainbow, or Water theme *(v14)*
 
 ---
 
@@ -142,7 +143,7 @@ The pack includes 7 animations: Show full body, Greeting, Peace sign, Shoot, Spi
 
 ## Animation Editor *(v4+)*
 
-YouTube Demo ↓
+Click for the YouTube demo ↓
 [![Animation Editor](https://img.youtube.com/vi/igydSW2kMAI/maxresdefault.jpg)](https://www.youtube.com/watch?v=igydSW2kMAI)
 
 Click **Edit Animation** to open the animation editor as a full VS Code tab:
@@ -301,6 +302,9 @@ Available on VS Code and Chrome.
 
 ## Millionaire Mode *(v12)*
 
+Click for the YouTube demo ↓
+[![AI Avatar v13 Demo](https://img.youtube.com/vi/ACcrC_mWx_U/maxresdefault.jpg)](https://www.youtube.com/shorts/ACcrC_mWx_U)
+
 Select a mode with the **Millionaire** radio buttons in the toolbar:
 
 | Option | Behavior |
@@ -310,6 +314,26 @@ Select a mode with the **Millionaire** radio buttons in the toolbar:
 | `Diamond` | 3D pink crystal diamonds burst from the avatar on every reaction |
 
 The **Millionaire: Sound** button toggles a chime sound for each burst — coin plays a short C6 ring, diamond plays a longer crystal chime. The sound button is disabled when Millionaire is set to Off.
+
+When Millionaire mode is active, a **🪙 coin counter** appears in the top bar showing the total coins spawned this session. It resets to zero when mode is turned off. *(v14)*
+
+---
+
+## Roller Coaster Mode *(v14)*
+
+Click for the YouTube demo ↓
+[![AI Avatar v13 Demo](https://img.youtube.com/vi/iyecc2jEQcY/maxresdefault.jpg)](https://www.youtube.com/shorts/iyecc2jEQcY)
+
+Select a theme with the **Roller Coaster** radio buttons in the toolbar:
+
+| Option | Behavior |
+|---|---|
+| `Off` | No roller coaster (default) |
+| `Default` | Avatar rides a 3D roller coaster over a green field; chase camera follows from behind |
+| `Rainbow` | Rainbow-colored track through a starry space scene; dark background with vignette overlay |
+| `Water` | Underwater track with rising transparent bubbles; blue gradient background and blue overlay |
+
+The avatar stands on a skateboard-shaped cart and rides the full looping track. The camera chases from behind so you can always see the avatar.
 
 ---
 
@@ -433,16 +457,21 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 - 💬 Bubble On/Off toggle — hide speech bubbles while keeping TTS audio active
 - 🤖 Bubble:AI — contextual messages (special days, time of day, etc.) now go through AI in AI mode
 
-**v14** — Now creating!
+**v14** ✅
+- 🎢 Roller Coaster Mode — avatar rides a 3D roller coaster in Default, Rainbow, or Water theme
+- 🪙 Add coin counter in the top bar
+- ❓ Add help button in the top bar
+
+**v15** — Now creating!
 - 🎉 More fun updates
 
 ---
 
 # AI Avatar（日本語）
 
-**VS Codeサイドバー**（Claude Code / GitHub Copilotに反応）または**ブラウザサイドパネル**（ChatGPT / Claudeに反応）に表示されるVRM 3Dキャラクターです。AIなしでもアニメーションや吹き出しが動作します。
+**VS Codeサイドバー**（Claude Code / GitHub Copilotに反応）または**ブラウザサイドパネル**（ChatGPT / Claudeに反応）に表示されるVRM 3Dキャラクターです。AIなしでもアニメーションや吹き出しを楽しめます。
 
-YouTube Demo ↓
+Click for the YouTube demo ↓
 [![AI Avatar v9 デモ動画](https://img.youtube.com/vi/WOBhUQAm3HM/maxresdefault.jpg)](https://www.youtube.com/shorts/WOBhUQAm3HM)
 
 🎉 VS Code版100インストール達成！ありがとうございます！  
@@ -458,7 +487,7 @@ YouTube Demo ↓
 - **v7** → [🫡全力でサポートします！ (AI Avatar v7)](https://dev.to/webdeveloperhyper/well-support-you-with-all-our-might-ai-avatar-v7-pose-capture-and-more-vs-code-and-chrome-3aab)
 - **v8,v9,v10** → [🎥AIチャット、AI応援メッセージ、アニメーションエディタ ハイパー (AI Avatar v10: VS
   Code・Chrome拡張機能)](https://dev.to/webdeveloperhyper/ai-chat-ai-cheering-messages-and-animation-editor-hyper-ai-avatar-v10-vs-code-and-chrome-1noo)
-- **v11,v12,v13** → coming soon!
+- **v11,v12,v13,v14** → coming soon!
 
 ---
 
@@ -470,7 +499,7 @@ YouTube Demo ↓
 - 🔀 **ウォッチャー切り替え** *（VS Code限定）* — Claude CodeとGitHub Copilotの監視を切り替え *(v2)*
 - 🔄 **アバター変更** — 上部のボタンで`VRM`キャラクターをいつでも変更可能
 - 💃 **アニメーション** — `.vrma`モーションクリップやカスタムJSONポーズを再生；5つの独立トグルボタン：Off / Default / Random *(v7)* / Custom *(v2)* / Custom Random *(v8)* *(v10)*
-- 💬 **AI吹き出し** *（VS Code限定）* — Fixed/AIモードを切り替え；AIモードでは Claude Code の活動に反応してコンテキストに応じた発言をする *(v10)*
+- 💬 **AI吹き出し** *（VS Code限定）* — Fixed/AIモードを切り替え；AIモードでは Claude Code に反応してコンテキストに応じた発言をする *(v10)*
 - 🎬 **アニメーションエディタ** — 複数キーフレームタイムライン（In / Hold / Outタイミング） *(v4)*；全30指ボーン対応 *(v5)*；度数表示 *(v5)*
 - 🎨 **ランダムエディタ** — アニメーションエディタ内でゾーン分割パターンJSONを直接編集；ボディ＆アーム / 脚 / 指ゾーン、パターンの追加・削除・ナビゲーション *(v8)*
 - 🎥 **オービットコントロール** — ドラッグで回転、スクロールでズーム、右クリックでパン
@@ -489,7 +518,8 @@ YouTube Demo ↓
 - 🎭 **AIスタイル** — Cute / Energetic / Coolの3つのキャラクターモード *(v11)*
 - 🌐 **言語切り替え** — `Lang: EN/JP` 1つのボタンで吹き出しとチャットの言語を同時に切り替え *(v11)*
 - 🕺 **豊かなアイドルアニメーション** — 首の傾き / 体の傾き / 重力リーンをランダムにサイクル *(v11)*
-- 🪙 **ミリオネアモード** — リアクションのたびにアバターから3Dコインまたはダイヤモンドの噴水が出る *(v12)*
+- 🪙 **ミリオネアモード** — リアクションのたびにアバターから3Dコインまたはダイヤモンドが噴き出す *(v12)*
+- 🎢 **ローラーコースターモード** — Default・Rainbow・Waterの3テーマで3Dローラーコースターに乗る *(v14)*
 
 ---
 
@@ -519,7 +549,7 @@ YouTube Demo ↓
 v6では新しいサンプルキャラクター（女の子3体・男の子2体）とポーズパック（かわいい・クール・おもしろ）を追加しました。
 （[GitHubリリースから無料ダウンロード](https://github.com/webdeveloperhyper/ai-avatar/releases)）
 
-**Joyful Colors** は、開発者をはじめ多くの人を元気にして幸せな気持ちにすることをミッションに集まったグループです。VS Code拡張機能とChrome（Edge）拡張機能を通じて24時間365日あなたを応援します。スーパーヒーローキャラクターたちを紹介します！
+**Joyful Colors** は、開発者をはじめ多くの人を元気にしてハッピーな気持ちにすることをミッションに集まったグループです。VS Code拡張機能とChrome（Edge）拡張機能を通じて24時間365日あなたを応援します。スーパーヒーローキャラクターたちを紹介します！
 
 <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/sweet-purple.png" width="10%">
 
@@ -558,9 +588,9 @@ Purple と Pink が自分のことを好きだと思っているが、実際に�
 
 | ボタン | 動作 |
 |---|---|
-| `Animation: Off` | モーションクリップを再生しない |
-| `Animation: Default` | 拡張機能付属のサンプルポーズを再生 |
-| `Animation: Random` | 内蔵ゾーンパターンからランダムにポーズを生成 *(v7)* |
+| `Animation: Off` | アニメーションを再生しない |
+| `Animation: Default` | 付属のサンプルポーズを再生 |
+| `Animation: Random` | 付属ゾーンパターンからランダムにポーズを生成 *(v7)* |
 | `Animation: Custom` | ファイルを選択し `.vrma` と `.json` ポーズファイルを再生 |
 | `Animation: Custom Random` | カスタム `random-custom.json` を選択 — 独自ゾーンパターンからランダムにポーズを生成 *(v8)* |
 
@@ -575,13 +605,13 @@ VRMAアニメーションファイルはライセンスの都合上、拡張機�
 1. パックをダウンロードして解凍
 2. **Animation** ボタンを `Animation: Custom` になるまでクリック
 3. `.vrma` ファイルが入ったフォルダを選択
-4. AIが返答するたびにランダムなクリップが再生
+4. AIが返答するたびにランダムなアニメーションを再生
 
 ---
 
 ## アニメーションエディタ *(v4+)*
 
-YouTube Demo ↓
+Click for the YouTube demo ↓
 [![Animation Editor](https://img.youtube.com/vi/igydSW2kMAI/maxresdefault.jpg)](https://www.youtube.com/watch?v=igydSW2kMAI)
 
 **Edit Animation** をクリックするとVS Codeの専用タブとしてエディタが開きます：
@@ -613,7 +643,7 @@ YouTube Demo ↓
 
 **ランダムエディタ** *(v8)*
 - **Random Editor** をクリックしてゾーン分割パターンJSONエディタを開く
-- デフォルトの `random-custom.json` を自動で読み込んで開始 — **Load Random** で別のパターンJSONファイルに切り替え可能
+- デフォルトの `random-custom.json` を自動で読み込んで開始 — **Load Random** で別のJSONファイルに切り替え可能
 - **ボディ＆アーム / 脚 / 指** ゾーンを切り替え — 関連ボーンのみ表示、無関係なボーンは非表示
 - **< >** でパターンをナビゲート、**+** で追加、**−** で削除、名前を編集可能
 - **Save** でJSONファイルに書き戻し、**Reload** でディスクから再読み込み
@@ -623,7 +653,7 @@ YouTube Demo ↓
 
 ## AIチャット *(v9)*
 
-チャット入力欄がパネル下部に常時表示されます。メッセージを入力して **→** を押すと送信。アバターがアニメーションし、返答を大きな吹き出しで表示します。
+チャット入力欄がパネル下部に常時表示されます。メッセージを入力して **→** を押すと送信。アバターがアニメーションし、返答を吹き出しで表示します。
 
 <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/ai-chat.png" width="50%">
 
@@ -653,7 +683,7 @@ YouTube Demo ↓
 - Gemini / Ollamaトグルでプロバイダーを切り替え
 - Gemini APIキーを入力（安全に保存され、コミットされません）
 - モデル名を設定（デフォルト：`gemini-3.1-flash-lite` / `qwen2.5:3b`）
-- システムプロンプトを編集 — デフォルト：絵文字付き1文で励ます陽気なコーディング仲間
+- システムプロンプトを編集 — デフォルト：絵文字付き1文で励ます明るいコーディングコンパニオン
 
 ---
 
@@ -740,6 +770,9 @@ VS CodeとChrome両対応。
 
 ## ミリオネアモード *(v12)*
 
+Click for the YouTube demo ↓
+[![AI Avatar v13 Demo](https://img.youtube.com/vi/ACcrC_mWx_U/maxresdefault.jpg)](https://www.youtube.com/shorts/ACcrC_mWx_U)
+
 ツールバーの **Millionaire** ラジオボタンでモードを選択：
 
 | オプション | 動作 |
@@ -749,6 +782,26 @@ VS CodeとChrome両対応。
 | `Diamond` | リアクションのたびにアバターから3Dピンクダイヤモンドが噴き出す |
 
 **Millionaire: Sound** ボタンでバーストごとのチャイムサウンドをオン／オフできます。MillionaireがOffのときはサウンドボタンは無効になります。
+
+ミリオネアモードがオンのとき、トップバーに **🪙 コインカウンター** が表示され、このセッションで噴き出したコインの合計数を確認できます。モードをオフにするとリセットされます。 *(v14)*
+
+---
+
+## ローラーコースターモード *(v14)*
+
+Click for the YouTube demo ↓
+[![AI Avatar v13 Demo](https://img.youtube.com/vi/iyecc2jEQcY/maxresdefault.jpg)](https://www.youtube.com/shorts/iyecc2jEQcY)
+
+ツールバーの **Roller Coaster** ラジオボタンでテーマを選択：
+
+| オプション | 動作 |
+|---|---|
+| `Off` | ローラーコースターなし（デフォルト） |
+| `Default` | アバターが緑の野原の3Dローラーコースターに乗る；チェイスカメラが後ろから追跡 |
+| `Rainbow` | 星空の宇宙を走るレインボーカラーのトラック；ダーク背景にビネットオーバーレイ |
+| `Water` | 上昇する透明な泡が漂う水中トラック；青いグラデーション背景と青いオーバーレイ |
+
+アバターはスケートボード型カートに立ってループトラックを走ります。チェイスカメラが後ろから追跡するのでアバターを常に確認できます。
 
 ---
 
@@ -800,7 +853,7 @@ VS CodeとChrome両対応。
 
 **v1** ✅
 - VS CodeサイドバーにVRMキャラクター表示
-- Claude Code活動へのライブ反応
+- Claude Codeへのライブ反応
 - 視線追跡、リップシンク、オービットコントロール
 - アバター変更、吹き出しメッセージ
 
@@ -847,12 +900,12 @@ VS CodeとChrome両対応。
 - 🎬 アニメーションエディタ アップデート — フルスクリーンタブとして起動；3方向カメラ表示（RIGHT / FRONT / LEFT）、参考画像レイアウト、ボーン弧トレイル、ゾーンプリセットボタン、JSON to VRMAエクスポート
 
 **v9** ✅
-- 🤖 AIチャット — 常時表示のチャット入力；アバターに何でも質問できる；返答は大きな吹き出しでアニメーション付き；Gemini APIとOllama（ローカル）対応
+- 🤖 AIチャット — 常時表示のチャット入力；アバターに何でも質問できる；返答は吹き出しでアニメーション付き；Gemini APIとOllama（ローカル）対応
 - 🎛️ パネルレイアウト刷新 — ⚙ギアでツールバーを折りたたみ
 - 🐛 ポジティブ/ネガティブワード検出の不安定さを修正 *（VS Code限定）* — Claude Codeへのメッセージのキーワードを確実に検出するように改善
 
 **v10** ✅
-- 💬 AI吹き出し *（VS Code限定）* — FixedとAIモードを切り替え；AIモードではClaude Codeの活動に反応してキャラクターがコンテキストに応じた発言をする；メッセージはカスタマイズ可能
+- 💬 AI吹き出し *（VS Code限定）* — FixedとAIモードを切り替え；AIモードではClaude Codeに反応してキャラクターがコンテキストに応じた発言をする；メッセージはカスタマイズ可能
 - 🎛️ ツールバーリデザイン — 4行固定表示；アニメーションを5つの独立したトグルボタンに分割（Off / Default / Random / Custom / Custom Random）；ポジティブワード・ネガティブワードをダイレクトボタンに
 - 🎭 アイドル・思考アニメーション改善 — アイドル時に6〜10秒ごとランダムな頭の微傾き；思考中は自然なZ軸の首かしげポーズとゆっくりした揺れを追加
 
@@ -864,7 +917,7 @@ VS CodeとChrome両対応。
 - 🕺 豊かなアイドルアニメーション — 首の傾き / 体の傾き / 重力リーンをランダムにサイクル
 
 **v12** ✅
-- 🪙 ミリオネアモード — リアクションのたびにアバターから3Dコインまたはダイヤモンドの噴水が出る
+- 🪙 ミリオネアモード — リアクションのたびにアバターから3Dコインまたはダイヤモンドを噴き出す
 - 🎛️ ラジオボタンUI — アニメーション、AIスタイル、音声、プロバイダー、ミリオネアのコントロールをインラインラジオボタンに刷新
 
 **v13** ✅
@@ -872,5 +925,10 @@ VS CodeとChrome両対応。
 - 💬 吹き出しOn/Offトグル — TTS音声を維持しながら吹き出しを非表示にできる
 - 🤖 Bubble:AI — 特別な日・時間帯などのコンテキストメッセージもAIモードで処理されるように改善
 
-**v14** — Now creating!
+**v14** ✅
+- 🎢 ローラーコースターモード — Default・Rainbow・Waterの3テーマで3Dローラーコースターに乗る
+- 🪙 トップバーにコインカウンターを追加
+- ❓ トップバーにヘルプボタンを追加
+
+**v15** — Now creating!
 - 🎉 お楽しみに
