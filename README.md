@@ -7,7 +7,7 @@ A VRM 3D character that lives in your **VS Code sidebar** (reacts to Claude Code
 Click for the YouTube demo ↓
 [![AI Avatar v9 Demo](https://img.youtube.com/vi/WOBhUQAm3HM/maxresdefault.jpg)](https://www.youtube.com/shorts/WOBhUQAm3HM)
 
-🎉 Thank you for 100+ installs on VS Code!  
+🎉 Thank you for 200+ installs on VS Code!  
 🛒 **[Download from VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=web-developer-hyper.ai-avatar)**
 
 🛒 **[Download from Chrome Web Store](https://chromewebstore.google.com/detail/ai-avatar/afmcfaeaaojalninahhhjnonhmlmiidi)**
@@ -19,7 +19,7 @@ Click for the YouTube demo ↓
 - **v5,v6** → [🦸Let Superheroes Cheer You Up (AI Avatar v6: Chrome Extension + VS Code Extension)](https://dev.to/webdeveloperhyper/let-superheroes-cheer-you-up-ai-avatar-v6-chrome-extension-vs-code-extension-2ak7)
 - **v7** → [🫡We'll Support You with All Our Might (AI Avatar v7: Pose Capture and More (VS Code and Chrome Extension))](https://dev.to/webdeveloperhyper/well-support-you-with-all-our-might-ai-avatar-v7-pose-capture-and-more-vs-code-and-chrome-3aab)
 - **v8,v9,v10** → [🎥AI Chat, AI Cheering Messages, and Animation Editor Hyper (AI Avatar v10: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/ai-chat-ai-cheering-messages-and-animation-editor-hyper-ai-avatar-v10-vs-code-and-chrome-1noo)
-- **v11,v12,v13,v14** → coming soon!
+- **v11,v12,v13,v14,v15** → coming soon!
 
 ---
 
@@ -52,6 +52,7 @@ Click for the YouTube demo ↓
 - 🕺 **Richer idle animations** — random cycle picks from neck tilt / body tilt / whole-body gravity lean each interval *(v11)*
 - 🪙 **Millionaire Mode** — 3D coin or diamond fountain bursts from the avatar on every reaction *(v12)*
 - 🎢 **Roller Coaster Mode** — avatar rides a 3D roller coaster in Default, Rainbow, or Water theme *(v14)*
+- 🎆 **Background Effects** — loading and 5 reaction backgrounds (Galaxy, Magic, Cyber, Comic, Idol Stage) randomly appear on each reaction *(v15)*
 
 ---
 
@@ -111,6 +112,14 @@ Makes cool poses.
 Always trying to make a cool app, but always ends up making a silly app.
 He thinks Purple and Pink like him, but they are just using him.
 Makes silly poses.
+
+| v2 | v3 | v4 | v5 | v6 | v7 |
+|---|---|---|---|---|---|
+| <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v2.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v3.png" width="45px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v4.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v5.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v6.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v7.png" width="40px"> |
+
+**Candy Pink** ↑
+
+👉 **[Download Candy Pink from GitHub](https://github.com/webdeveloperhyper/ai-avatar/tree/main/avatars)**
 
 ---
 
@@ -303,7 +312,7 @@ Available on VS Code and Chrome.
 ## Millionaire Mode *(v12)*
 
 Click for the YouTube demo ↓
-[![AI Avatar v13 Demo](https://img.youtube.com/vi/ACcrC_mWx_U/maxresdefault.jpg)](https://www.youtube.com/shorts/ACcrC_mWx_U)
+[![AI Avatar v12 Demo](https://img.youtube.com/vi/ACcrC_mWx_U/maxresdefault.jpg)](https://www.youtube.com/shorts/ACcrC_mWx_U)
 
 Select a mode with the **Millionaire** radio buttons in the toolbar:
 
@@ -322,7 +331,7 @@ When Millionaire mode is active, a **🪙 coin counter** appears in the top bar 
 ## Roller Coaster Mode *(v14)*
 
 Click for the YouTube demo ↓
-[![AI Avatar v13 Demo](https://img.youtube.com/vi/iyecc2jEQcY/maxresdefault.jpg)](https://www.youtube.com/shorts/iyecc2jEQcY)
+[![AI Avatar v14 Demo](https://img.youtube.com/vi/iyecc2jEQcY/maxresdefault.jpg)](https://www.youtube.com/shorts/iyecc2jEQcY)
 
 Select a theme with the **Roller Coaster** radio buttons in the toolbar:
 
@@ -334,6 +343,29 @@ Select a theme with the **Roller Coaster** radio buttons in the toolbar:
 | `Water` | Underwater track with rising transparent bubbles; blue gradient background and blue overlay |
 
 The avatar stands on a skateboard-shaped cart and rides the full looping track. The camera chases from behind so you can always see the avatar.
+
+---
+
+## Background Effects *(v15)*
+
+*Effects designed by [@RutenVeil](https://x.com/RutenVeil).*
+
+Click for the YouTube demo ↓
+[![AI Avatar v15 Demo](https://img.youtube.com/vi/oe025rprCqM/maxresdefault.jpg)](https://www.youtube.com/shorts/oe025rprCqM)
+
+**Loading effect** plays automatically when the avatar first loads — a hologram scan line sweeps from top to bottom, carving the avatar out of the darkness against an SF space background.
+
+**Reaction backgrounds** appear randomly on every reaction. There are 5 themes:
+
+| Theme | Style |
+|---|---|
+| `Galaxy` | Starry night sky with aurora, glowing nebula, and twinkling sparkles |
+| `Magic` | Magic circles at feet and overhead; butterflies, sparkles, and light mist rise from below |
+| `Cyber` | Cyberspace reveal — amoeba mask dissolves to expose a digital background with hologram UI elements |
+| `Comic` | Comic burst — speech balloons, thunderbolts, and confetti pop out sequentially, then fade leaving only the avatar |
+| `Idol Stage` | Concert stage curtain drops; spotlights swing, glowsticks sway, and hearts burst outward |
+
+The **Effect** button in the toolbar toggles all background effects on/off. Effects are automatically hidden during Roller Coaster mode.
 
 ---
 
@@ -378,6 +410,15 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 
 - VS Code 1.85+
 - [Claude Code](https://claude.ai/code) CLI or VS Code extension (for automatic reactions)
+
+---
+
+## Special Thanks
+
+- [@RutenVeil](https://x.com/RutenVeil) — Created the background effects in v15.
+- [@Gramli](https://github.com/Gramli) — Updated in v2 and keeps supporting.
+- [@aryanc193](https://github.com/aryanc193) — Made the avatar collaboration project that is the beginning of AI Avatar and keeps supporting.
+- **Maximum Blue** — Made avatars in v6 and keeps supporting.
 
 ---
 
@@ -461,8 +502,17 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 - 🎢 Roller Coaster Mode — avatar rides a 3D roller coaster in Default, Rainbow, or Water theme
 - 🪙 Add coin counter in the top bar
 - ❓ Add help button in the top bar
+- 🐛 Bug fixes: roller coaster CSS and Chrome Giant Mode display
 
-**v15** — Now creating!
+**v15** ✅
+- 🎆 Background Effects — SF loading effect on avatar load; 5 animated reaction backgrounds (Galaxy, Magic, Cyber, Comic, Idol Stage) randomly selected on each reaction
+- 💥 Roller Coaster Rainbow mode — large stars now explode into a burst of colored particles when they hit the avatar
+- 🦁 Giant Mode state sync — Effect, bubble visibility, TTS mode, and language now carried over from the panel when opening Giant Mode
+- 🐛 Fix: Animation editor — image picker no longer resets the pose to default; unintended idle/click animations no longer fire while editing
+- ✨ Fix: Settings panel now has a scrollbar so all buttons are reachable
+- 💃 Candy Pink Avatar — added Candy Pink v2–v7 image gallery and VRM avatar download link
+
+**v16** — Now creating!
 - 🎉 More fun updates
 
 ---
@@ -474,7 +524,7 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 Click for the YouTube demo ↓
 [![AI Avatar v9 デモ動画](https://img.youtube.com/vi/WOBhUQAm3HM/maxresdefault.jpg)](https://www.youtube.com/shorts/WOBhUQAm3HM)
 
-🎉 VS Code版100インストール達成！ありがとうございます！  
+🎉 VS Code版200インストール達成！ありがとうございます！  
 🛒 **[VS Code Marketplaceからダウンロード](https://marketplace.visualstudio.com/items?itemName=web-developer-hyper.ai-avatar)**
 
 🛒 **[Chrome ウェブストアからダウンロード](https://chromewebstore.google.com/detail/ai-avatar/afmcfaeaaojalninahhhjnonhmlmiidi)**
@@ -487,7 +537,7 @@ Click for the YouTube demo ↓
 - **v7** → [🫡全力でサポートします！ (AI Avatar v7)](https://dev.to/webdeveloperhyper/well-support-you-with-all-our-might-ai-avatar-v7-pose-capture-and-more-vs-code-and-chrome-3aab)
 - **v8,v9,v10** → [🎥AIチャット、AI応援メッセージ、アニメーションエディタ ハイパー (AI Avatar v10: VS
   Code・Chrome拡張機能)](https://dev.to/webdeveloperhyper/ai-chat-ai-cheering-messages-and-animation-editor-hyper-ai-avatar-v10-vs-code-and-chrome-1noo)
-- **v11,v12,v13,v14** → coming soon!
+- **v11,v12,v13,v14,v15** → coming soon!
 
 ---
 
@@ -520,6 +570,7 @@ Click for the YouTube demo ↓
 - 🕺 **豊かなアイドルアニメーション** — 首の傾き / 体の傾き / 重力リーンをランダムにサイクル *(v11)*
 - 🪙 **ミリオネアモード** — リアクションのたびにアバターから3Dコインまたはダイヤモンドが噴き出す *(v12)*
 - 🎢 **ローラーコースターモード** — Default・Rainbow・Waterの3テーマで3Dローラーコースターに乗る *(v14)*
+- 🎆 **背景エフェクト** — ロード時のSFエフェクト＋5種類のリアクション背景（Galaxy・Magic・Cyber・Comic・Idol Stage）がリアクション時にランダム表示 *(v15)*
 
 ---
 
@@ -579,6 +630,15 @@ v6では新しいサンプルキャラクター（女の子3体・男の子2体�
 いつもカッコいいアプリを作ろうと挑戦するが、なぜかいつもふざけたアプリになってしまいます。
 Purple と Pink が自分のことを好きだと思っているが、実際には利用されているだけ。
 変なポーズが得意。
+
+
+| v2 | v3 | v4 | v5 | v6 | v7 |
+|---|---|---|---|---|---|
+| <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v2.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v3.png" width="45px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v4.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v5.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v6.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v7.png" width="40px"> |
+
+**Candy Pink** ↑
+
+👉 **[GitHubからCandy Pinkをダウンロード](https://github.com/webdeveloperhyper/ai-avatar/tree/main/avatars)**
 
 ---
 
@@ -771,7 +831,7 @@ VS CodeとChrome両対応。
 ## ミリオネアモード *(v12)*
 
 Click for the YouTube demo ↓
-[![AI Avatar v13 Demo](https://img.youtube.com/vi/ACcrC_mWx_U/maxresdefault.jpg)](https://www.youtube.com/shorts/ACcrC_mWx_U)
+[![AI Avatar v12 Demo](https://img.youtube.com/vi/ACcrC_mWx_U/maxresdefault.jpg)](https://www.youtube.com/shorts/ACcrC_mWx_U)
 
 ツールバーの **Millionaire** ラジオボタンでモードを選択：
 
@@ -790,7 +850,7 @@ Click for the YouTube demo ↓
 ## ローラーコースターモード *(v14)*
 
 Click for the YouTube demo ↓
-[![AI Avatar v13 Demo](https://img.youtube.com/vi/iyecc2jEQcY/maxresdefault.jpg)](https://www.youtube.com/shorts/iyecc2jEQcY)
+[![AI Avatar v14 Demo](https://img.youtube.com/vi/iyecc2jEQcY/maxresdefault.jpg)](https://www.youtube.com/shorts/iyecc2jEQcY)
 
 ツールバーの **Roller Coaster** ラジオボタンでテーマを選択：
 
@@ -802,6 +862,29 @@ Click for the YouTube demo ↓
 | `Water` | 上昇する透明な泡が漂う水中トラック；青いグラデーション背景と青いオーバーレイ |
 
 アバターはスケートボード型カートに立ってループトラックを走ります。チェイスカメラが後ろから追跡するのでアバターを常に確認できます。
+
+---
+
+## 背景エフェクト *(v15)*
+
+*エフェクト制作：[@RutenVeil](https://x.com/RutenVeil)*
+
+Click for the YouTube demo ↓
+[![AI Avatar v15 Demo](https://img.youtube.com/vi/oe025rprCqM/maxresdefault.jpg)](https://www.youtube.com/shorts/oe025rprCqM)
+
+**ロードエフェクト**はアバターが最初に読み込まれるときに自動再生されます。ホログラムのスキャンラインが上から下に走り、SF宇宙背景の中からアバターが削り出されるように登場します。
+
+**リアクション背景**はリアクションのたびにランダムで表示されます。5種類のテーマがあります：
+
+| テーマ | スタイル |
+|---|---|
+| `Galaxy` | オーロラ・星雲・キラキラが輝く星空 |
+| `Magic` | 足元と頭上に魔法陣が出現し、蝶・キラキラ・光のモヤが下から湧き上がる |
+| `Cyber` | 電脳空間 — アメーバ状マスクが溶けて消え、ホログラムUIが浮かぶデジタル背景が現れる |
+| `Comic` | コミック — 吹き出し・雷マーク・紙吹雪がポップコーン式に次々出現し、最後はアバターだけが残る |
+| `Idol Stage` | ステージの幕が上から降りてきて開演；スポットライトが揺れ、サイリウムが振られ、ハートが飛び散る |
+
+ツールバーの **Effect** ボタンで全背景エフェクトのオン/オフを切り替えられます。ローラーコースターモード中はエフェクトが自動的に非表示になります。
 
 ---
 
@@ -846,6 +929,15 @@ Click for the YouTube demo ↓
 
 - VS Code 1.85以上
 - [Claude Code](https://claude.ai/code) CLIまたはVS Code拡張機能（自動反応に必要）
+
+---
+
+## スペシャルサンクス
+
+- [@RutenVeil](https://x.com/RutenVeil) — v15の背景エフェクトを制作。
+- [@Gramli](https://github.com/Gramli) — v2のアップデートに貢献し、継続的にサポート。
+- [@aryanc193](https://github.com/aryanc193) — AI Avatarの原点となるアバターコラボレーションプロジェクトを制作し、継続的にサポート。
+- **Maximum Blue** — v6でアバターを制作し、継続的にサポート。
 
 ---
 
@@ -929,6 +1021,15 @@ Click for the YouTube demo ↓
 - 🎢 ローラーコースターモード — Default・Rainbow・Waterの3テーマで3Dローラーコースターに乗る
 - 🪙 トップバーにコインカウンターを追加
 - ❓ トップバーにヘルプボタンを追加
+- 🐛 バグ修正：ローラーコースターCSSとChromeジャイアントモードの表示
 
-**v15** — Now creating!
+**v15** ✅
+- 🎆 背景エフェクト — ロード時のSFエフェクト＋5種類のリアクション背景（Galaxy・Magic・Cyber・Comic・Idol Stage）がリアクション時にランダム表示
+- 💥 ローラーコースター Rainbowモード — 大きな星がアバターに当たると、カラフルなパーティクルが爆発するように弾け飛ぶ
+- 🦁 ジャイアントモード状態同期 — ジャイアントモードを開くとエフェクト・吹き出し・TTSモード・言語の状態がパネルから引き継がれるように修正
+- 🐛 バグ修正：アニメーションエディタで画像選択中にポーズがリセットされる問題を修正；アニメーションエディタで意図しないアイドル・クリックアニメーションが発火する問題を修正
+- ✨ 設定パネルにスクロールバーを追加（ボタンが見切れなくなりました）
+- 💃 Candy Pink Avatar — Candy Pink v2〜v7のバージョン別画像ギャラリーとVRMアバターのダウンロードリンクを追加
+
+**v16** — 作成中!
 - 🎉 お楽しみに
