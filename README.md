@@ -114,9 +114,9 @@ Always trying to make a cool app, but always ends up making a silly app.
 He thinks Purple and Pink like him, but they are just using him.
 Makes silly poses.
 
-| v2 | v3 | v4 | v5 | v6 | v7 |
-|---|---|---|---|---|---|
-| <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v2.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v3.png" width="45px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v4.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v5.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v6.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v7.png" width="40px"> |
+| v2 | v3 | v4 | v5 | v6 | v7 | v8 cat |
+|---|---|---|---|---|---|---| 
+| <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v2.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v3.png" width="45px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v4.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v5.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v6.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v7.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v8-cat.png" width="40px"> |
 
 **Candy Pink** ↑
 
@@ -633,10 +633,9 @@ v6では新しいサンプルキャラクター（女の子3体・男の子2体�
 Purple と Pink が自分のことを好きだと思っているが、実際には利用されているだけ。
 変なポーズが得意。
 
-
-| v2 | v3 | v4 | v5 | v6 | v7 |
-|---|---|---|---|---|---|
-| <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v2.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v3.png" width="45px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v4.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v5.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v6.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v7.png" width="40px"> |
+| v2 | v3 | v4 | v5 | v6 | v7 | v8 cat |
+|---|---|---|---|---|---|---| 
+| <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v2.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v3.png" width="45px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v4.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v5.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v6.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v7.png" width="40px"> | <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/candy-pink-v8-cat.png" width="40px"> |
 
 **Candy Pink** ↑
 
