@@ -2,7 +2,7 @@
 
 (日本語の説明は下部をご覧ください / Japanese version below)
 
-A VRM 3D character that lives in your **VS Code sidebar** (reacts to Claude Code / GitHub Copilot) or **browser side panel** (reacts to ChatGPT / Claude). Animations and speech bubbles all run without AI too.
+AI Avatar is a free app where your VRoid (VRM) avatar cheers you with all its might.🤗 It lives in your **VS Code sidebar** (reacts to Claude Code / GitHub Copilot) or **browser side panel** (reacts to ChatGPT / Claude). Animations and speech bubbles all run without AI too.
 
 Click for the YouTube demo ↓
 [![AI Avatar v9 Demo](https://img.youtube.com/vi/WOBhUQAm3HM/maxresdefault.jpg)](https://www.youtube.com/shorts/WOBhUQAm3HM)
@@ -39,21 +39,22 @@ Click for the YouTube demo ↓
 - 👀 **Eye tracking** — eyes and head follow your mouse cursor when idle
 - 💬 **Lipsync** — mouth animates while Claude is replying
 - 😊 **Click or press Enter to interact** — triggers a smile, nod, and animation (if ON)
-- 💬 **Custom speech messages** — edit the speech bubble messages via the Messages button (saved to settings)
+- 💬 **Custom speech messages** — edit the speech bubble messages via the Messages button; choose Fixed (built-in) / Custom / Both pool *(v16)*
 - 😂 **Jokes** — avatar tells jokes via the Jokes button *(v2)*
 - 📸 **Pose Capture** — capture a real body pose with your webcam and export it as a VRM animation JSON *(v7)*
 - ❤️ **Positive word reactions** *(VS Code only)* — heart counter, smile, and heart overlay animation when positive words are detected; broken heart and head shake on negative words *(v7)*
 - 🔍 **Prompt Checker [Beta]** *(VS Code only)* — paste any AI prompt and get instant rule-based feedback on clarity, specificity, and structure *(v7)*
 - 🦁 **Giant Mode** *(Chrome only)* — float the avatar as a draggable, resizable overlay over any web page *(v7)*
 - 🤖 **AI Chat** — always-visible chat input at the bottom of the panel; ask the avatar anything; replies appear as speech bubbles and trigger animations; supports Gemini API and Ollama *(v9)*
-- 🗣️ **Text-to-Speech** — Speech:Off / Speech:API (Web Speech API) / Speech:AI (Gemini TTS, uses your API key) *(v11)* / Speech:Local (Kokoro EN + VOICEVOX JP) *(v13)*
-- 🧠 **Contextual speech bubbles** — character reacts to special days (EN/JP separate lists), session count milestones, coding gap, session length, day of week, and time of day *(v11)*
+- 🗣️ **Text-to-Speech** — Speech:Off / Speech:API (Web Speech API) / Speech:AI (Gemini TTS, uses your API key) *(v11)* / Speech:Local (Kokoro EN + VOICEVOX JP) *(v13)* / Kokoro Server for faster local EN TTS *(v16)*
+- 🧠 **Contextual speech bubbles** — character reacts to special days (EN/JP separate lists), session count milestones, coding gap, session length, day of week, and time of day *(v11)* *(v16)*
 - 🎭 **AI Style** — Cute / Energetic / Cool character modes *(v11)*
 - 🌐 **Lang toggle** — single `Lang: EN/JP` button controls bubble language and chat language together *(v11)*
 - 🕺 **Richer idle animations** — random cycle picks from neck tilt / body tilt / whole-body gravity lean each interval *(v11)*
 - 🪙 **Millionaire Mode** — 3D coin or diamond fountain bursts from the avatar on every reaction *(v12)*
 - 🎢 **Roller Coaster Mode** — avatar rides a 3D roller coaster in Default, Rainbow, or Water theme *(v14)*
 - 🎆 **Background Effects** — loading and 5 reaction backgrounds (Galaxy, Magic, Cyber, Comic, Idol Stage) randomly appear on each reaction *(v15)*
+- 🐱 **Cat Mode** — avatar speaks like a cat (meow/にゃ flavor) with full contextual message support *(v16)*
 
 ---
 
@@ -250,7 +251,7 @@ Speech:AI requires the same Gemini API key used for AI Chat. If no key is set, S
 
 ---
 
-## Speech:Local *(v13)*
+## Speech:Local *(v13)* *(v16)*
 
 Offline TTS — no API key or internet required. Select **Speech:Local** in the Speech radio group.
 
@@ -263,6 +264,27 @@ Two engines run depending on language:
 
 **Kokoro** downloads and caches the model on first use, then warms it up so the first response is instant. No further downloads after the initial load.
 
+**Kokoro Server *(v16)*:**
+
+The default in-browser Kokoro runs neural network inference inside WebAssembly, which is significantly slower than native execution — every message takes several seconds to synthesize. The **Kokoro Server** runs the same model as a local Python process using the native ONNX Runtime, which is much faster and produces speech in under a second per message.
+
+Requirements (install once):
+```
+pip install kokoro-onnx soundfile fastapi uvicorn
+```
+
+**VS Code usage:**
+1. Toggle **Kokoro Server: On** in the toolbar — the extension starts the server; on first run the server downloads the model files (~300 MB) separately to `~/.cache/kokoro-onnx/`
+2. Wait for the status to show ready, then speak as normal — the Speech radio group is disabled while the server is active
+
+**Chrome usage:**
+1. Download [kokoro_server.py](https://github.com/webdeveloperhyper/ai-avatar/blob/main/scripts/kokoro_server.py) and run it:
+   ```
+   python kokoro_server.py
+   ```
+2. Wait for `Model loaded. Server ready`
+3. Toggle **Kokoro Server: On** in the panel — the Speech radio group is disabled while the server is active
+
 **VOICEVOX setup (required for JP):**
 1. Download VOICEVOX from [voicevox.hiroshiba.jp](https://voicevox.hiroshiba.jp/) (free, Windows / Mac / Linux)
 2. Install and launch it — it runs as a local server on port 50021
@@ -274,19 +296,20 @@ Voice gender (Female / Male) applies to both engines.
 
 ---
 
-## Contextual Speech Bubbles *(v11)*
+## Contextual Speech Bubbles *(v11)* *(v16)*
 
-The speech bubble checks a priority chain before showing a message. Higher-priority conditions fire first; each fires at most once per session:
+The speech bubble checks a priority chain before showing a message. Higher-priority conditions fire first; each fires at most once per session, except time of day which fires once per time period *(v16)* (persists across restarts):
 
 | Priority | Condition | Example |
 |---|---|---|
 | 1 | Special day (holiday) | "Happy Halloween! 🎃" |
-| 2 | Session count milestone | "10th reaction today! 🎉" |
-| 3 | Long gap since last reaction | "Welcome back! Missed you 💕" |
-| 4 | Long session | "You've been at it for an hour! 🔥" |
-| 5 | Day of week | "Happy Monday! Let's go! ⚡" |
-| 6 | Time of day | "Good morning! ☀️" |
-| 7 | AI / fixed pool | Normal reaction message |
+| 2 | Monthly greeting *(v16)* | "Happy New Year! 🎊" |
+| 3 | Session count milestone | "10th reaction today! 🎉" |
+| 4 | Long gap since last reaction | "Welcome back! Missed you 💕" |
+| 5 | Long session | "You've been at it for an hour! 🔥" |
+| 6 | Day of week | "Happy Monday! Let's go! ⚡" |
+| 7 | Time of day *(once per period v16)* | "Good morning! ☀️" |
+| 8 | AI / fixed pool | Normal reaction message |
 
 EN and JP use separate message pools and separate special day lists (Western vs Japanese holidays).
 
@@ -513,14 +536,24 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 - ✨ Fix: Settings panel now has a scrollbar so all buttons are reachable
 - 💃 Candy Pink Avatar — added Candy Pink v2–v7 image gallery and VRM avatar download link
 
-**v16** — Now creating!
+**v16** ✅
+- 🐱 Cat mode — avatar speaks like a cat (meow/にゃ flavor) with full contextual message support
+- 🐱 Cat pose added to default animations
+- 🐱 Candy Pink v8 Cat avatar added to GitHub — [download here](https://github.com/webdeveloperhyper/ai-avatar/blob/main/avatars/candy-pink8.vrm)
+- 🚀 Kokoro TTS server added to speed up local text-to-speech
+- 🧠 Richer contextual messages — expanded special days (EN/JP), monthly messages, time-of-day message shows once per time period
+- 💬 Message pool toggle — Fixed / Custom / Both radio button; Fixed pool adds 20 built-in cheer messages
+- 🐛 Fix: Animation editor no longer loads poses from the custom animation folder on first open
+- 🐛 Fix: Bubble: Off now correctly hides the bubble when Bubble: AI is active
+
+**v17** — Now creating!
 - 🎉 More fun updates
 
 ---
 
 # AI Avatar（日本語）
 
-**VS Codeサイドバー**（Claude Code / GitHub Copilotに反応）または**ブラウザサイドパネル**（ChatGPT / Claudeに反応）に表示されるVRM 3Dキャラクターです。AIなしでもアニメーションや吹き出しを楽しめます。
+AI Avatarは、推し(自分のVRoid(VRM))が、あなたを全力で応援する無料アプリです。🤗 **VS Codeサイドバー**（Claude Code / GitHub Copilotに反応）または**ブラウザサイドパネル**（ChatGPT / Claudeに反応）に表示されるVRM 3Dキャラクターです。AIなしでもアニメーションや会話を楽しめます。
 
 Click for the YouTube demo ↓
 [![AI Avatar v9 デモ動画](https://img.youtube.com/vi/WOBhUQAm3HM/maxresdefault.jpg)](https://www.youtube.com/shorts/WOBhUQAm3HM)
@@ -558,21 +591,22 @@ Click for the YouTube demo ↓
 - 👀 **視線追跡** — アイドル時に目と頭がマウスカーソルを追う
 - 💬 **リップシンク** — Claudeの返答中に口が動く
 - 😊 **クリックまたはEnterキーで反応** — スマイル、うなずき、アニメーションが発動
-- 💬 **カスタム吹き出しメッセージ** — Messagesボタンからメッセージを編集（設定に保存）
+- 💬 **カスタム吹き出しメッセージ** — Messagesボタンからメッセージを編集；Fixed（内蔵）/ Custom / Bothプール切り替え *(v16)*
 - 😂 **ジョーク** — Jokesボタンでアバターがジョークを言う *(v2)*
 - 📸 **ポーズキャプチャ** — ウェブカメラで体のポーズを撮影し、VRMアニメーションJSONとして書き出し *(v7)*
 - ❤️ **ポジティブワード反応** *（VS Code限定）* — ポジティブワード検出時にハートカウンター・スマイル・ハートオーバーレイアニメーション；ネガティブワードには割れたハートと首振り *(v7)*
 - 🔍 **プロンプトチェッカー [Beta]** *（VS Code限定）* — AIプロンプトを貼り付けるだけで、明確さ・具体性・構造をルールベースで即チェック *(v7)*
 - 🦁 **ジャイアントモード** *（Chrome限定）* — ドラッグ・リサイズ可能なオーバーレイとしてアバターをどのページにも表示 *(v7)*
 - 🤖 **AIチャット** — パネル下部に常時表示されるチャット入力；アバターに何でも質問できる；返答は吹き出しで表示してアニメーションも発動；Gemini APIとOllama対応 *(v9)*
-- 🗣️ **音声読み上げ（TTS）** — Speech:Off / Speech:API（Web Speech API）/ Speech:AI（Gemini TTS、APIキーを使用） *(v11)* / Speech:Local（Kokoro EN + VOICEVOX JP） *(v13)*
-- 🧠 **コンテキスト吹き出し** — 特別な日（EN/JP別リスト）、セッション数マイルストーン、反応間隔、セッション時間、曜日、時間帯に応じた吹き出し *(v11)*
+- 🗣️ **音声読み上げ（TTS）** — Speech:Off / Speech:API（Web Speech API）/ Speech:AI（Gemini TTS、APIキーを使用） *(v11)* / Speech:Local（Kokoro EN + VOICEVOX JP） *(v13)* / Kokoro ServerでローカルEN TTSを高速化 *(v16)*
+- 🧠 **コンテキスト吹き出し** — 特別な日（EN/JP別リスト）、セッション数マイルストーン、反応間隔、セッション時間、曜日、時間帯に応じた吹き出し *(v11)* *(v16)*
 - 🎭 **AIスタイル** — Cute / Energetic / Coolの3つのキャラクターモード *(v11)*
 - 🌐 **言語切り替え** — `Lang: EN/JP` 1つのボタンで吹き出しとチャットの言語を同時に切り替え *(v11)*
 - 🕺 **豊かなアイドルアニメーション** — 首の傾き / 体の傾き / 重力リーンをランダムにサイクル *(v11)*
 - 🪙 **ミリオネアモード** — リアクションのたびにアバターから3Dコインまたはダイヤモンドが噴き出す *(v12)*
 - 🎢 **ローラーコースターモード** — Default・Rainbow・Waterの3テーマで3Dローラーコースターに乗る *(v14)*
 - 🎆 **背景エフェクト** — ロード時のSFエフェクト＋5種類のリアクション背景（Galaxy・Magic・Cyber・Comic・Idol Stage）がリアクション時にランダム表示 *(v15)*
+- 🐱 **Catモード** — アバターが猫語（meow/にゃ）で話す；全コンテキストメッセージ対応 *(v16)*
 
 ---
 
@@ -769,7 +803,7 @@ Speech:AIにはAIチャットと同じGemini APIキーが必要です。キー�
 
 ---
 
-## Speech:Local *(v13)*
+## Speech:Local *(v13)* *(v16)*
 
 オフラインTTS — APIキーもインターネット接続も不要。Speechラジオグループで **Speech:Local** を選択します。
 
@@ -782,6 +816,27 @@ Speech:AIにはAIチャットと同じGemini APIキーが必要です。キー�
 
 **Kokoro** は初回使用時にモデルをダウンロード・キャッシュし、ウォームアップを行うことで初回レスポンスを高速化します。2回目以降は追加ダウンロード不要です。
 
+**Kokoro Server *(v16)*：**
+
+デフォルトのブラウザ内Kokoroはニューラルネットワークの推論をWebAssembly上で実行するため、ネイティブ実行と比べて大幅に遅く、メッセージごとに数秒かかります。**Kokoro Server** は同じモデルをローカルのPythonプロセスとしてネイティブのONNX Runtimeで実行するため、1メッセージあたり1秒未満で音声を生成できます。
+
+必要なパッケージ（一度だけインストール）：
+```
+pip install kokoro-onnx soundfile fastapi uvicorn
+```
+
+**VS Code の使い方：**
+1. ツールバーの **Kokoro Server: On** を選択 — 拡張機能がサーバーを自動起動；初回のみサーバーがモデルファイル（約300 MB）を `~/.cache/kokoro-onnx/` に別途ダウンロード
+2. ステータスが準備完了になったら通常通り話しかける — サーバー起動中はSpeechラジオグループは無効になります
+
+**Chrome の使い方：**
+1. [kokoro_server.py](https://github.com/webdeveloperhyper/ai-avatar/blob/main/scripts/kokoro_server.py) をダウンロードして起動：
+   ```
+   python kokoro_server.py
+   ```
+2. `Model loaded. Server ready` と表示されるまで待つ
+3. パネルの **Kokoro Server: On** を選択 — サーバー起動中はSpeechラジオグループは無効になります
+
 **VOICEVOXのセットアップ（JP使用時に必須）：**
 1. [voicevox.hiroshiba.jp](https://voicevox.hiroshiba.jp/) からVOICEVOXを無料ダウンロード（Windows / Mac / Linux対応）
 2. インストールして起動 — ポート50021でローカルサーバーとして動作します
@@ -793,19 +848,20 @@ JP+Local切り替え時にVOICEVOXが起動していない場合、パネルに�
 
 ---
 
-## コンテキスト吹き出し *(v11)*
+## コンテキスト吹き出し *(v11)* *(v16)*
 
-吹き出しはメッセージを表示する前に優先度チェーンを確認します。高優先度の条件が先に発動し、各条件はセッション中1回のみ：
+吹き出しはメッセージを表示する前に優先度チェーンを確認します。高優先度の条件が先に発動し、各条件はセッション中1回のみ（時間帯は時間帯ごとに1回 *(v16)* 、再起動後も持続）：
 
 | 優先度 | 条件 | 例 |
 |---|---|---|
 | 1 | 特別な日（祝日） | "Happy Halloween! 🎃" |
-| 2 | セッション数マイルストーン | "今日10回目のリアクション！🎉" |
-| 3 | 前回の反応からの間隔 | "おかえり！待ってたよ 💕" |
-| 4 | セッションの長さ | "1時間も頑張ってるね！🔥" |
-| 5 | 曜日 | "月曜日！一緒に頑張ろう！⚡" |
-| 6 | 時間帯 | "おはよう！☀️" |
-| 7 | AI / 通常プール | 通常のリアクションメッセージ |
+| 2 | 月次メッセージ *(v16)* | "あけましておめでとう！🎊" |
+| 3 | セッション数マイルストーン | "今日10回目のリアクション！🎉" |
+| 4 | 前回の反応からの間隔 | "おかえり！待ってたよ 💕" |
+| 5 | セッションの長さ | "1時間も頑張ってるね！🔥" |
+| 6 | 曜日 | "月曜日！一緒に頑張ろう！⚡" |
+| 7 | 時間帯 *(時間帯ごとに1回 v16)* | "おはよう！☀️" |
+| 8 | AI / 通常プール | 通常のリアクションメッセージ |
 
 ENとJPはメッセージプールと特別な日リストが別々（西洋の祝日 vs 日本の祝日）。
 
@@ -1032,5 +1088,15 @@ Click for the YouTube demo ↓
 - ✨ 設定パネルにスクロールバーを追加（ボタンが見切れなくなりました）
 - 💃 Candy Pink Avatar — Candy Pink v2〜v7のバージョン別画像ギャラリーとVRMアバターのダウンロードリンクを追加
 
-**v16** — 作成中!
-- 🎉 お楽しみに
+**v16** ✅
+- 🐱 Catモード — アバターが猫語（meow/にゃ）で話す；全コンテキストメッセージ対応
+- 🐱 デフォルトアニメーションに猫ポーズを追加
+- 🐱 Candy Pink v8 CatアバターをGitHubに追加 — [こちらからダウンロード](https://github.com/webdeveloperhyper/ai-avatar/blob/main/avatars/candy-pink8.vrm)
+- 🚀 Kokoro TTSサーバー追加によるローカル音声読み上げの高速化
+- 🧠 コンテキストメッセージを大幅拡張 — 特別な日（EN/JP）・月次メッセージ・時間帯メッセージを時間帯ごとに1回表示
+- 💬 メッセージプール切り替え — Fixed / Custom / Bothラジオボタン；Fixedで20件の内蔵応援メッセージを使用
+- 🐛 バグ修正：アニメーションエディタが初回起動時にカスタムフォルダのポーズを誤って読み込む問題を修正
+- 🐛 バグ修正：Bubble: AI有効時にBubble: Offが正しく機能しない問題を修正
+
+**v17** — 作成中！
+- 🎉 さらに楽しいアップデート
