@@ -393,6 +393,19 @@ The **Effect** button in the toolbar toggles all background effects on/off. Effe
 
 ---
 
+## Cat Mode *(v16)*
+
+Click for the YouTube demo ↓
+[![AI Avatar Cat Mode Demo](https://img.youtube.com/vi/2KteUU287zA/maxresdefault.jpg)](https://youtube.com/shorts/2KteUU287zA)
+
+Click the **Cat Mode** button in the toolbar to toggle cat mode on/off.
+
+When Cat Mode is on, all speech bubble messages get a cat flavor — English messages are prefixed with `Meow!` or `Purrr!`, and Japanese messages end with `にゃ`. The full cat text is shown in the bubble exactly as-is.
+
+**Cat Sound** — a second button appears next to Cat Mode. When Cat Sound is on, a random meow sound plays before each TTS message. The sound plays first, then TTS reads the message (Meow!/Purrr! prefix is stripped from TTS so it isn't read aloud — only the meaningful content is spoken).
+
+---
+
 ## Watcher *(VS Code only)* *(v2)*
 
 Click the **Switch Watcher** button to toggle between watching **Claude Code** and **GitHub Copilot** activity.
@@ -942,6 +955,19 @@ Click for the YouTube demo ↓
 | `Idol Stage` | ステージの幕が上から降りてきて開演；スポットライトが揺れ、サイリウムが振られ、ハートが飛び散る |
 
 ツールバーの **Effect** ボタンで全背景エフェクトのオン/オフを切り替えられます。ローラーコースターモード中はエフェクトが自動的に非表示になります。
+
+---
+
+## ネコモード *(v16)*
+
+Click for the YouTube demo ↓
+[![AI Avatar Cat Mode Demo](https://img.youtube.com/vi/2KteUU287zA/maxresdefault.jpg)](https://youtube.com/shorts/2KteUU287zA)
+
+ツールバーの **Cat Mode** ボタンでネコモードのオン/オフを切り替えられます。
+
+ネコモードがオンのとき、すべての吹き出しメッセージがネコ風になります。英語メッセージは `Meow!` または `Purrr!` で始まり、日本語メッセージは `にゃ` で終わります。吹き出しにはネコ文体がそのまま表示されます。
+
+**Cat Sound** — Cat Modeの横にもう一つボタンが表示されます。Cat Soundがオンのとき、TTSメッセージの前にランダムなにゃー声が再生されます。音が先に鳴り、その後TTSがメッセージを読み上げます（TTSでは `Meow!`/`Purrr!` の部分は読まれず、意味のある内容だけが読み上げられます）。
 
 ---
 
