@@ -1,8 +1,10 @@
 # AI Avatar
 
-(日本語の説明は下部をご覧ください / Japanese version below)
+([日本語の説明は下部をご覧ください / Japanese version below](#ai-avatar日本語))
 
 AI Avatar is a free app where your VRoid (VRM) avatar cheers you with all its might.🤗 It lives in your **VS Code sidebar** (reacts to Claude Code / GitHub Copilot) or **browser side panel** (reacts to ChatGPT / Claude). Animations and speech bubbles all run without AI too.
+
+**Jump to:** [✨ Features](#features) · [📖 Details](#getting-started) · [🗺️ Roadmap](#roadmap)
 
 Click for the YouTube demo ↓
 [![AI Avatar v9 Demo](https://img.youtube.com/vi/WOBhUQAm3HM/maxresdefault.jpg)](https://www.youtube.com/shorts/WOBhUQAm3HM)
@@ -29,32 +31,35 @@ Click for the YouTube demo ↓
 <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/main.png" width="50%">
 
 - 🎭 **Live reactions** — character automatically reacts when you send a message to AI
-- 🔀 **Watcher switching** *(VS Code only)* — switch between watching Claude Code or GitHub Copilot *(v2)*
-- 🔄 **Change Avatar** — swap your `VRM` character anytime with the button at the top
-- 💃 **Animations** — play `.vrma` motion clips or custom JSON poses; 5 separate toggle buttons: Off / Default / Random *(v7)* / Custom *(v2)* / Custom Random *(v8)* *(v10)*
-- 💬 **AI Speech Bubble** *(VS Code only)* — toggle Fixed/AI mode; in AI mode the character reacts to Claude Code activity with context-aware speech *(v10)*
-- 🎬 **Animation Editor** — multi-keyframe timeline with in / hold / out timing *(v4)*; all 30 finger bones *(v5)*; values in degrees *(v5)*
-- 🎨 **Random Editor** — edit zone-split pattern JSON directly in the Animation Editor; Body & Arms / Legs / Fingers zones, add/delete/navigate patterns *(v8)*
+- 🔀 **[Watcher switching](#watcher-vs-code-only-v2)** *(VS Code only)* — switch between watching Claude Code or GitHub Copilot *(v2)*
+- 🔄 **[Change Avatar](#use-your-own-vrm-character)** — swap your `VRM` character anytime with the button at the top
+- 💃 **[Animations](#animations-v2)** — play `.vrma` motion clips or custom JSON poses; 5 separate toggle buttons: Off / Default / Random *(v7)* / Custom *(v2)* / Custom Random *(v8)* *(v10)*
+- 💬 **[AI Speech Bubble](#contextual-speech-bubbles-v11-v16)** *(VS Code only)* — toggle Fixed/AI mode; in AI mode the character reacts to Claude Code activity with context-aware speech *(v10)*
+- 🎬 **[Animation Editor](#animation-editor-v4)** — multi-keyframe timeline with in / hold / out timing *(v4)*; all 30 finger bones *(v5)*; values in degrees *(v5)*
+- 🎨 **[Random Editor](#animation-editor-v4)** — edit zone-split pattern JSON directly in the Animation Editor; Body & Arms / Legs / Fingers zones, add/delete/navigate patterns *(v8)*
 - 🎥 **OrbitControls** — drag to rotate, scroll to zoom, right-click to pan
 - 👀 **Eye tracking** — eyes and head follow your mouse cursor when idle
 - 💬 **Lipsync** — mouth animates while Claude is replying
 - 😊 **Click or press Enter to interact** — triggers a smile, nod, and animation (if ON)
-- 💬 **Custom speech messages** — edit the speech bubble messages via the Messages button; choose Fixed (built-in) / Custom / Both pool *(v16)*
+- 💬 **[Custom speech messages](#speech-bubble-messages)** — edit the speech bubble messages via the Messages button; choose Fixed (built-in) / Custom / Both pool *(v16)*
 - 😂 **Jokes** — avatar tells jokes via the Jokes button *(v2)*
 - 📸 **Pose Capture** — capture a real body pose with your webcam and export it as a VRM animation JSON *(v7)*
 - ❤️ **Positive word reactions** *(VS Code only)* — heart counter, smile, and heart overlay animation when positive words are detected; broken heart and head shake on negative words *(v7)*
 - 🔍 **Prompt Checker [Beta]** *(VS Code only)* — paste any AI prompt and get instant rule-based feedback on clarity, specificity, and structure *(v7)*
-- 🦁 **Giant Mode** *(Chrome only)* — float the avatar as a draggable, resizable overlay over any web page *(v7)*
-- 🤖 **AI Chat** — always-visible chat input at the bottom of the panel; ask the avatar anything; replies appear as speech bubbles and trigger animations; supports Gemini API and Ollama *(v9)*
-- 🗣️ **Text-to-Speech** — Speech:Off / Speech:API (Web Speech API) / Speech:AI (Gemini TTS, uses your API key) *(v11)* / Speech:Local (Kokoro EN + VOICEVOX JP) *(v13)* / Kokoro Server for faster local EN TTS *(v16)*
-- 🧠 **Contextual speech bubbles** — character reacts to special days (EN/JP separate lists), session count milestones, coding gap, session length, day of week, and time of day *(v11)* *(v16)*
-- 🎭 **AI Style** — Cute / Energetic / Cool character modes *(v11)*
+- 🦁 **[Giant Mode](#giant-mode-chrome-only)** *(Chrome only)* — float the avatar as a draggable, resizable overlay over any web page *(v7)*
+- 🤖 **[AI Chat](#ai-chat-v9)** — always-visible chat input at the bottom of the panel; ask the avatar anything; replies appear as speech bubbles and trigger animations; supports Gemini API and Ollama *(v9)*
+- 🗣️ **[Text-to-Speech](#text-to-speech-v11)** — Speech:Off / Speech:API (Web Speech API) / Speech:AI (Gemini TTS, uses your API key) *(v11)* / [Speech:Local](#speechlocal-v13-v16) (Kokoro EN + VOICEVOX JP) *(v13)* / Kokoro Server for faster local EN TTS *(v16)*
+- 🧠 **[Contextual speech bubbles](#contextual-speech-bubbles-v11-v16)** — character reacts to special days (EN/JP separate lists), session count milestones, coding gap, session length, day of week, and time of day *(v11)* *(v16)*
+- 🎭 **[AI Style](#ai-style-v11)** — Cute / Energetic / Cool character modes *(v11)*
 - 🌐 **Lang toggle** — single `Lang: EN/JP` button controls bubble language and chat language together *(v11)*
 - 🕺 **Richer idle animations** — random cycle picks from neck tilt / body tilt / whole-body gravity lean each interval *(v11)*
-- 🪙 **Millionaire Mode** — 3D coin or diamond fountain bursts from the avatar on every reaction *(v12)*
-- 🎢 **Roller Coaster Mode** — avatar rides a 3D roller coaster in Default, Rainbow, or Water theme *(v14)*
-- 🎆 **Background Effects** — loading and 5 reaction backgrounds (Galaxy, Magic, Cyber, Comic, Idol Stage) randomly appear on each reaction *(v15)*
-- 🐱 **Cat Mode** — avatar speaks like a cat (meow/にゃ flavor) with full contextual message support *(v16)*
+- 🪙 **[Millionaire Mode](#millionaire-mode-v12)** — 3D coin or diamond fountain bursts from the avatar on every reaction *(v12)*
+- 🎢 **[Roller Coaster Mode](#roller-coaster-mode-v14)** — avatar rides a 3D roller coaster in Default, Rainbow, or Water theme *(v14)*
+- 🎆 **[Background Effects](#background-effects-v15)** — loading and 5 reaction backgrounds (Galaxy, Magic, Cyber, Comic, Idol Stage) randomly appear on each reaction *(v15)*
+- 🐱 **[Cat Mode](#cat-mode-v16)** — avatar speaks like a cat (meow/にゃ flavor) with full contextual message support *(v16)*
+- 🏢 **[AI Office Mode](#ai-office-mode-v17)** — boss and sub avatars patrol the panel and report to each other with speech bubbles and TTS *(v17)*
+- 🐾 **[Launch Catbot](#catbot-v17)** — launch the AI catbot app directly from the sidebar *(v17)*
+- 🐾 **[Catbot avatar](#catbot-v17)** — the AI catbot collaborator appears as a live 3D VRM avatar in the panel *(v17)*
 
 ---
 
@@ -406,6 +411,36 @@ When Cat Mode is on, all speech bubble messages get a cat flavor — English mes
 
 ---
 
+## AI Office Mode *(v17)*
+
+Two 3D avatars — **Boss** and **Sub** — appear in the panel and patrol back and forth. They stop, face each other, and exchange speech bubbles with TTS. On each AI reaction, Boss calls Sub over for a status report.
+
+- Boss and Sub are full VRM avatars with walk animation and idle speech
+- Speech bubbles appear above each avatar with TTS
+- Millionaire Mode and Roller Coaster Mode are automatically disabled while AI Office is active
+
+**AI Office** — toggle AI Office mode on/off
+
+**Change Boss** — swap the Boss VRM avatar
+
+**Cat Boss** — use the Catbot as the Boss avatar
+
+---
+
+## Catbot *(v17)*
+
+[Catbot](https://github.com/AnnaVi11arrea1/catbot) is a galactic robot cat you can talk to from any device — and a harness that lets you switch between (or combine) all of your AI models. Created by DEV Community friend Anna. See the [Catbot README](https://github.com/AnnaVi11arrea1/catbot) for full feature details and setup instructions.
+
+**No Catbot / Catbot Only / With Catbot** — radio group to choose how the Catbot avatar appears: hidden, shown alone, or shown alongside the main avatar
+
+**Launch Catbot** — starts the server in the catbot folder and opens `http://localhost:8800` in the browser *(Chrome: start the server manually before clicking)*
+
+**Set Catbot** *(VS Code only)* — opens a folder picker to set the catbot folder path *(Chrome: button is disabled)*
+
+**Catbot avatar** — the AI catbot collaborator appears as a live 3D VRM avatar in the panel *(v17)*
+
+---
+
 ## Watcher *(VS Code only)* *(v2)*
 
 Click the **Switch Watcher** button to toggle between watching **Claude Code** and **GitHub Copilot** activity.
@@ -452,7 +487,8 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 
 ## Special Thanks
 
-- [@RutenVeil](https://x.com/RutenVeil) — Created the background effects in v15.
+- [@AnnaVi11arrea1](https://github.com/AnnaVi11arrea1) - Catbot creator and v17 collaborator
+- [@RutenVeil](https://x.com/RutenVeil) — Created the background effects in v15 and keeps supporting.
 - [@Gramli](https://github.com/Gramli) — Updated in v2 and keeps supporting.
 - [@aryanc193](https://github.com/aryanc193) — Made the avatar collaboration project that is the beginning of AI Avatar and keeps supporting.
 - **Maximum Blue** — Made avatars in v6 and keeps supporting.
@@ -468,18 +504,18 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 - Change Avatar, speech bubble messages
 
 **v2** ✅
-- 3-state Animation button (off / Default / Custom)
+- 3-state [Animation](#animations-v2) button (off / Default / Custom)
 - Custom pose editor with JSON save/load
 - Jokes button
 - GitHub Copilot watcher support
-- Watcher switching (Claude ↔ Copilot)
+- [Watcher](#watcher-vs-code-only-v2) switching (Claude ↔ Copilot)
 
 **v3** ✅
 - 🌐 Chrome extension version
 - Various fixes and adjustments
 
 **v4** ✅
-- Pose Editor upgraded to full Animation Editor
+- Pose Editor upgraded to full [Animation Editor](#animation-editor-v4)
 - Multi-keyframe timeline with in / hold / out timing
 - Various fixes and adjustments
 
@@ -498,7 +534,7 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 **v7** ✅
 - 📸 Pose Capture — capture a real body pose with webcam and export it as a VRM animation JSON
 - ❤️ Positive word reactions *(VS Code only)* — heart counter, smile, and heart overlay animation when positive words are detected; broken heart and head shake on negative words
-- 🦁 Giant Mode *(Chrome only)* — float the avatar as a draggable, resizable overlay over any web page
+- 🦁 [Giant Mode](#giant-mode-chrome-only) *(Chrome only)* — float the avatar as a draggable, resizable overlay over any web page
 - 🎲 Animation: Random mode — new 4th state generates random poses from zone patterns (expression, body + arm, fingers, legs)
 - 😊 Expression editor — add Happy or Wink expressions to animation keyframes directly in the editor
 - 🖱️ Click anywhere to react *(Chrome only)* — clicking any web page triggers an animation on the avatar
@@ -507,10 +543,10 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 **v8** ✅
 - 🎲 Animation: Random Custom — 5th animation state; pick a custom zone-pattern JSON, plays random pose combos
 - 🎨 Random Editor — zone-split pattern JSON editor inside the Animation Editor (Body & Arms / Legs / Fingers zones)
-- 🎬 Animation Editor update — now opens as a full-screen tab; three-camera view (RIGHT / FRONT / LEFT), image reference layout, bone arc trail, zone preset buttons, JSON to VRMA export
+- 🎬 [Animation Editor](#animation-editor-v4) update — now opens as a full-screen tab; three-camera view (RIGHT / FRONT / LEFT), image reference layout, bone arc trail, zone preset buttons, JSON to VRMA export
 
 **v9** ✅
-- 🤖 AI Chat — always-visible chat input; ask the avatar anything; replies appear as wide speech bubbles and trigger animations; supports Gemini API and Ollama (local)
+- 🤖 [AI Chat](#ai-chat-v9) — always-visible chat input; ask the avatar anything; replies appear as wide speech bubbles and trigger animations; supports Gemini API and Ollama (local)
 - 🎛️ Panel layout redesign — collapsible toolbar behind ⚙ gear
 - 🐛 Fixed flaky positive/negative word detection *(VS Code only)* — now reliably catches keywords in your messages to Claude Code
 
@@ -520,29 +556,29 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 - 🎭 Improved idle & thinking animations — random idle head micro-tilt every 6–10s; thinking state now shows a natural Z-axis pondering tilt with gentle oscillation
 
 **v11** ✅
-- 🗣️ Text-to-Speech — Speech:Off / Speech:API (Web Speech API) / Speech:AI (Gemini TTS)
-- 🧠 Contextual speech bubbles — character reacts to special days (EN/JP), session count milestones, coding gaps, session length, day of week, and time of day
-- 🎭 AI Style — Cute / Energetic / Cool modes
+- 🗣️ [Text-to-Speech](#text-to-speech-v11) — Speech:Off / Speech:API (Web Speech API) / Speech:AI (Gemini TTS)
+- 🧠 [Contextual speech bubbles](#contextual-speech-bubbles-v11-v16) — character reacts to special days (EN/JP), session count milestones, coding gaps, session length, day of week, and time of day
+- 🎭 [AI Style](#ai-style-v11) — Cute / Energetic / Cool modes
 - 🌐 Lang toggle — single button controls bubble language and chat language together
 - 🕺 Richer idle animations — random cycle picks from neck tilt / body tilt / whole-body gravity lean
 
 **v12** ✅
-- 🪙 Millionaire Mode — 3D coin or diamond fountain bursts from the avatar on every reaction
+- 🪙 [Millionaire Mode](#millionaire-mode-v12) — 3D coin or diamond fountain bursts from the avatar on every reaction
 - 🎛️ Radio group UI — animation, AI style, speech, provider, and millionaire controls redesigned as inline radio buttons
 
 **v13** ✅
-- 🗣️ Speech:Local — Kokoro (EN offline TTS, no API key needed) + VOICEVOX (JP local TTS)
+- 🗣️ [Speech:Local](#speechlocal-v13-v16) — Kokoro (EN offline TTS, no API key needed) + VOICEVOX (JP local TTS)
 - 💬 Bubble On/Off toggle — hide speech bubbles while keeping TTS audio active
 - 🤖 Bubble:AI — contextual messages (special days, time of day, etc.) now go through AI in AI mode
 
 **v14** ✅
-- 🎢 Roller Coaster Mode — avatar rides a 3D roller coaster in Default, Rainbow, or Water theme
+- 🎢 [Roller Coaster Mode](#roller-coaster-mode-v14) — avatar rides a 3D roller coaster in Default, Rainbow, or Water theme
 - 🪙 Add coin counter in the top bar
 - ❓ Add help button in the top bar
 - 🐛 Bug fixes: roller coaster CSS and Chrome Giant Mode display
 
 **v15** ✅
-- 🎆 Background Effects — SF loading effect on avatar load; 5 animated reaction backgrounds (Galaxy, Magic, Cyber, Comic, Idol Stage) randomly selected on each reaction
+- 🎆 [Background Effects](#background-effects-v15) — SF loading effect on avatar load; 5 animated reaction backgrounds (Galaxy, Magic, Cyber, Comic, Idol Stage) randomly selected on each reaction
 - 💥 Roller Coaster Rainbow mode — large stars now explode into a burst of colored particles when they hit the avatar
 - 🦁 Giant Mode state sync — Effect, bubble visibility, TTS mode, and language now carried over from the panel when opening Giant Mode
 - 🐛 Fix: Animation editor — image picker no longer resets the pose to default; unintended idle/click animations no longer fire while editing
@@ -550,7 +586,7 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 - 💃 Candy Pink Avatar — added Candy Pink v2–v7 image gallery and VRM avatar download link
 
 **v16** ✅
-- 🐱 Cat mode — avatar speaks like a cat (meow/にゃ flavor) with full contextual message support
+- 🐱 [Cat Mode](#cat-mode-v16) — avatar speaks like a cat (meow/にゃ flavor) with full contextual message support
 - 🐱 Cat pose added to default animations
 - 🐱 Candy Pink v8 Cat avatar added to GitHub — [download here](https://github.com/webdeveloperhyper/ai-avatar/blob/main/avatars/candy-pink8.vrm)
 - 🚀 Kokoro TTS server added to speed up local text-to-speech
@@ -559,14 +595,24 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 - 🐛 Fix: Animation editor no longer loads poses from the custom animation folder on first open
 - 🐛 Fix: Bubble: Off now correctly hides the bubble when Bubble: AI is active
 
-**v17** — Now creating!
+**v17** ✅
+- 🏢 [AI Office Mode](#ai-office-mode-v17) — boss and sub avatars patrol the panel and report to each other with speech bubbles and TTS
+- 🐾 [Launch Catbot](#catbot-v17) — launch the AI catbot app directly from the sidebar *(Chrome: start the catbot server manually before clicking)*
+- 🐾 [Catbot avatar](#catbot-v17) — the AI catbot collaborator appears as a live 3D VRM avatar in the panel
+- 📖 README — added navigation links, back to top links, and JP jump link
+
+**v18** — Now creating!
 - 🎉 More fun updates
+
+[↑ Back to top](#ai-avatar)
 
 ---
 
 # AI Avatar（日本語）
 
 AI Avatarは、推し(自分のVRoid(VRM))が、あなたを全力で応援する無料アプリです。🤗 **VS Codeサイドバー**（Claude Code / GitHub Copilotに反応）または**ブラウザサイドパネル**（ChatGPT / Claudeに反応）に表示されるVRM 3Dキャラクターです。AIなしでもアニメーションや会話を楽しめます。
+
+**セクションへ移動：** [✨ 機能一覧](#機能一覧) · [📖 詳細](#はじめ方) · [🗺️ ロードマップ](#ロードマップ)
 
 Click for the YouTube demo ↓
 [![AI Avatar v9 デモ動画](https://img.youtube.com/vi/WOBhUQAm3HM/maxresdefault.jpg)](https://www.youtube.com/shorts/WOBhUQAm3HM)
@@ -594,32 +640,35 @@ Click for the YouTube demo ↓
 <img src="https://raw.githubusercontent.com/webdeveloperhyper/ai-avatar/main/docs/images/main.png" width="50%">
 
 - 🎭 **リアクション** — Claude Code / GitHub Copilotが考え中または返答したとき自動でキャラクターが反応
-- 🔀 **ウォッチャー切り替え** *（VS Code限定）* — Claude CodeとGitHub Copilotの監視を切り替え *(v2)*
-- 🔄 **アバター変更** — 上部のボタンで`VRM`キャラクターをいつでも変更可能
-- 💃 **アニメーション** — `.vrma`モーションクリップやカスタムJSONポーズを再生；5つの独立トグルボタン：Off / Default / Random *(v7)* / Custom *(v2)* / Custom Random *(v8)* *(v10)*
-- 💬 **AI吹き出し** *（VS Code限定）* — Fixed/AIモードを切り替え；AIモードでは Claude Code に反応してコンテキストに応じた発言をする *(v10)*
-- 🎬 **アニメーションエディタ** — 複数キーフレームタイムライン（In / Hold / Outタイミング） *(v4)*；全30指ボーン対応 *(v5)*；度数表示 *(v5)*
-- 🎨 **ランダムエディタ** — アニメーションエディタ内でゾーン分割パターンJSONを直接編集；ボディ＆アーム / 脚 / 指ゾーン、パターンの追加・削除・ナビゲーション *(v8)*
+- 🔀 **[ウォッチャー切り替え](#ウォッチャー-vs-code限定-v2)** *（VS Code限定）* — Claude CodeとGitHub Copilotの監視を切り替え *(v2)*
+- 🔄 **[アバター変更](#自分のvrmキャラクターを使う)** — 上部のボタンで`VRM`キャラクターをいつでも変更可能
+- 💃 **[アニメーション](#アニメーション-v2)** — `.vrma`モーションクリップやカスタムJSONポーズを再生；5つの独立トグルボタン：Off / Default / Random *(v7)* / Custom *(v2)* / Custom Random *(v8)* *(v10)*
+- 💬 **[AI吹き出し](#コンテキスト吹き出し-v11-v16)** *（VS Code限定）* — Fixed/AIモードを切り替え；AIモードでは Claude Code に反応してコンテキストに応じた発言をする *(v10)*
+- 🎬 **[アニメーションエディタ](#アニメーションエディタ-v4)** — 複数キーフレームタイムライン（In / Hold / Outタイミング） *(v4)*；全30指ボーン対応 *(v5)*；度数表示 *(v5)*
+- 🎨 **[ランダムエディタ](#アニメーションエディタ-v4)** — アニメーションエディタ内でゾーン分割パターンJSONを直接編集；ボディ＆アーム / 脚 / 指ゾーン、パターンの追加・削除・ナビゲーション *(v8)*
 - 🎥 **オービットコントロール** — ドラッグで回転、スクロールでズーム、右クリックでパン
 - 👀 **視線追跡** — アイドル時に目と頭がマウスカーソルを追う
 - 💬 **リップシンク** — Claudeの返答中に口が動く
 - 😊 **クリックまたはEnterキーで反応** — スマイル、うなずき、アニメーションが発動
-- 💬 **カスタム吹き出しメッセージ** — Messagesボタンからメッセージを編集；Fixed（内蔵）/ Custom / Bothプール切り替え *(v16)*
+- 💬 **[カスタム吹き出しメッセージ](#吹き出しメッセージ)** — Messagesボタンからメッセージを編集；Fixed（内蔵）/ Custom / Bothプール切り替え *(v16)*
 - 😂 **ジョーク** — Jokesボタンでアバターがジョークを言う *(v2)*
 - 📸 **ポーズキャプチャ** — ウェブカメラで体のポーズを撮影し、VRMアニメーションJSONとして書き出し *(v7)*
 - ❤️ **ポジティブワード反応** *（VS Code限定）* — ポジティブワード検出時にハートカウンター・スマイル・ハートオーバーレイアニメーション；ネガティブワードには割れたハートと首振り *(v7)*
 - 🔍 **プロンプトチェッカー [Beta]** *（VS Code限定）* — AIプロンプトを貼り付けるだけで、明確さ・具体性・構造をルールベースで即チェック *(v7)*
-- 🦁 **ジャイアントモード** *（Chrome限定）* — ドラッグ・リサイズ可能なオーバーレイとしてアバターをどのページにも表示 *(v7)*
-- 🤖 **AIチャット** — パネル下部に常時表示されるチャット入力；アバターに何でも質問できる；返答は吹き出しで表示してアニメーションも発動；Gemini APIとOllama対応 *(v9)*
-- 🗣️ **音声読み上げ（TTS）** — Speech:Off / Speech:API（Web Speech API）/ Speech:AI（Gemini TTS、APIキーを使用） *(v11)* / Speech:Local（Kokoro EN + VOICEVOX JP） *(v13)* / Kokoro ServerでローカルEN TTSを高速化 *(v16)*
-- 🧠 **コンテキスト吹き出し** — 特別な日（EN/JP別リスト）、セッション数マイルストーン、反応間隔、セッション時間、曜日、時間帯に応じた吹き出し *(v11)* *(v16)*
-- 🎭 **AIスタイル** — Cute / Energetic / Coolの3つのキャラクターモード *(v11)*
+- 🦁 **[ジャイアントモード](#ジャイアントモード-chrome限定)** *（Chrome限定）* — ドラッグ・リサイズ可能なオーバーレイとしてアバターをどのページにも表示 *(v7)*
+- 🤖 **[AIチャット](#aiチャット-v9)** — パネル下部に常時表示されるチャット入力；アバターに何でも質問できる；返答は吹き出しで表示してアニメーションも発動；Gemini APIとOllama対応 *(v9)*
+- 🗣️ **[音声読み上げ（TTS）](#音声読み上げtts-v11)** — Speech:Off / Speech:API（Web Speech API）/ Speech:AI（Gemini TTS、APIキーを使用） *(v11)* / [Speech:Local](#speechlocal-v13-v16)（Kokoro EN + VOICEVOX JP） *(v13)* / Kokoro ServerでローカルEN TTSを高速化 *(v16)*
+- 🧠 **[コンテキスト吹き出し](#コンテキスト吹き出し-v11-v16)** — 特別な日（EN/JP別リスト）、セッション数マイルストーン、反応間隔、セッション時間、曜日、時間帯に応じた吹き出し *(v11)* *(v16)*
+- 🎭 **[AIスタイル](#aiスタイル-v11)** — Cute / Energetic / Coolの3つのキャラクターモード *(v11)*
 - 🌐 **言語切り替え** — `Lang: EN/JP` 1つのボタンで吹き出しとチャットの言語を同時に切り替え *(v11)*
 - 🕺 **豊かなアイドルアニメーション** — 首の傾き / 体の傾き / 重力リーンをランダムにサイクル *(v11)*
-- 🪙 **ミリオネアモード** — リアクションのたびにアバターから3Dコインまたはダイヤモンドが噴き出す *(v12)*
-- 🎢 **ローラーコースターモード** — Default・Rainbow・Waterの3テーマで3Dローラーコースターに乗る *(v14)*
-- 🎆 **背景エフェクト** — ロード時のSFエフェクト＋5種類のリアクション背景（Galaxy・Magic・Cyber・Comic・Idol Stage）がリアクション時にランダム表示 *(v15)*
-- 🐱 **Catモード** — アバターが猫語（meow/にゃ）で話す；全コンテキストメッセージ対応 *(v16)*
+- 🪙 **[ミリオネアモード](#ミリオネアモード-v12)** — リアクションのたびにアバターから3Dコインまたはダイヤモンドが噴き出す *(v12)*
+- 🎢 **[ローラーコースターモード](#ローラーコースターモード-v14)** — Default・Rainbow・Waterの3テーマで3Dローラーコースターに乗る *(v14)*
+- 🎆 **[背景エフェクト](#背景エフェクト-v15)** — ロード時のSFエフェクト＋5種類のリアクション背景（Galaxy・Magic・Cyber・Comic・Idol Stage）がリアクション時にランダム表示 *(v15)*
+- 🐱 **[Catモード](#ネコモード-v16)** — アバターが猫語（meow/にゃ）で話す；全コンテキストメッセージ対応 *(v16)*
+- 🏢 **[AI Officeモード](#ai-officeモード-v17)** — ボスとサブアバターがパネルを巡回し、吹き出しとTTSで会話する *(v17)*
+- 🐾 **[Launch Catbot](#catbot-v17)** — サイドバーのボタンからAI catbotアプリを直接起動 *(v17)*
+- 🐾 **[Catbot avatar](#catbot-v17)** — Catbotコラボレーターがパネルにライブ3DのVRMアバターとして登場 *(v17)*
 
 ---
 
@@ -971,6 +1020,36 @@ Click for the YouTube demo ↓
 
 ---
 
+## AI Officeモード *(v17)*
+
+2体の3Dアバター — **ボス** と **サブ** — がパネルに登場して巡回します。立ち止まって向き合い、吹き出しとTTSで会話します。AIのリアクションのたびに、ボスがサブを呼び出して状況を報告します。
+
+- ボスとサブは歩行アニメーション・アイドル発言付きのフルVRMアバター
+- 各アバターの上に吹き出しが表示され、TTSで読み上げられる
+- AI Office起動中はミリオネアモードとローラーコースターモードが自動的に無効化される
+
+**AI Office** — AI Officeモードのオン/オフを切り替える
+
+**Change Boss** — ボスのVRMアバターを変更する
+
+**Cat Boss** — CatbotをボスのVRMアバターとして使用する
+
+---
+
+## Catbot *(v17)*
+
+[Catbot](https://github.com/AnnaVi11arrea1/catbot)はどのデバイスからでも話しかけられる銀河系ロボット猫 — そしてすべてのAIモデルを切り替えたり組み合わせたりできるハーネスです。DEVコミュニティの友人Annaが制作しました。機能の詳細とセットアップ方法は[Catbot README](https://github.com/AnnaVi11arrea1/catbot)をご覧ください。
+
+**No Catbot / Catbot Only / With Catbot** — Catbotアバターの表示方法を選択するラジオグループ：非表示、単独表示、またはメインアバターと並べて表示
+
+**Launch Catbot** — catbotフォルダでサーバーを起動し、`http://localhost:8800` をブラウザで開く *（Chrome：クリック前にサーバーを手動で起動してください）*
+
+**Set Catbot** *（VS Code限定）* — catbotフォルダのパスを設定するフォルダピッカーを開く *（Chrome：ボタンは無効化）*
+
+**Catbot avatar** — Catbotコラボレーターがパネルにライブ3DのVRMアバターとして登場 *(v17)*
+
+---
+
 ## ウォッチャー *(VS Code限定)* *(v2)*
 
 **Switch Watcher** ボタンで **Claude Code** と **GitHub Copilot** の監視を切り替えます。
@@ -1017,7 +1096,8 @@ Click for the YouTube demo ↓
 
 ## スペシャルサンクス
 
-- [@RutenVeil](https://x.com/RutenVeil) — v15の背景エフェクトを制作。
+- [@AnnaVi11arrea1](https://github.com/AnnaVi11arrea1) - Catbotのクリエーターでv17のコラボレーター
+- [@RutenVeil](https://x.com/RutenVeil) — v15の背景エフェクトを制作し、継続的にサポート。
 - [@Gramli](https://github.com/Gramli) — v2のアップデートに貢献し、継続的にサポート。
 - [@aryanc193](https://github.com/aryanc193) — AI Avatarの原点となるアバターコラボレーションプロジェクトを制作し、継続的にサポート。
 - **Maximum Blue** — v6でアバターを制作し、継続的にサポート。
@@ -1033,18 +1113,18 @@ Click for the YouTube demo ↓
 - アバター変更、吹き出しメッセージ
 
 **v2** ✅
-- 3段階Animationボタン（オフ / デフォルト / カスタム）
+- 3段階[アニメーション](#アニメーション-v2)ボタン（オフ / デフォルト / カスタム）
 - カスタムポーズエディタ（JSON保存・読み込み）
 - Jokesボタン
 - GitHub Copilotウォッチャー対応
-- ウォッチャー切り替え（Claude ↔ Copilot）
+- [ウォッチャー切り替え](#ウォッチャー-vs-code限定-v2)（Claude ↔ Copilot）
 
 **v3** ✅
 - 🌐 Chrome拡張機能版
 - 各種修正・調整
 
 **v4** ✅
-- ポーズエディタをフルアニメーションエディタにアップグレード
+- ポーズエディタをフル[アニメーションエディタ](#アニメーションエディタ-v4)にアップグレード
 - In / Hold / Outタイミング付き複数キーフレームタイムライン
 - 各種修正・調整
 
@@ -1063,7 +1143,7 @@ Click for the YouTube demo ↓
 **v7** ✅
 - 📸 ポーズキャプチャ — ウェブカメラで体のポーズを撮影し、VRMアニメーションJSONとして書き出し
 - ❤️ ポジティブワード反応 *（VS Code限定）* — ポジティブワード検出時にハートカウンター・スマイル・ハートオーバーレイアニメーション；ネガティブワードには割れたハートと首振り
-- 🦁 ジャイアントモード *（Chrome限定）* — ドラッグ・リサイズ可能なオーバーレイとしてアバターをどのページにも表示
+- 🦁 [ジャイアントモード](#ジャイアントモード-chrome限定) *（Chrome限定）* — ドラッグ・リサイズ可能なオーバーレイとしてアバターをどのページにも表示
 - 🎲 Animation: Randomモード — 内蔵のゾーンパターン（表情・体と腕・指・脚）からランダムにポーズを生成する新しい第4状態
 - 😊 表情エディタ — アニメーションエディタのキーフレームにHappyまたはWink表情を追加可能
 - 🖱️ ページのどこかをクリックで反応 *（Chrome限定）* — ウェブページをクリックするとアバターがアニメーションで反応
@@ -1072,10 +1152,10 @@ Click for the YouTube demo ↓
 **v8** ✅
 - 🎲 Animation: Random Custom — 第5のアニメーション状態；カスタムゾーンパターンJSONを選択してランダムなポーズコンボを再生
 - 🎨 ランダムエディタ — アニメーションエディタ内のゾーン分割パターンJSONエディタ（ボディ＆アーム / 脚 / 指ゾーン）
-- 🎬 アニメーションエディタ アップデート — フルスクリーンタブとして起動；3方向カメラ表示（RIGHT / FRONT / LEFT）、参考画像レイアウト、ボーン弧トレイル、ゾーンプリセットボタン、JSON to VRMAエクスポート
+- 🎬 [アニメーションエディタ](#アニメーションエディタ-v4) アップデート — フルスクリーンタブとして起動；3方向カメラ表示（RIGHT / FRONT / LEFT）、参考画像レイアウト、ボーン弧トレイル、ゾーンプリセットボタン、JSON to VRMAエクスポート
 
 **v9** ✅
-- 🤖 AIチャット — 常時表示のチャット入力；アバターに何でも質問できる；返答は吹き出しでアニメーション付き；Gemini APIとOllama（ローカル）対応
+- 🤖 [AIチャット](#aiチャット-v9) — 常時表示のチャット入力；アバターに何でも質問できる；返答は吹き出しでアニメーション付き；Gemini APIとOllama（ローカル）対応
 - 🎛️ パネルレイアウト刷新 — ⚙ギアでツールバーを折りたたみ
 - 🐛 ポジティブ/ネガティブワード検出の不安定さを修正 *（VS Code限定）* — Claude Codeへのメッセージのキーワードを確実に検出するように改善
 
@@ -1085,29 +1165,29 @@ Click for the YouTube demo ↓
 - 🎭 アイドル・思考アニメーション改善 — アイドル時に6〜10秒ごとランダムな頭の微傾き；思考中は自然なZ軸の首かしげポーズとゆっくりした揺れを追加
 
 **v11** ✅
-- 🗣️ 音声読み上げ（TTS）— Speech:Off / Speech:API（Web Speech API）/ Speech:AI（Gemini TTS）
-- 🧠 コンテキスト吹き出し — 特別な日（EN/JP別）、セッション数マイルストーン、反応間隔、セッション時間、曜日、時間帯
-- 🎭 AIスタイル — Cute / Energetic / Coolモード
+- 🗣️ [音声読み上げ（TTS）](#音声読み上げtts-v11)— Speech:Off / Speech:API（Web Speech API）/ Speech:AI（Gemini TTS）
+- 🧠 [コンテキスト吹き出し](#コンテキスト吹き出し-v11-v16) — 特別な日（EN/JP別）、セッション数マイルストーン、反応間隔、セッション時間、曜日、時間帯
+- 🎭 [AIスタイル](#aiスタイル-v11) — Cute / Energetic / Coolモード
 - 🌐 言語切り替え — 1つのボタンで吹き出しとチャットの言語を同時に切り替え
 - 🕺 豊かなアイドルアニメーション — 首の傾き / 体の傾き / 重力リーンをランダムにサイクル
 
 **v12** ✅
-- 🪙 ミリオネアモード — リアクションのたびにアバターから3Dコインまたはダイヤモンドを噴き出す
+- 🪙 [ミリオネアモード](#ミリオネアモード-v12) — リアクションのたびにアバターから3Dコインまたはダイヤモンドを噴き出す
 - 🎛️ ラジオボタンUI — アニメーション、AIスタイル、音声、プロバイダー、ミリオネアのコントロールをインラインラジオボタンに刷新
 
 **v13** ✅
-- 🗣️ Speech:Local — Kokoro（ENオフラインTTS、APIキー不要）+ VOICEVOX（JP ローカルTTS）
+- 🗣️ [Speech:Local](#speechlocal-v13-v16) — Kokoro（ENオフラインTTS、APIキー不要）+ VOICEVOX（JP ローカルTTS）
 - 💬 吹き出しOn/Offトグル — TTS音声を維持しながら吹き出しを非表示にできる
 - 🤖 Bubble:AI — 特別な日・時間帯などのコンテキストメッセージもAIモードで処理されるように改善
 
 **v14** ✅
-- 🎢 ローラーコースターモード — Default・Rainbow・Waterの3テーマで3Dローラーコースターに乗る
+- 🎢 [ローラーコースターモード](#ローラーコースターモード-v14) — Default・Rainbow・Waterの3テーマで3Dローラーコースターに乗る
 - 🪙 トップバーにコインカウンターを追加
 - ❓ トップバーにヘルプボタンを追加
 - 🐛 バグ修正：ローラーコースターCSSとChromeジャイアントモードの表示
 
 **v15** ✅
-- 🎆 背景エフェクト — ロード時のSFエフェクト＋5種類のリアクション背景（Galaxy・Magic・Cyber・Comic・Idol Stage）がリアクション時にランダム表示
+- 🎆 [背景エフェクト](#背景エフェクト-v15) — ロード時のSFエフェクト＋5種類のリアクション背景（Galaxy・Magic・Cyber・Comic・Idol Stage）がリアクション時にランダム表示
 - 💥 ローラーコースター Rainbowモード — 大きな星がアバターに当たると、カラフルなパーティクルが爆発するように弾け飛ぶ
 - 🦁 ジャイアントモード状態同期 — ジャイアントモードを開くとエフェクト・吹き出し・TTSモード・言語の状態がパネルから引き継がれるように修正
 - 🐛 バグ修正：アニメーションエディタで画像選択中にポーズがリセットされる問題を修正；アニメーションエディタで意図しないアイドル・クリックアニメーションが発火する問題を修正
@@ -1115,7 +1195,7 @@ Click for the YouTube demo ↓
 - 💃 Candy Pink Avatar — Candy Pink v2〜v7のバージョン別画像ギャラリーとVRMアバターのダウンロードリンクを追加
 
 **v16** ✅
-- 🐱 Catモード — アバターが猫語（meow/にゃ）で話す；全コンテキストメッセージ対応
+- 🐱 [Catモード](#ネコモード-v16) — アバターが猫語（meow/にゃ）で話す；全コンテキストメッセージ対応
 - 🐱 デフォルトアニメーションに猫ポーズを追加
 - 🐱 Candy Pink v8 CatアバターをGitHubに追加 — [こちらからダウンロード](https://github.com/webdeveloperhyper/ai-avatar/blob/main/avatars/candy-pink8.vrm)
 - 🚀 Kokoro TTSサーバー追加によるローカル音声読み上げの高速化
@@ -1124,5 +1204,13 @@ Click for the YouTube demo ↓
 - 🐛 バグ修正：アニメーションエディタが初回起動時にカスタムフォルダのポーズを誤って読み込む問題を修正
 - 🐛 バグ修正：Bubble: AI有効時にBubble: Offが正しく機能しない問題を修正
 
-**v17** — 作成中！
+**v17** ✅
+- 🏢 [AI Officeモード](#ai-officeモード-v17) — ボスとサブアバターがパネルを巡回し、吹き出しとTTSで会話する
+- 🐾 [Launch Catbot](#catbot-v17) — サイドバーのボタンからAI catbotアプリを直接起動 *(Chrome：クリック前にcatbotサーバーを手動で起動してください)*
+- 🐾 [Catbot avatar](#catbot-v17) — Catbotコラボレーターがパネルにライブ3DのVRMアバターとして登場
+- 📖 README — ナビゲーションリンク・トップへ戻るリンク・JP ジャンプリンクを追加
+
+**v18** — 作成中！
 - 🎉 さらに楽しいアップデート
+
+[↑ ページトップへ戻る](#ai-avatar)
