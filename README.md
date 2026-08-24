@@ -22,7 +22,8 @@ Click for the YouTube demo ↓
 - **v7** → [🫡We'll Support You with All Our Might (AI Avatar v7: Pose Capture and More (VS Code and Chrome Extension))](https://dev.to/webdeveloperhyper/well-support-you-with-all-our-might-ai-avatar-v7-pose-capture-and-more-vs-code-and-chrome-3aab)
 - **v8,v9,v10** → [🎥AI Chat, AI Cheering Messages, and Animation Editor Hyper (AI Avatar v10: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/ai-chat-ai-cheering-messages-and-animation-editor-hyper-ai-avatar-v10-vs-code-and-chrome-1noo)
 - **v11,v12,v13,v14,v15** → [✨Cool Effects, TTS, and Fun Animations (AI Avatar v15: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/cool-effects-tts-and-fun-animations-ai-avatar-v15-vs-code-and-chrome-extension-3oec)
-- **v16** → coming soon!
+- **v16,v17** → [😸Catbot Integration, AI Office, Cat Mode (AI Avatar v17: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/catbot-integration-ai-office-cat-mode-ai-avatar-v17-vs-code-and-chrome-extension-2f26)
+- **v18** → coming soon!
 
 ---
 
@@ -60,6 +61,8 @@ Click for the YouTube demo ↓
 - 🏢 **[AI Office Mode](#ai-office-mode-v17)** — boss and sub avatars patrol the panel and report to each other with speech bubbles and TTS *(v17)*
 - 🐾 **[Launch Catbot](#catbot-v17)** — launch the AI catbot app directly from the sidebar *(v17)*
 - 🐾 **[Catbot avatar](#catbot-v17)** — the AI catbot collaborator appears as a live 3D VRM avatar in the panel *(v17)*
+- 🌀 **[Kaleidoscope Effect](#kaleidoscope-effect-v18)** — animated kaleidoscope background with live tuning controls (sides, speed, color, warmth, symmetry, zoom) *(v18)*
+- 🗣️ **[Piper TTS](#piper-tts-v18)** *(VS Code only)* — EN local TTS via an automatically-downloaded native binary, no Python required and faster than Kokoro *(v18)*
 
 ---
 
@@ -413,6 +416,9 @@ When Cat Mode is on, all speech bubble messages get a cat flavor — English mes
 
 ## AI Office Mode *(v17)*
 
+Click for the YouTube demo ↓
+[![AI Avatar AI Office Mode Demo](https://img.youtube.com/vi/tjyLC4YIhXE/mqdefault.jpg)](https://youtube.com/shorts/tjyLC4YIhXE)
+
 Two 3D avatars — **Boss** and **Sub** — appear in the panel and patrol back and forth. They stop, face each other, and exchange speech bubbles with TTS. On each AI reaction, Boss calls Sub over for a status report.
 
 - Boss and Sub are full VRM avatars with walk animation and idle speech
@@ -438,6 +444,47 @@ Two 3D avatars — **Boss** and **Sub** — appear in the panel and patrol back 
 **Set Catbot** *(VS Code only)* — opens a folder picker to set the catbot folder path *(Chrome: button is disabled)*
 
 **Catbot avatar** — the AI catbot collaborator appears as a live 3D VRM avatar in the panel *(v17)*
+
+---
+
+## Kaleidoscope Effect *(v18)*
+
+Click the **Kaleidoscope** toolbar button to replace the background with an animated, live-tunable kaleidoscope shader rendered behind the avatar.
+
+**Kaleidoscope: On / Off** — toggles the effect on and off
+
+**Warmth** — shifts the color palette warmer or cooler
+
+**Vivid** — controls how saturated the colors are
+
+**Sides** — number of mirrored segments around the center
+
+**Rings** — number of concentric rings in the pattern
+
+**Symmetry** — mirrors the pattern for a symmetric vs. free-flowing look
+
+**Center** — offsets the pattern's center point
+
+**Zoom** — zooms the pattern in or out
+
+**Speed** — controls how fast the pattern animates
+
+---
+
+## Piper TTS *(v18)*
+
+Local, offline English TTS powered by [Piper](https://github.com/rhasspy/piper), a native (non-Python) neural TTS engine — faster than the WebAssembly-based Kokoro and no Python install required. Select **Speech: EN Piper** in the Speech radio group to use it. *(VS Code only — Piper runs as a native process spawned by the extension host, which isn't available in the Chrome sandbox; the option is shown grayed out in Chrome.)*
+
+Turning it on for the first time automatically downloads the Piper binary and default voice models (~a few hundred MB) — no manual setup needed. To use your own binary/voice instead, point `vroidCompanion.piperFolder` in settings at a folder containing `piper/piper.exe` and a `.onnx` voice model; clear the setting to fall back to the automatic download.
+
+Piper picks a voice automatically based on the current **Gender** setting, and uses a distinct boss voice when speaking as the boss avatar in [AI Office Mode](#ai-office-mode-v17):
+
+| Setting | Voice |
+|---|---|
+| `Gender: Female` | Amy |
+| `Gender: Male` | Ryan |
+| `Gender: Female` *(boss)* | hfc_female |
+| `Gender: Male` *(boss)* | Norman |
 
 ---
 
@@ -482,6 +529,15 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 
 - VS Code 1.85+
 - [Claude Code](https://claude.ai/code) CLI or VS Code extension (for automatic reactions)
+
+---
+
+## Cursor Avatar *(v18)*
+
+Click for the YouTube demo ↓
+[![Cursor Avatar v1 Demo](https://img.youtube.com/vi/qMxZJqRQXg8/maxresdefault.jpg)](https://www.youtube.com/watch?v=qMxZJqRQXg8)
+
+[Cursor Avatar](https://github.com/webdeveloperhyper/cursor-avatar) is a spin-off desktop app: click anywhere on your screen and your VRM avatar pops up near your cursor to react. It's a separate download, not part of this extension — see its own repo for setup and details.
 
 ---
 
@@ -601,7 +657,15 @@ One panel goes to the left sidebar, the other to the right — you can choose wh
 - 🐾 [Catbot avatar](#catbot-v17) — the AI catbot collaborator appears as a live 3D VRM avatar in the panel
 - 📖 README — added navigation links, back to top links, and JP jump link
 
-**v18** — Now creating!
+**v18** ✅
+- 🚀 [Cursor Avatar](#cursor-avatar-v18) — new spin-off desktop app: click anywhere on screen and your VRM avatar pops up near your cursor (https://github.com/webdeveloperhyper/cursor-avatar)
+- 🌀 [Kaleidoscope Effect](#kaleidoscope-effect-v18) — animated kaleidoscope background with live tuning controls (sides, speed, color, warmth, symmetry, zoom)
+- 🗣️ [Piper TTS](#piper-tts-v18) *(VS Code only)* — EN local TTS via an automatically-downloaded native binary, no Python required and faster than Kokoro
+- 🎛️ Speech control consolidation — Speech mode, Kokoro Server, and Piper merged into one unified radio group
+- 🐛 Fix: AI Office avatar now plays its walk animation even when no boss avatar is configured
+- 🐛 Fix: broken JP links for kept-in-English section names (Speech:Local, Catbot) that collided with their EN anchor
+
+**v19** — Now creating!
 - 🎉 More fun updates
 
 [↑ Back to top](#ai-avatar)
@@ -631,7 +695,8 @@ Click for the YouTube demo ↓
 - **v8,v9,v10** → [🎥AIチャット、AI応援メッセージ、アニメーションエディタ ハイパー (AI Avatar v10: VS
   Code・Chrome拡張機能)](https://dev.to/webdeveloperhyper/ai-chat-ai-cheering-messages-and-animation-editor-hyper-ai-avatar-v10-vs-code-and-chrome-1noo)
 - **v11,v12,v13,v14,v15** → [✨おしゃれなエフェクト、TTS、楽しいアニメーション (AI Avatar v15: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/cool-effects-tts-and-fun-animations-ai-avatar-v15-vs-code-and-chrome-extension-3oec)
-- **v16** → coming soon!
+- **v16,v17** → [😸Catbot統合, AI Office, Cat Mode (AI Avatar v17: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/catbot-integration-ai-office-cat-mode-ai-avatar-v17-vs-code-and-chrome-extension-2f26)
+- **v18** → coming soon!
 
 ---
 
@@ -657,7 +722,7 @@ Click for the YouTube demo ↓
 - 🔍 **プロンプトチェッカー [Beta]** *（VS Code限定）* — AIプロンプトを貼り付けるだけで、明確さ・具体性・構造をルールベースで即チェック *(v7)*
 - 🦁 **[ジャイアントモード](#ジャイアントモード-chrome限定)** *（Chrome限定）* — ドラッグ・リサイズ可能なオーバーレイとしてアバターをどのページにも表示 *(v7)*
 - 🤖 **[AIチャット](#aiチャット-v9)** — パネル下部に常時表示されるチャット入力；アバターに何でも質問できる；返答は吹き出しで表示してアニメーションも発動；Gemini APIとOllama対応 *(v9)*
-- 🗣️ **[音声読み上げ（TTS）](#音声読み上げtts-v11)** — Speech:Off / Speech:API（Web Speech API）/ Speech:AI（Gemini TTS、APIキーを使用） *(v11)* / [Speech:Local](#speechlocal-v13-v16)（Kokoro EN + VOICEVOX JP） *(v13)* / Kokoro ServerでローカルEN TTSを高速化 *(v16)*
+- 🗣️ **[音声読み上げ（TTS）](#音声読み上げtts-v11)** — Speech:Off / Speech:API（Web Speech API）/ Speech:AI（Gemini TTS、APIキーを使用） *(v11)* / [Speech:Local](#speechlocal-v13-v16-jp)（Kokoro EN + VOICEVOX JP） *(v13)* / Kokoro ServerでローカルEN TTSを高速化 *(v16)*
 - 🧠 **[コンテキスト吹き出し](#コンテキスト吹き出し-v11-v16)** — 特別な日（EN/JP別リスト）、セッション数マイルストーン、反応間隔、セッション時間、曜日、時間帯に応じた吹き出し *(v11)* *(v16)*
 - 🎭 **[AIスタイル](#aiスタイル-v11)** — Cute / Energetic / Coolの3つのキャラクターモード *(v11)*
 - 🌐 **言語切り替え** — `Lang: EN/JP` 1つのボタンで吹き出しとチャットの言語を同時に切り替え *(v11)*
@@ -667,8 +732,10 @@ Click for the YouTube demo ↓
 - 🎆 **[背景エフェクト](#背景エフェクト-v15)** — ロード時のSFエフェクト＋5種類のリアクション背景（Galaxy・Magic・Cyber・Comic・Idol Stage）がリアクション時にランダム表示 *(v15)*
 - 🐱 **[Catモード](#ネコモード-v16)** — アバターが猫語（meow/にゃ）で話す；全コンテキストメッセージ対応 *(v16)*
 - 🏢 **[AI Officeモード](#ai-officeモード-v17)** — ボスとサブアバターがパネルを巡回し、吹き出しとTTSで会話する *(v17)*
-- 🐾 **[Launch Catbot](#catbot-v17)** — サイドバーのボタンからAI catbotアプリを直接起動 *(v17)*
-- 🐾 **[Catbot avatar](#catbot-v17)** — Catbotコラボレーターがパネルにライブ3DのVRMアバターとして登場 *(v17)*
+- 🐾 **[Launch Catbot](#catbot-v17-jp)** — サイドバーのボタンからAI catbotアプリを直接起動 *(v17)*
+- 🐾 **[Catbot avatar](#catbot-v17-jp)** — Catbotコラボレーターがパネルにライブ3DのVRMアバターとして登場 *(v17)*
+- 🌀 **[Kaleidoscopeエフェクト](#kaleidoscopeエフェクト-v18)** — サイド・スピード・カラー・暖かさ・対称性・ズームをライブ調整できるアニメーション万華鏡背景 *(v18)*
+- 🗣️ **[Piper TTS](#piper-tts-v18-jp)** *（VS Code限定）* — 自動ダウンロードされるネイティブバイナリによるEN用ローカルTTS、Python不要でKokoroより高速 *(v18)*
 
 ---
 
@@ -865,6 +932,8 @@ Speech:AIにはAIチャットと同じGemini APIキーが必要です。キー�
 
 ---
 
+<a id="speechlocal-v13-v16-jp"></a>
+
 ## Speech:Local *(v13)* *(v16)*
 
 オフラインTTS — APIキーもインターネット接続も不要。Speechラジオグループで **Speech:Local** を選択します。
@@ -1022,6 +1091,9 @@ Click for the YouTube demo ↓
 
 ## AI Officeモード *(v17)*
 
+Click for the YouTube demo ↓
+[![AI Avatar AI Office Mode Demo](https://img.youtube.com/vi/tjyLC4YIhXE/mqdefault.jpg)](https://youtube.com/shorts/tjyLC4YIhXE)
+
 2体の3Dアバター — **ボス** と **サブ** — がパネルに登場して巡回します。立ち止まって向き合い、吹き出しとTTSで会話します。AIのリアクションのたびに、ボスがサブを呼び出して状況を報告します。
 
 - ボスとサブは歩行アニメーション・アイドル発言付きのフルVRMアバター
@@ -1036,6 +1108,8 @@ Click for the YouTube demo ↓
 
 ---
 
+<a id="catbot-v17-jp"></a>
+
 ## Catbot *(v17)*
 
 [Catbot](https://github.com/AnnaVi11arrea1/catbot)はどのデバイスからでも話しかけられる銀河系ロボット猫 — そしてすべてのAIモデルを切り替えたり組み合わせたりできるハーネスです。DEVコミュニティの友人Annaが制作しました。機能の詳細とセットアップ方法は[Catbot README](https://github.com/AnnaVi11arrea1/catbot)をご覧ください。
@@ -1047,6 +1121,49 @@ Click for the YouTube demo ↓
 **Set Catbot** *（VS Code限定）* — catbotフォルダのパスを設定するフォルダピッカーを開く *（Chrome：ボタンは無効化）*
 
 **Catbot avatar** — Catbotコラボレーターがパネルにライブ3DのVRMアバターとして登場 *(v17)*
+
+---
+
+## Kaleidoscopeエフェクト *(v18)*
+
+ツールバーの **Kaleidoscope** ボタンをクリックすると、背景がアバターの後ろにアニメーション表示されるライブ調整可能な万華鏡シェーダーに切り替わります。
+
+**Kaleidoscope: On / Off** — エフェクトのオン・オフを切り替え
+
+**Warmth** — カラーパレットを暖色寄り・寒色寄りに調整
+
+**Vivid** — 色の彩度を調整
+
+**Sides** — 中心を囲む鏡面セグメントの数
+
+**Rings** — パターンの同心円の数
+
+**Symmetry** — パターンを左右対称にするか、自由な形状にするか
+
+**Center** — パターンの中心位置をずらす
+
+**Zoom** — パターンの拡大・縮小
+
+**Speed** — パターンのアニメーション速度
+
+---
+
+<a id="piper-tts-v18-jp"></a>
+
+## Piper TTS *(v18)*
+
+[Piper](https://github.com/rhasspy/piper)によるオフライン英語TTS — Python不要のネイティブニューラルTTSエンジンで、WebAssembly版のKokoroより高速です。Speechラジオグループで **Speech: EN Piper** を選択して使用します。*（VS Code限定 — PiperはExtension Hostが起動するネイティブプロセスとして動作するため、Chromeのサンドボックスでは利用できません。Chromeではグレーアウト表示されます）*
+
+初回オンにするとPiperのバイナリとデフォルトのボイスモデル（数百MB程度）が自動的にダウンロードされます — 手動セットアップは不要です。自分のバイナリ・ボイスを使いたい場合は、設定の `vroidCompanion.piperFolder` に `piper/piper.exe` と `.onnx` ボイスモデルが入ったフォルダのパスを指定してください。設定をクリアすると自動ダウンロードに戻ります。
+
+Piperは現在の **Gender** 設定に応じて自動的にボイスを選択し、[AI Officeモード](#ai-officeモード-v17)でボスアバターとして話す際は専用のボスボイスを使用します：
+
+| 設定 | ボイス |
+|---|---|
+| `Gender: Female` | Amy |
+| `Gender: Male` | Ryan |
+| `Gender: Female` *（ボス）* | hfc_female |
+| `Gender: Male` *（ボス）* | Norman |
 
 ---
 
@@ -1091,6 +1208,17 @@ Click for the YouTube demo ↓
 
 - VS Code 1.85以上
 - [Claude Code](https://claude.ai/code) CLIまたはVS Code拡張機能（自動反応に必要）
+
+---
+
+<a id="cursor-avatar-v18-jp"></a>
+
+## Cursor Avatar *(v18)*
+
+Click for the YouTube demo ↓
+[![Cursor Avatar v1 Demo](https://img.youtube.com/vi/qMxZJqRQXg8/maxresdefault.jpg)](https://www.youtube.com/watch?v=qMxZJqRQXg8)
+
+[Cursor Avatar](https://github.com/webdeveloperhyper/cursor-avatar)は、画面上のどこをクリックしてもカーソル付近にVRMアバターが登場して反応する、スピンオフのデスクトップアプリです。この拡張機能とは別のダウンロードが必要です — セットアップ方法や詳細は専用リポジトリをご覧ください。
 
 ---
 
@@ -1176,7 +1304,7 @@ Click for the YouTube demo ↓
 - 🎛️ ラジオボタンUI — アニメーション、AIスタイル、音声、プロバイダー、ミリオネアのコントロールをインラインラジオボタンに刷新
 
 **v13** ✅
-- 🗣️ [Speech:Local](#speechlocal-v13-v16) — Kokoro（ENオフラインTTS、APIキー不要）+ VOICEVOX（JP ローカルTTS）
+- 🗣️ [Speech:Local](#speechlocal-v13-v16-jp) — Kokoro（ENオフラインTTS、APIキー不要）+ VOICEVOX（JP ローカルTTS）
 - 💬 吹き出しOn/Offトグル — TTS音声を維持しながら吹き出しを非表示にできる
 - 🤖 Bubble:AI — 特別な日・時間帯などのコンテキストメッセージもAIモードで処理されるように改善
 
@@ -1206,11 +1334,19 @@ Click for the YouTube demo ↓
 
 **v17** ✅
 - 🏢 [AI Officeモード](#ai-officeモード-v17) — ボスとサブアバターがパネルを巡回し、吹き出しとTTSで会話する
-- 🐾 [Launch Catbot](#catbot-v17) — サイドバーのボタンからAI catbotアプリを直接起動 *(Chrome：クリック前にcatbotサーバーを手動で起動してください)*
-- 🐾 [Catbot avatar](#catbot-v17) — Catbotコラボレーターがパネルにライブ3DのVRMアバターとして登場
+- 🐾 [Launch Catbot](#catbot-v17-jp) — サイドバーのボタンからAI catbotアプリを直接起動 *(Chrome：クリック前にcatbotサーバーを手動で起動してください)*
+- 🐾 [Catbot avatar](#catbot-v17-jp) — Catbotコラボレーターがパネルにライブ3DのVRMアバターとして登場
 - 📖 README — ナビゲーションリンク・トップへ戻るリンク・JP ジャンプリンクを追加
 
-**v18** — 作成中！
+**v18** ✅
+- 🚀 [Cursor Avatar](#cursor-avatar-v18-jp) — AI Avatarのスピンオフ新アプリ：画面上のどこをクリックしてもカーソル付近にVRMアバターが登場 (https://github.com/webdeveloperhyper/cursor-avatar)
+- 🌀 [Kaleidoscopeエフェクト](#kaleidoscopeエフェクト-v18) — サイド・スピード・カラー・暖かさ・対称性・ズームをライブ調整できるアニメーション万華鏡背景
+- 🗣️ [Piper TTS](#piper-tts-v18-jp) *（VS Code限定）* — 自動ダウンロードされるネイティブバイナリによるEN用ローカルTTS、Python不要でKokoroより高速
+- 🎛️ 音声コントロールの統合 — Speech mode・Kokoro Server・Piperを1つの統一されたラジオグループに統合
+- 🐛 バグ修正：ボスアバター未設定でもAI Officeアバターが歩行アニメーションを正しく再生するように修正
+- 🐛 バグ修正：英語表記のまま維持しているセクション名（Speech:Local、Catbot）でEN側とアンカーが衝突し、JPリンクが壊れていた問題を修正
+
+**v19** — 作成中！
 - 🎉 さらに楽しいアップデート
 
 [↑ ページトップへ戻る](#ai-avatar)
