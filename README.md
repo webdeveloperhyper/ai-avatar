@@ -63,6 +63,7 @@ Click for the YouTube demo ↓
 - 🐾 **[Catbot avatar](#catbot-v17)** — the AI catbot collaborator appears as a live 3D VRM avatar in the panel *(v17)*
 - 🌀 **[Kaleidoscope Effect](#kaleidoscope-effect-v18)** — animated kaleidoscope background with live tuning controls (sides, speed, color, warmth, symmetry, zoom) *(v18)*
 - 🗣️ **[Piper TTS](#piper-tts-v18)** *(VS Code only)* — EN local TTS via an automatically-downloaded native binary, no Python required and faster than Kokoro *(v18)*
+- 🧊 **[Voxel Avatar](#voxel-avatar-v19)** — Minecraft-like mini-game where your avatar walks, terraforms terrain, and plants flowers *(v19)*
 
 ---
 
@@ -488,6 +489,32 @@ Piper picks a voice automatically based on the current **Gender** setting, and u
 
 ---
 
+## Voxel Avatar *(v19)*
+
+Click the **Voxel Avatar** toolbar button to switch the panel into a minimal Minecraft-like mini-game — your avatar walks around a small block world, terraforms terrain, and plants flowers.
+
+**Voxel Avatar: On / Off** — toggles the mini-game on and off; borrows your currently-loaded avatar without reloading it
+
+**Auto: On / Off** — avatar wanders and gardens on its own; a click, or Claude Code finishing a response, triggers one step (flatten stone, fill a hole, or plant a flower); defaults to on each time Voxel Avatar is turned on
+
+**W A S D / Arrows** — move the avatar; **Shift** to move faster
+
+**Left-drag** — orbit the camera; **Right-drag** — pan the camera (re-centers once the avatar moves)
+
+**Mouse wheel** — zoom in / out
+
+**Left click** — place the selected block; **Right click** — break a block
+
+**Block / Flower radio buttons** — pick what to place; flowers (Pink / Red / Purple) are only plantable on top of grass at ground level
+
+**Save / Load** — save the current world to a file, or load one from a file (overwrites what's currently placed)
+
+**🌸 flower counter** — shows how many flowers are currently planted
+
+**❓ Help** — opens an in-panel cheat sheet of all the controls above
+
+---
+
 ## Watcher *(VS Code only)* *(v2)*
 
 Click the **Switch Watcher** button to toggle between watching **Claude Code** and **GitHub Copilot** activity.
@@ -538,6 +565,15 @@ Click for the YouTube demo ↓
 [![Cursor Avatar v1 Demo](https://img.youtube.com/vi/qMxZJqRQXg8/maxresdefault.jpg)](https://www.youtube.com/watch?v=qMxZJqRQXg8)
 
 [Cursor Avatar](https://github.com/webdeveloperhyper/cursor-avatar) is a spin-off desktop app: click anywhere on your screen and your VRM avatar pops up near your cursor to react. It's a separate download, not part of this extension — see its own repo for setup and details.
+
+---
+
+## Notification Avatar *(v19)*
+
+Click for the YouTube demo ↓
+[![Notification Avatar v1 Demo](https://img.youtube.com/vi/0SCemZqVo4w/maxresdefault.jpg)](https://www.youtube.com/watch?v=0SCemZqVo4w)
+
+[Notification Avatar](https://github.com/webdeveloperhyper/notification-avatar) is a spin-off desktop companion app: your VRM avatar pops up in the corner of your screen and reacts whenever Claude Code or Codex needs your attention or finishes a task — works even when VS Code isn't open, since it reacts to Claude Code/Codex CLI hooks directly. It's a separate download, not part of this extension — see its own repo for setup and details.
 
 ---
 
@@ -665,7 +701,15 @@ Click for the YouTube demo ↓
 - 🐛 Fix: AI Office avatar now plays its walk animation even when no boss avatar is configured
 - 🐛 Fix: broken JP links for kept-in-English section names (Speech:Local, Catbot) that collided with their EN anchor
 
-**v19** — Now creating!
+**v19** ✅
+- 🧊 [Voxel Avatar](#voxel-avatar-v19) — Minecraft-like mini-game where your avatar walks, terraforms terrain, and plants flowers
+- 🔔 [Notification Avatar](#notification-avatar-v19) — new spin-off desktop app: VRM avatar pops up and reacts whenever Claude Code or Codex needs your attention or finishes a task (https://github.com/webdeveloperhyper/notification-avatar)
+- 🐛 Fix: Kaleidoscope and AI Office now mutually exclusive
+- 🐛 Fix: Kokoro Server no longer silently falls back to VOICEVOX when language was left　on JP
+- 🐛 Fix: fixed AI Office/Catbot getting stuck disabled after another mode force-turned Millionaire/Roller Coaster off
+- 🎛️ Fix: Mode exclusivity refactored into one shared table
+
+**v20** — Now creating!
 - 🎉 More fun updates
 
 [↑ Back to top](#ai-avatar)
@@ -736,6 +780,7 @@ Click for the YouTube demo ↓
 - 🐾 **[Catbot avatar](#catbot-v17-jp)** — Catbotコラボレーターがパネルにライブ3DのVRMアバターとして登場 *(v17)*
 - 🌀 **[Kaleidoscopeエフェクト](#kaleidoscopeエフェクト-v18)** — サイド・スピード・カラー・暖かさ・対称性・ズームをライブ調整できるアニメーション万華鏡背景 *(v18)*
 - 🗣️ **[Piper TTS](#piper-tts-v18-jp)** *（VS Code限定）* — 自動ダウンロードされるネイティブバイナリによるEN用ローカルTTS、Python不要でKokoroより高速 *(v18)*
+- 🧊 **[Voxel Avatar](#voxel-avatar-v19-jp)** — アバターが歩き、地形を整地し、花を植えるMinecraft風ミニゲーム *(v19)*
 
 ---
 
@@ -1167,6 +1212,34 @@ Piperは現在の **Gender** 設定に応じて自動的にボイスを選択し
 
 ---
 
+<a id="voxel-avatar-v19-jp"></a>
+
+## Voxel Avatar *(v19)*
+
+**Voxel Avatar** ツールバーボタンをクリックすると、パネルが小さなMinecraft風ミニゲームに切り替わります — アバターがブロックの世界を歩き回り、地形を整地し、花を植えます。
+
+**Voxel Avatar: On / Off** — ミニゲームのオン・オフを切り替え；現在読み込んでいるアバターをそのまま流用（再読み込みなし）
+
+**Auto: On / Off** — アバターが自動で歩き回り庭造りをします；クリック、またはClaude Codeの応答完了で1ステップ実行（石を平らにする・穴を埋める・花を植える）；Voxel Avatarをオンにするたびデフォルトでオン
+
+**W A S D / 矢印キー** — アバターを移動；**Shift** で高速移動
+
+**左ドラッグ** — カメラを回転；**右ドラッグ** — カメラをパン（アバターが動くと再センタリング）
+
+**マウスホイール** — ズームイン・アウト
+
+**左クリック** — 選択中のブロックを設置；**右クリック** — ブロックを破壊
+
+**Block / Flower ラジオボタン** — 何を設置するか選択；花（Pink / Red / Purple）は地面レベルの草ブロックの上にのみ植えられます
+
+**Save / Load** — 現在のワールドをファイルに保存、またはファイルから読み込み（現在配置されているものを上書き）
+
+**🌸 花カウンター** — 現在植えられている花の数を表示
+
+**❓ ヘルプ** — 上記の操作一覧をパネル内チートシートとして表示
+
+---
+
 ## ウォッチャー *(VS Code限定)* *(v2)*
 
 **Switch Watcher** ボタンで **Claude Code** と **GitHub Copilot** の監視を切り替えます。
@@ -1219,6 +1292,17 @@ Click for the YouTube demo ↓
 [![Cursor Avatar v1 Demo](https://img.youtube.com/vi/qMxZJqRQXg8/maxresdefault.jpg)](https://www.youtube.com/watch?v=qMxZJqRQXg8)
 
 [Cursor Avatar](https://github.com/webdeveloperhyper/cursor-avatar)は、画面上のどこをクリックしてもカーソル付近にVRMアバターが登場して反応する、スピンオフのデスクトップアプリです。この拡張機能とは別のダウンロードが必要です — セットアップ方法や詳細は専用リポジトリをご覧ください。
+
+---
+
+<a id="notification-avatar-v19-jp"></a>
+
+## Notification Avatar *(v19)*
+
+Click for the YouTube demo ↓
+[![Notification Avatar v1 Demo](https://img.youtube.com/vi/0SCemZqVo4w/maxresdefault.jpg)](https://www.youtube.com/watch?v=0SCemZqVo4w)
+
+[Notification Avatar](https://github.com/webdeveloperhyper/notification-avatar)は、Claude CodeまたはCodexがあなたの入力を必要としたとき、またはタスクを完了したときに、画面の隅にVRMアバターが現れて反応する、スピンオフのデスクトップ companion アプリです。VS Codeを開いていなくても、Claude Code/Codex CLIのフックに直接反応するので動作します。この拡張機能とは別のダウンロードが必要です — セットアップ方法や詳細は専用リポジトリをご覧ください。
 
 ---
 
@@ -1346,7 +1430,15 @@ Click for the YouTube demo ↓
 - 🐛 バグ修正：ボスアバター未設定でもAI Officeアバターが歩行アニメーションを正しく再生するように修正
 - 🐛 バグ修正：英語表記のまま維持しているセクション名（Speech:Local、Catbot）でEN側とアンカーが衝突し、JPリンクが壊れていた問題を修正
 
-**v19** — 作成中！
+**v19** ✅
+- 🧊 [Voxel Avatar](#voxel-avatar-v19-jp) — アバターが歩き、地形を整地し、花を植えるMinecraft風ミニゲーム
+- 🔔 [Notification Avatar](#notification-avatar-v19-jp) — AI Avatarのスピンオフ新アプリ：Claude CodeまたはCodexがあなたの入力を必要としたとき、またはタスクを完了したときに、VRMアバターが登場 (https://github.com/webdeveloperhyper/notification-avatar)
+- 🐛 バグ修正：KaleidoscopeとAI Officeを相互排他に修正
+- 🐛 バグ修正：言語がJPのままKokoro Serverを有効にするとVOICEVOXに黙って戻ってしまう問題を修正
+- 🐛 バグ修正：他のモードがMillionaire/Roller Coasterを強制オフした後にAI Office/Catbotが無効のまま固まる問題を修正
+- 🎛️ バグ修正：モード排他制御を1つの共有テーブルに統合
+
+**v20** — 作成中！
 - 🎉 さらに楽しいアップデート
 
 [↑ ページトップへ戻る](#ai-avatar)
