@@ -63,7 +63,8 @@ Click for the YouTube demo ↓
 - 🐾 **[Catbot avatar](#catbot-v17)** — the AI catbot collaborator appears as a live 3D VRM avatar in the panel *(v17)*
 - 🌀 **[Kaleidoscope Effect](#kaleidoscope-effect-v18)** — animated kaleidoscope background with live tuning controls (sides, speed, color, warmth, symmetry, zoom) *(v18)*
 - 🗣️ **[Piper TTS](#piper-tts-v18)** *(VS Code only)* — EN local TTS via an automatically-downloaded native binary, no Python required and faster than Kokoro *(v18)*
-- 🧊 **[Voxel Avatar](#voxel-avatar-v19)** — Minecraft-like mini-game where your avatar walks, terraforms terrain, and plants flowers *(v19)*
+- 🧊 **[Voxel Avatar](#voxel-avatar-v19-v20)** — Minecraft-like mini-game where your avatar walks, terraforms terrain, and plants flowers *(v19)*
+- 🌻 **[Voxel Avatar](#voxel-avatar-v19-v20)** update — Sunflower and Tulip flowers, butterflies that visit and land on flowers, rain with a rainbow, and speech bubbles for manual play *(v20)*
 
 ---
 
@@ -489,7 +490,8 @@ Piper picks a voice automatically based on the current **Gender** setting, and u
 
 ---
 
-## Voxel Avatar *(v19)*
+## Voxel Avatar *(v19)* *(v20)*
+
 
 Click the **Voxel Avatar** toolbar button to switch the panel into a minimal Minecraft-like mini-game — your avatar walks around a small block world, terraforms terrain, and plants flowers.
 
@@ -505,11 +507,21 @@ Click the **Voxel Avatar** toolbar button to switch the panel into a minimal Min
 
 **Left click** — place the selected block; **Right click** — break a block
 
-**Block / Flower radio buttons** — pick what to place; flowers (Pink / Red / Purple) are only plantable on top of grass at ground level
+**Block / Flower radio buttons** — pick what to place; flowers (Pink / Red / Purple, plus Sunflower / Tulip in the More row *(v20)*) are only plantable on top of grass at ground level
 
 **Save / Load** — save the current world to a file, or load one from a file (overwrites what's currently placed)
 
 **🌸 flower counter** — shows how many flowers are currently planted
+
+**More: Sunflower / Tulip** — two flower types with their own shapes: a tall sunflower with a wide dark center, and a cup-shaped tulip; Auto mode plants them too *(v20)*
+
+**Butterfly** — adds a butterfly (up to 50) that flutters around, visits flowers, and sometimes lands on one; the count is saved with the world *(v20)*
+
+**🦋 butterfly counter** — shows how many butterflies are flying *(v20)*
+
+**Weather** — it sometimes rains (roughly every 3–6 minutes, for 30–60 seconds): the sky dims, butterflies shelter until it clears, and a rainbow appears as the rain stops *(v20)*
+
+**Speech bubbles** — Auto mode's bubble and speech now also fire for manual play: placing or breaking a block, planting a flower, pressing Butterfly, and the weather *(v20)*
 
 **❓ Help** — opens an in-panel cheat sheet of all the controls above
 
@@ -702,14 +714,17 @@ Click for the YouTube demo ↓
 - 🐛 Fix: broken JP links for kept-in-English section names (Speech:Local, Catbot) that collided with their EN anchor
 
 **v19** ✅
-- 🧊 [Voxel Avatar](#voxel-avatar-v19) — Minecraft-like mini-game where your avatar walks, terraforms terrain, and plants flowers
+- 🧊 [Voxel Avatar](#voxel-avatar-v19-v20) — Minecraft-like mini-game where your avatar walks, terraforms terrain, and plants flowers
 - 🔔 [Notification Avatar](#notification-avatar-v19) — new spin-off desktop app: VRM avatar pops up and reacts whenever Claude Code or Codex needs your attention or finishes a task (https://github.com/webdeveloperhyper/notification-avatar)
 - 🐛 Fix: Kaleidoscope and AI Office now mutually exclusive
-- 🐛 Fix: Kokoro Server no longer silently falls back to VOICEVOX when language was left　on JP
+- 🐛 Fix: Kokoro Server no longer silently falls back to VOICEVOX when language was left on JP
 - 🐛 Fix: fixed AI Office/Catbot getting stuck disabled after another mode force-turned Millionaire/Roller Coaster off
 - 🎛️ Fix: Mode exclusivity refactored into one shared table
 
-**v20** — Now creating!
+**v20** ✅
+- 🌻 [Voxel Avatar](#voxel-avatar-v19-v20) update — Sunflower and Tulip flowers, butterflies that visit and land on flowers, rain with a rainbow, and speech bubbles for manual play
+
+**v21** — Now creating!
 - 🎉 More fun updates
 
 [↑ Back to top](#ai-avatar)
@@ -780,7 +795,8 @@ Click for the YouTube demo ↓
 - 🐾 **[Catbot avatar](#catbot-v17-jp)** — Catbotコラボレーターがパネルにライブ3DのVRMアバターとして登場 *(v17)*
 - 🌀 **[Kaleidoscopeエフェクト](#kaleidoscopeエフェクト-v18)** — サイド・スピード・カラー・暖かさ・対称性・ズームをライブ調整できるアニメーション万華鏡背景 *(v18)*
 - 🗣️ **[Piper TTS](#piper-tts-v18-jp)** *（VS Code限定）* — 自動ダウンロードされるネイティブバイナリによるEN用ローカルTTS、Python不要でKokoroより高速 *(v18)*
-- 🧊 **[Voxel Avatar](#voxel-avatar-v19-jp)** — アバターが歩き、地形を整地し、花を植えるMinecraft風ミニゲーム *(v19)*
+- 🧊 **[Voxel Avatar](#voxel-avatar-v19-v20-jp)** — アバターが歩き、地形を整地し、花を植えるMinecraft風ミニゲーム *(v19)*
+- 🌻 **[Voxel Avatar](#voxel-avatar-v19-v20-jp)** アップデート — ヒマワリとチューリップの花、花を訪れて止まるちょうちょ、虹が出る雨、手動操作時の吹き出し *(v20)*
 
 ---
 
@@ -1212,9 +1228,9 @@ Piperは現在の **Gender** 設定に応じて自動的にボイスを選択し
 
 ---
 
-<a id="voxel-avatar-v19-jp"></a>
+<a id="voxel-avatar-v19-v20-jp"></a>
 
-## Voxel Avatar *(v19)*
+## Voxel Avatar *(v19)* *(v20)*
 
 **Voxel Avatar** ツールバーボタンをクリックすると、パネルが小さなMinecraft風ミニゲームに切り替わります — アバターがブロックの世界を歩き回り、地形を整地し、花を植えます。
 
@@ -1230,11 +1246,21 @@ Piperは現在の **Gender** 設定に応じて自動的にボイスを選択し
 
 **左クリック** — 選択中のブロックを設置；**右クリック** — ブロックを破壊
 
-**Block / Flower ラジオボタン** — 何を設置するか選択；花（Pink / Red / Purple）は地面レベルの草ブロックの上にのみ植えられます
+**Block / Flower ラジオボタン** — 何を設置するか選択；花（Pink / Red / Purple、v20からはMore行のSunflower / Tulipも *(v20)*）は地面レベルの草ブロックの上にのみ植えられます
 
 **Save / Load** — 現在のワールドをファイルに保存、またはファイルから読み込み（現在配置されているものを上書き）
 
 **🌸 花カウンター** — 現在植えられている花の数を表示
+
+**More: Sunflower / Tulip** — 形の異なる2種類の花：幅広い黒い中心を持つ背の高いヒマワリと、カップ型のチューリップ；Autoモードでも植えられます *(v20)*
+
+**Butterfly** — ちょうちょを追加（最大50匹）；ひらひら飛び回り、花を訪れ、ときどき花に止まります；数はワールドと一緒に保存されます *(v20)*
+
+**🦋 ちょうちょカウンター** — 飛んでいるちょうちょの数を表示 *(v20)*
+
+**天気** — ときどき雨が降ります（およそ3〜6分ごとに30〜60秒間）：空が暗くなり、ちょうちょは雨がやむまで隠れ、雨上がりに虹が出ます *(v20)*
+
+**吹き出し** — Autoモードの吹き出しと読み上げが手動操作でも表示されます：ブロックの設置・破壊、花の植え付け、Butterflyボタン、天気の変化 *(v20)*
 
 **❓ ヘルプ** — 上記の操作一覧をパネル内チートシートとして表示
 
@@ -1431,14 +1457,17 @@ Click for the YouTube demo ↓
 - 🐛 バグ修正：英語表記のまま維持しているセクション名（Speech:Local、Catbot）でEN側とアンカーが衝突し、JPリンクが壊れていた問題を修正
 
 **v19** ✅
-- 🧊 [Voxel Avatar](#voxel-avatar-v19-jp) — アバターが歩き、地形を整地し、花を植えるMinecraft風ミニゲーム
+- 🧊 [Voxel Avatar](#voxel-avatar-v19-v20-jp) — アバターが歩き、地形を整地し、花を植えるMinecraft風ミニゲーム
 - 🔔 [Notification Avatar](#notification-avatar-v19-jp) — AI Avatarのスピンオフ新アプリ：Claude CodeまたはCodexがあなたの入力を必要としたとき、またはタスクを完了したときに、VRMアバターが登場 (https://github.com/webdeveloperhyper/notification-avatar)
 - 🐛 バグ修正：KaleidoscopeとAI Officeを相互排他に修正
 - 🐛 バグ修正：言語がJPのままKokoro Serverを有効にするとVOICEVOXに黙って戻ってしまう問題を修正
 - 🐛 バグ修正：他のモードがMillionaire/Roller Coasterを強制オフした後にAI Office/Catbotが無効のまま固まる問題を修正
 - 🎛️ バグ修正：モード排他制御を1つの共有テーブルに統合
 
-**v20** — 作成中！
+**v20** ✅
+- 🌻 [Voxel Avatar](#voxel-avatar-v19-v20-jp) アップデート — ヒマワリとチューリップの花、花を訪れて止まるちょうちょ、虹が出る雨、手動操作時の吹き出し
+
+**v21** — 作成中！
 - 🎉 さらに楽しいアップデート
 
 [↑ ページトップへ戻る](#ai-avatar)
