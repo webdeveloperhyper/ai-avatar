@@ -23,7 +23,8 @@ Click for the YouTube demo ↓
 - **v8,v9,v10** → [🎥AI Chat, AI Cheering Messages, and Animation Editor Hyper (AI Avatar v10: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/ai-chat-ai-cheering-messages-and-animation-editor-hyper-ai-avatar-v10-vs-code-and-chrome-1noo)
 - **v11,v12,v13,v14,v15** → [✨Cool Effects, TTS, and Fun Animations (AI Avatar v15: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/cool-effects-tts-and-fun-animations-ai-avatar-v15-vs-code-and-chrome-extension-3oec)
 - **v16,v17** → [😸Catbot Integration, AI Office, Cat Mode (AI Avatar v17: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/catbot-integration-ai-office-cat-mode-ai-avatar-v17-vs-code-and-chrome-extension-2f26)
-- **v18** → coming soon!
+- **v18,v19,v20** → [AI Avatar v20, Cursor Avatar, Notification Avatar (Voxel Avatar)🧊](https://dev.to/webdeveloperhyper/ai-avatar-v20-cursor-avatar-notification-avatar-voxel-avatar-4dd2)
+- **v21** → coming soon!
 
 ---
 
@@ -63,8 +64,9 @@ Click for the YouTube demo ↓
 - 🐾 **[Catbot avatar](#catbot-v17)** — the AI catbot collaborator appears as a live 3D VRM avatar in the panel *(v17)*
 - 🌀 **[Kaleidoscope Effect](#kaleidoscope-effect-v18)** — animated kaleidoscope background with live tuning controls (sides, speed, color, warmth, symmetry, zoom) *(v18)*
 - 🗣️ **[Piper TTS](#piper-tts-v18)** *(VS Code only)* — EN local TTS via an automatically-downloaded native binary, no Python required and faster than Kokoro *(v18)*
-- 🧊 **[Voxel Avatar](#voxel-avatar-v19-v20)** — Minecraft-like mini-game where your avatar walks, terraforms terrain, and plants flowers *(v19)*
-- 🌻 **[Voxel Avatar](#voxel-avatar-v19-v20)** update — Sunflower and Tulip flowers, butterflies that visit and land on flowers, rain with a rainbow, and speech bubbles for manual play *(v20)*
+- 🧊 **[Voxel Avatar](#voxel-avatar-v19-v20-v21)** — Minecraft-like mini-game where your avatar walks, terraforms terrain, and plants flowers *(v19)*
+- 🌻 **[Voxel Avatar](#voxel-avatar-v19-v20-v21)** update — Sunflower and Tulip flowers, butterflies that visit and land on flowers, rain with a rainbow, and speech bubbles for manual play *(v20)*
+- 🛤️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21)** update — build and ride a rail through the garden, cats that wander around, and coin trees that grow and drop coins *(v21)*
 
 ---
 
@@ -451,6 +453,9 @@ Two 3D avatars — **Boss** and **Sub** — appear in the panel and patrol back 
 
 ## Kaleidoscope Effect *(v18)*
 
+Click for the YouTube demo ↓
+[![AI Avatar Kaleidoscope Mode Demo](https://img.youtube.com/vi/KBcl5JZrwcQ/maxresdefault.jpg)](https://youtube.com/shorts/KBcl5JZrwcQ)
+
 Click the **Kaleidoscope** toolbar button to replace the background with an animated, live-tunable kaleidoscope shader rendered behind the avatar.
 
 **Kaleidoscope: On / Off** — toggles the effect on and off
@@ -490,8 +495,13 @@ Piper picks a voice automatically based on the current **Gender** setting, and u
 
 ---
 
-## Voxel Avatar *(v19)* *(v20)*
+## Voxel Avatar *(v19)* *(v20)* *(v21)*
 
+Click for the YouTube demo v20↓
+[![AI Avatar Voxel Avatar Mode v20 Demo](https://img.youtube.com/vi/8LUaYPmRIYk/maxresdefault.jpg)](https://youtube.com/shorts/8LUaYPmRIYk)
+
+v19 ↓
+[![AI Avatar Voxel Avatar Mode v19 Demo](https://img.youtube.com/vi/RnIMtYAWeVQ/maxresdefault.jpg)](https://youtube.com/shorts/RnIMtYAWeVQ)
 
 Click the **Voxel Avatar** toolbar button to switch the panel into a minimal Minecraft-like mini-game — your avatar walks around a small block world, terraforms terrain, and plants flowers.
 
@@ -522,6 +532,38 @@ Click the **Voxel Avatar** toolbar button to switch the panel into a minimal Min
 **Weather** — it sometimes rains (roughly every 3–6 minutes, for 30–60 seconds): the sky dims, butterflies shelter until it clears, and a rainbow appears as the rain stops *(v20)*
 
 **Speech bubbles** — Auto mode's bubble and speech now also fire for manual play: placing or breaking a block, planting a flower, pressing Butterfly, and the weather *(v20)*
+
+**Cat** — adds a cat (up to 20) that wanders around the garden on its own; the count is saved with the world *(v21)*
+
+**🐱 cat counter** — shows how many cats are around *(v21)*
+
+**Coin Tree** — plant it on grass at ground level like a flower; each of its 3 branches grows a coin, hangs it, then drops it and grows another, forever *(v21)*
+
+**🪙 coin counter** — shows the total number of coins dropped across all coin trees, ever (a running total, not a live count on screen) *(v21)*
+
+**Start Rail** — a Block radio option; click a block on the ground to begin building a rail there; right-click a placed rail to undo its last waypoint *(v21)*
+
+**Extend: Straight** — extends the rail one block straight ahead from wherever it currently ends *(v21)*
+
+**Extend: Left** — extends the rail one block, turning 45° left (press twice for a 90° turn) *(v21)*
+
+**Extend: Right** — extends the rail one block, turning 45° right (press twice for a 90° turn) *(v21)*
+
+**Extend: Up** — extends the rail one block, climbing half a block *(v21)*
+
+**Extend: Down** — extends the rail one block, descending half a block *(v21)*
+
+**Extend: ↖** — turns 45° left while climbing half a block, in one rail piece *(v21)*
+
+**Extend: ↗** — turns 45° right while climbing half a block, in one rail piece *(v21)*
+
+**Extend: ↙** — turns 45° left while descending half a block, in one rail piece *(v21)*
+
+**Extend: ↘** — turns 45° right while descending half a block, in one rail piece *(v21)*
+
+**Delete** — removes the last-placed rail waypoint (same as right-clicking it in the 3D view) *(v21)*
+
+**Ride** — rides the rail you built (needs at least 3 rails placed); click again (now "Stop") to get off; the garden keeps going while you ride — butterflies, cats, and coin trees don't freeze *(v21)*
 
 **❓ Help** — opens an in-panel cheat sheet of all the controls above
 
@@ -714,7 +756,7 @@ Click for the YouTube demo ↓
 - 🐛 Fix: broken JP links for kept-in-English section names (Speech:Local, Catbot) that collided with their EN anchor
 
 **v19** ✅
-- 🧊 [Voxel Avatar](#voxel-avatar-v19-v20) — Minecraft-like mini-game where your avatar walks, terraforms terrain, and plants flowers
+- 🧊 [Voxel Avatar](#voxel-avatar-v19-v20-v21) — Minecraft-like mini-game where your avatar walks, terraforms terrain, and plants flowers
 - 🔔 [Notification Avatar](#notification-avatar-v19) — new spin-off desktop app: VRM avatar pops up and reacts whenever Claude Code or Codex needs your attention or finishes a task (https://github.com/webdeveloperhyper/notification-avatar)
 - 🐛 Fix: Kaleidoscope and AI Office now mutually exclusive
 - 🐛 Fix: Kokoro Server no longer silently falls back to VOICEVOX when language was left on JP
@@ -722,9 +764,14 @@ Click for the YouTube demo ↓
 - 🎛️ Fix: Mode exclusivity refactored into one shared table
 
 **v20** ✅
-- 🌻 [Voxel Avatar](#voxel-avatar-v19-v20) update — Sunflower and Tulip flowers, butterflies that visit and land on flowers, rain with a rainbow, and speech bubbles for manual play
+- 🌻 [Voxel Avatar](#voxel-avatar-v19-v20-v21) update — Sunflower and Tulip flowers, butterflies that visit and land on flowers, rain with a rainbow, and speech bubbles for manual play
 
-**v21** — Now creating!
+**v21** ✅
+- 🛤️ [Voxel Avatar](#voxel-avatar-v19-v20-v21) update — build and ride a rail through the garden, cats that wander around, and coin trees that grow and drop coins
+- 🎛️ Voxel Avatar controls now open in their own tab
+- 🐛 Fix: narrow panel — toolbar buttons that don't fit a row now wrap to a new line instead of disappearing off the edge
+
+**v22** — Now creating!
 - 🎉 More fun updates
 
 [↑ Back to top](#ai-avatar)
@@ -755,7 +802,8 @@ Click for the YouTube demo ↓
   Code・Chrome拡張機能)](https://dev.to/webdeveloperhyper/ai-chat-ai-cheering-messages-and-animation-editor-hyper-ai-avatar-v10-vs-code-and-chrome-1noo)
 - **v11,v12,v13,v14,v15** → [✨おしゃれなエフェクト、TTS、楽しいアニメーション (AI Avatar v15: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/cool-effects-tts-and-fun-animations-ai-avatar-v15-vs-code-and-chrome-extension-3oec)
 - **v16,v17** → [😸Catbot統合, AI Office, Cat Mode (AI Avatar v17: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/catbot-integration-ai-office-cat-mode-ai-avatar-v17-vs-code-and-chrome-extension-2f26)
-- **v18** → coming soon!
+- **v18,v19,v20** → [AI Avatar v20, Cursor Avatar, Notification Avatar (Voxel Avatar)🧊](https://dev.to/webdeveloperhyper/ai-avatar-v20-cursor-avatar-notification-avatar-voxel-avatar-4dd2)
+- **v21** → coming soon!
 
 ---
 
@@ -795,8 +843,9 @@ Click for the YouTube demo ↓
 - 🐾 **[Catbot avatar](#catbot-v17-jp)** — Catbotコラボレーターがパネルにライブ3DのVRMアバターとして登場 *(v17)*
 - 🌀 **[Kaleidoscopeエフェクト](#kaleidoscopeエフェクト-v18)** — サイド・スピード・カラー・暖かさ・対称性・ズームをライブ調整できるアニメーション万華鏡背景 *(v18)*
 - 🗣️ **[Piper TTS](#piper-tts-v18-jp)** *（VS Code限定）* — 自動ダウンロードされるネイティブバイナリによるEN用ローカルTTS、Python不要でKokoroより高速 *(v18)*
-- 🧊 **[Voxel Avatar](#voxel-avatar-v19-v20-jp)** — アバターが歩き、地形を整地し、花を植えるMinecraft風ミニゲーム *(v19)*
-- 🌻 **[Voxel Avatar](#voxel-avatar-v19-v20-jp)** アップデート — ヒマワリとチューリップの花、花を訪れて止まるちょうちょ、虹が出る雨、手動操作時の吹き出し *(v20)*
+- 🧊 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-jp)** — アバターが歩き、地形を整地し、花を植えるMinecraft風ミニゲーム *(v19)*
+- 🌻 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-jp)** アップデート — ヒマワリとチューリップの花、花を訪れて止まるちょうちょ、虹が出る雨、手動操作時の吹き出し *(v20)*
+- 🛤️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21-jp)** アップデート — 庭にレールを敷いて乗れるように、庭を歩き回るネコ、コインが育って落ちるコインツリーを追加 *(v21)*
 
 ---
 
@@ -1187,6 +1236,9 @@ Click for the YouTube demo ↓
 
 ## Kaleidoscopeエフェクト *(v18)*
 
+Click for the YouTube demo ↓
+[![AI Avatar Kaleidoscope Mode Demo](https://img.youtube.com/vi/KBcl5JZrwcQ/maxresdefault.jpg)](https://youtube.com/shorts/KBcl5JZrwcQ)
+
 ツールバーの **Kaleidoscope** ボタンをクリックすると、背景がアバターの後ろにアニメーション表示されるライブ調整可能な万華鏡シェーダーに切り替わります。
 
 **Kaleidoscope: On / Off** — エフェクトのオン・オフを切り替え
@@ -1228,9 +1280,15 @@ Piperは現在の **Gender** 設定に応じて自動的にボイスを選択し
 
 ---
 
-<a id="voxel-avatar-v19-v20-jp"></a>
+<a id="voxel-avatar-v19-v20-v21-jp"></a>
 
-## Voxel Avatar *(v19)* *(v20)*
+## Voxel Avatar *(v19)* *(v20)* *(v21)*
+
+Click for the YouTube demo v20↓
+[![AI Avatar Voxel Avatar Mode v20 Demo](https://img.youtube.com/vi/8LUaYPmRIYk/maxresdefault.jpg)](https://youtube.com/shorts/8LUaYPmRIYk)
+
+v19 ↓
+[![AI Avatar Voxel Avatar Mode v19 Demo](https://img.youtube.com/vi/RnIMtYAWeVQ/maxresdefault.jpg)](https://youtube.com/shorts/RnIMtYAWeVQ)
 
 **Voxel Avatar** ツールバーボタンをクリックすると、パネルが小さなMinecraft風ミニゲームに切り替わります — アバターがブロックの世界を歩き回り、地形を整地し、花を植えます。
 
@@ -1261,6 +1319,38 @@ Piperは現在の **Gender** 設定に応じて自動的にボイスを選択し
 **天気** — ときどき雨が降ります（およそ3〜6分ごとに30〜60秒間）：空が暗くなり、ちょうちょは雨がやむまで隠れ、雨上がりに虹が出ます *(v20)*
 
 **吹き出し** — Autoモードの吹き出しと読み上げが手動操作でも表示されます：ブロックの設置・破壊、花の植え付け、Butterflyボタン、天気の変化 *(v20)*
+
+**Cat** — 庭を自由に歩き回るネコを追加（最大20匹）；数はワールドと一緒に保存されます *(v21)*
+
+**🐱 ネコカウンター** — 現在いるネコの数を表示 *(v21)*
+
+**Coin Tree** — 花と同じように地上の草の上に植える；3つの枝それぞれがコインを育て、ぶら下げ、落として、また育てる、を永遠に繰り返す *(v21)*
+
+**🪙 コインカウンター** — すべてのCoin Treeから今までに落ちたコインの合計数を表示（画面上の現在の数ではなく累計）*(v21)*
+
+**Start Rail** — Blockのラジオボタンの一つ；地面のブロックをクリックしてそこからレールを敷き始める；設置済みのレールを右クリックすると最後のポイントを取り消せる *(v21)*
+
+**Extend: Straight** — レールを現在の終点から1ブロック分まっすぐ延長 *(v21)*
+
+**Extend: Left** — レールを1ブロック延長しながら左に45°カーブ（2回押すと90°）*(v21)*
+
+**Extend: Right** — レールを1ブロック延長しながら右に45°カーブ（2回押すと90°）*(v21)*
+
+**Extend: Up** — レールを1ブロック延長しながら半ブロック上る *(v21)*
+
+**Extend: Down** — レールを1ブロック延長しながら半ブロック下る *(v21)*
+
+**Extend: ↖** — 左に45°カーブしながら半ブロック上るのを1回の延長で行う *(v21)*
+
+**Extend: ↗** — 右に45°カーブしながら半ブロック上るのを1回の延長で行う *(v21)*
+
+**Extend: ↙** — 左に45°カーブしながら半ブロック下るのを1回の延長で行う *(v21)*
+
+**Extend: ↘** — 右に45°カーブしながら半ブロック下るのを1回の延長で行う *(v21)*
+
+**Delete** — 最後に置いたレールのポイントを削除（3Dビューでそのポイントを右クリックするのと同じ）*(v21)*
+
+**Ride** — 作ったレールに沿ってアバターが走行（レールを3つ以上置く必要あり）；もう一度クリック（ボタンは「Stop」に変わる）で降りる；走行中も庭は止まらず、ちょうちょ・ネコ・Coin Treeは動き続ける *(v21)*
 
 **❓ ヘルプ** — 上記の操作一覧をパネル内チートシートとして表示
 
@@ -1457,7 +1547,7 @@ Click for the YouTube demo ↓
 - 🐛 バグ修正：英語表記のまま維持しているセクション名（Speech:Local、Catbot）でEN側とアンカーが衝突し、JPリンクが壊れていた問題を修正
 
 **v19** ✅
-- 🧊 [Voxel Avatar](#voxel-avatar-v19-v20-jp) — アバターが歩き、地形を整地し、花を植えるMinecraft風ミニゲーム
+- 🧊 [Voxel Avatar](#voxel-avatar-v19-v20-v21-jp) — アバターが歩き、地形を整地し、花を植えるMinecraft風ミニゲーム
 - 🔔 [Notification Avatar](#notification-avatar-v19-jp) — AI Avatarのスピンオフ新アプリ：Claude CodeまたはCodexがあなたの入力を必要としたとき、またはタスクを完了したときに、VRMアバターが登場 (https://github.com/webdeveloperhyper/notification-avatar)
 - 🐛 バグ修正：KaleidoscopeとAI Officeを相互排他に修正
 - 🐛 バグ修正：言語がJPのままKokoro Serverを有効にするとVOICEVOXに黙って戻ってしまう問題を修正
@@ -1465,9 +1555,14 @@ Click for the YouTube demo ↓
 - 🎛️ バグ修正：モード排他制御を1つの共有テーブルに統合
 
 **v20** ✅
-- 🌻 [Voxel Avatar](#voxel-avatar-v19-v20-jp) アップデート — ヒマワリとチューリップの花、花を訪れて止まるちょうちょ、虹が出る雨、手動操作時の吹き出し
+- 🌻 [Voxel Avatar](#voxel-avatar-v19-v20-v21-jp) アップデート — ヒマワリとチューリップの花、花を訪れて止まるちょうちょ、虹が出る雨、手動操作時の吹き出し
 
-**v21** — 作成中！
+**v21** ✅
+- 🛤️ [Voxel Avatar](#voxel-avatar-v19-v20-v21-jp) アップデート — 庭にレールを敷いて乗れるように、庭を歩き回るネコ、コインが育って落ちるコインツリーを追加
+- 🎛️ Voxel Avatarのコントロールが専用タブで開くように
+- 🐛 バグ修正：パネルが狭いとき、行に収まらないツールバーのボタンが端で消えず、次の行に折り返すように修正
+
+**v22** — 作成中！
 - 🎉 さらに楽しいアップデート
 
 [↑ ページトップへ戻る](#ai-avatar)
