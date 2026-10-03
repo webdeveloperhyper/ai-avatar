@@ -64,13 +64,16 @@ Click for the YouTube demo ↓
 - 🐾 **[Catbot avatar](#catbot-v17)** — the AI catbot collaborator appears as a live 3D VRM avatar in the panel *(v17)*
 - 🌀 **[Kaleidoscope Effect](#kaleidoscope-effect-v18)** — animated kaleidoscope background with live tuning controls (sides, speed, color, warmth, symmetry, zoom) *(v18)*
 - 🗣️ **[Piper TTS](#piper-tts-v18)** *(VS Code only)* — EN local TTS via an automatically-downloaded native binary, no Python required and faster than Kokoro *(v18)*
-- 🧊 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22)** — Minecraft-like mini-game where your avatar walks, terraforms terrain, and plants flowers *(v19)*
-- 🌻 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22)** update — Sunflower and Tulip flowers, butterflies that visit and land on flowers, rain with a rainbow, and speech bubbles for manual play *(v20)*
-- 🛤️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22)** update — build and ride a rail through the garden, cats that wander around, and coin trees that grow and drop coins *(v21)*
-- 🐝 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22)** update — bees, dogs, and birds that fly, land, and roam the garden alongside the butterflies and cats *(v22)*
-- 🍃 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22)** update — flowers and coin trees sway in the breeze, cats stretch, dogs sniff and wag their tails, and bees linger on flowers *(v22)*
-- 🌼 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22)** update — flower clusters, placement previews, 20-step Undo, a golden pulse on changed blocks, and smarter Auto gardening *(v22)*
+- 🧊 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23)** — Minecraft-like mini-game where your avatar walks, terraforms terrain, and plants flowers *(v19)*
+- 🌻 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23)** update — Sunflower and Tulip flowers, butterflies that visit and land on flowers, rain with a rainbow, and speech bubbles for manual play *(v20)*
+- 🛤️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23)** update — build and ride a rail through the garden, cats that wander around, and coin trees that grow and drop coins *(v21)*
+- 🐝 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23)** update — bees, dogs, and birds that fly, land, and roam the garden alongside the butterflies and cats *(v22)*
+- 🍃 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23)** update — flowers and coin trees sway in the breeze, cats stretch, dogs sniff and wag their tails, and bees linger on flowers *(v22)*
+- 🌼 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23)** update — flower clusters, placement previews, 20-step Undo, a golden pulse on changed blocks, and smarter Auto gardening *(v22)*
 - 🤖 **[Codex Support](#codex-support-v22)** *(VS Code only)* — avatar also reacts to Codex CLI and Codex VS Code extension activity alongside Claude Code *(v22)*
+- ❤️ **[Jev Reactions](#jev-reactions-v23)** *(VS Code only)* — sentiment-based avatar reactions with 3D hearts, broken hearts, stars, fire and tears *(v23)*
+- 📊 **[Dev Log](#dev-log-v23)** *(VS Code only)* — request categories and daily, weekly and all-time history for Claude and Codex *(v23)*
+- ☁️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23)** update — hamsters, mushrooms, drifting clouds and sky gradients *(v23)*
 
 ---
 
@@ -235,12 +238,12 @@ Click the **⚙** button next to the input to open chat history, provider settin
 
   **Chrome only:** Ollama blocks requests from browser extensions by default. Fix it once:
   1. Win+R → type `sysdm.cpl` → Advanced → Environment Variables → New
-  2. Name: `OLLAMA_ORIGINS` / Value: `*`
+  2. Name: `OLLAMA_ORIGINS` / Value: `chrome-extension://YOUR_EXTENSION_ID` — replace `YOUR_EXTENSION_ID` with AI Avatar's ID from `chrome://extensions` (enable Developer mode to see it). Do not use `*`, which allows every website.
   3. Quit Ollama from the system tray → relaunch it — no reboot needed
 
 **Settings** (⚙ button)
 - Switch provider with the Gemini / Ollama toggle
-- Enter your Gemini API key (stored securely, never committed)
+- Enter your Gemini API key (VS Code: SecretStorage; Chrome: extension-local IndexedDB). Saved keys are not filled into the page automatically; the eye button reveals them briefly. Use **Remove key**, then **Save**, to delete the saved key.
 - Set the model name (default: `gemini-3.1-flash-lite` / `qwen2.5:3b`)
 - Edit the system prompt — default: cheerful 1-sentence coding companion with emoji
 
@@ -495,9 +498,15 @@ Piper picks a voice automatically based on the current **Gender** setting, and u
 
 ---
 
-## Voxel Avatar *(v19)* *(v20)* *(v21)* *(v22)*
+## Voxel Avatar *(v19)* *(v20)* *(v21)* *(v22)* *(v23)*
 
-Click for the YouTube demo v20↓
+Click for the YouTube demo v22↓
+[![AI Avatar Voxel Avatar Mode v22 Demo](https://img.youtube.com/vi/Hm1q03RXCwg/maxresdefault.jpg)](https://youtube.com/shorts/Hm1q03RXCwg)
+
+v21↓
+[![AI Avatar Voxel Avatar Mode v21 Demo](https://img.youtube.com/vi/iRlw3OASnWI/maxresdefault.jpg)](https://youtube.com/shorts/iRlw3OASnWI)
+
+v20↓
 [![AI Avatar Voxel Avatar Mode v20 Demo](https://img.youtube.com/vi/8LUaYPmRIYk/maxresdefault.jpg)](https://youtube.com/shorts/8LUaYPmRIYk)
 
 v19 ↓
@@ -514,7 +523,7 @@ Click the **Voxel Avatar** toolbar button to switch the panel into a minimal Min
 | **Undo** | restores the last garden or rail edit, including Auto's own actions (up to 20 steps); Load clears the history | v22 |
 | **Save / Load** | save the current world to a file, or load one from a file (overwrites what's currently placed) | v19 |
 | **❓ Help** | opens an in-panel cheat sheet of all the controls below — a wider, scrollable window with a close button in the top-right | v19 / v22 |
-| **Counters** | 🌸 individual flowers · 🦋 butterflies · 🐝 bees · 🐦 birds · 🐱 cats · 🐶 dogs · 🪙 coins dropped across all coin trees, ever (a running total, not a live count on screen) | v19–v22 |
+| **Counters** | 🌸 individual flowers · 🍄 mushrooms · 🦋 butterflies · 🐝 bees · 🐦 birds · 🐱 cats · 🐶 dogs · 🐹 hamsters · 🪙 coins dropped across all coin trees, ever (a running total, not a live count on screen) | v19–v23 |
 
 ### Moving & building
 
@@ -530,6 +539,7 @@ Click the **Voxel Avatar** toolbar button to switch the panel into a minimal Min
 | **Flower: Pink / Red / Purple** | plantable only on top of grass at ground level | v19 |
 | **Flower: Sunflower / Tulip** | two more flower shapes: a tall sunflower with a wide dark center, and a cup-shaped tulip; Auto plants them too | v20 |
 | **Flower: Coin Tree** | plant it on grass at ground level like a flower; each of its 3 branches grows a coin, hangs it, then drops it and grows another, forever | v21 |
+| **Mushroom** | plant clusters of 1–3 mushrooms on grass, with a separate counter | v23 |
 
 ### Wildlife
 
@@ -540,6 +550,7 @@ Click the **Voxel Avatar** toolbar button to switch the panel into a minimal Min
 | **Bird** | adds a randomly sized bird that flies, then lands and hops on grass — flowers included, so it perches among them; not on dirt, stone, or a coin tree (up to 10) | v22 |
 | **Cat** | adds a pink cat that walks around and occasionally stretches (up to 10) | v21 / v22 |
 | **Dog** | adds a dog that strolls, sniffs nearby flowers, blinks, and wags its tail (up to 10) | v22 |
+| **Hamster** | add up to 10 hamsters that scurry, sniff plants and sit up | v23 |
 
 Every count is saved with the world.
 
@@ -557,6 +568,8 @@ Every count is saved with the world.
 
 Things that happen on their own, without a button.
 
+**Clouds and sky** — drifting clouds above the garden and a gradient sky. *(v23)*
+
 **Weather** — it sometimes rains (roughly every 3–6 minutes, for 30–60 seconds): the sky dims, butterflies and birds shelter until it clears, and a rainbow appears as the rain stops *(v20)* *(v22)*
 
 **Speech bubbles** — Auto's bubble and speech also fire for manual play: placing or breaking a block, planting a flower, adding an animal, and the weather *(v20)*
@@ -570,6 +583,34 @@ Things that happen on their own, without a button.
 **Golden pulse** — a block flashes gold for half a second when it's successfully placed, broken, or planted, including Auto's own edits, so you can see what it just did *(v22)*
 
 **Smarter Auto** — Auto prefers a 5–10 block walk, routes around obstacles, announces where it's heading, temporarily skips blocked targets, and picks terrain repair 70% / planting 30% when both are in reach *(v22)*
+
+## Jev Reactions *(v23)*
+
+Click for the YouTube demo↓
+[![AI Avatar Voxel Avatar Mode v23 Demo](https://img.youtube.com/vi/5gn6hlxRUWY/maxresdefault.jpg)](https://youtube.com/shorts/5gn6hlxRUWY)
+
+Uses Jev to check the sentiment of your new Claude/Codex requests and trigger avatar reactions. VS Code only.
+
+- **Jev API Key** — save your key in Settings; the eye button reveals it for up to 15 seconds. **Remove key** deletes the saved key. *(v23)*
+- **Jev: On/Off** — enable sentiment reactions; starts Off after restart. *(v23)*
+
+Positive results randomly show a heart, star or fire; negative results show a broken heart or tears. Neutral results do not trigger a sentiment reaction. AI replies are excluded. *(v23)*
+
+## Dev Log *(v23)*
+
+Counts Claude/Codex requests and uses Jev to assign categories—not to measure completed tasks. Saves counts and categories locally, without message text. VS Code only.
+
+| Control | What it does |
+|---|---|
+| **Dev Log** | Opens the log tab |
+| **Record: On/Off** | Records new requests independently of avatar reactions; starts Off after restart |
+| **Period: Day / Week / All** | Shows daily, Monday–Sunday weekly or all-time totals |
+| **Tool: All / Claude / Codex** | Filters counts by tool |
+| **History** | Select a row to show its categories |
+| **Previous / Next** | Browses seven recorded days or weeks per page |
+| **Refresh** | Reloads saved counts |
+| **Clear history** | Stops recording in this window and deletes saved counts after confirmation |
+| **Help** | Shows controls and category explanations |
 
 ## Codex Support *(v22)*
 
@@ -660,6 +701,10 @@ Click for the YouTube demo ↓
 - **Maximum Blue** — Made avatars in v6 and keeps supporting.
 
 ---
+
+## Privacy
+
+[VS Code Privacy Policy](https://github.com/webdeveloperhyper/ai-avatar/blob/main/PRIVACY.md)
 
 ## Roadmap
 
@@ -776,7 +821,7 @@ Click for the YouTube demo ↓
 - 🐛 Fix: broken JP links for kept-in-English section names (Speech:Local, Catbot) that collided with their EN anchor
 
 **v19** ✅
-- 🧊 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22) — Minecraft-like mini-game where your avatar walks, terraforms terrain, and plants flowers
+- 🧊 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23) — Minecraft-like mini-game where your avatar walks, terraforms terrain, and plants flowers
 - 🔔 [Notification Avatar](#notification-avatar-v19) — new spin-off desktop app: VRM avatar pops up and reacts whenever Claude Code or Codex needs your attention or finishes a task (https://github.com/webdeveloperhyper/notification-avatar)
 - 🐛 Fix: Kaleidoscope and AI Office now mutually exclusive
 - 🐛 Fix: Kokoro Server no longer silently falls back to VOICEVOX when language was left on JP
@@ -784,21 +829,26 @@ Click for the YouTube demo ↓
 - 🎛️ Fix: Mode exclusivity refactored into one shared table
 
 **v20** ✅
-- 🌻 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22) update — Sunflower and Tulip flowers, butterflies that visit and land on flowers, rain with a rainbow, and speech bubbles for manual play
+- 🌻 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23) update — Sunflower and Tulip flowers, butterflies that visit and land on flowers, rain with a rainbow, and speech bubbles for manual play
 
 **v21** ✅
-- 🛤️ [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22) update — build and ride a rail through the garden, cats that wander around, and coin trees that grow and drop coins
+- 🛤️ [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23) update — build and ride a rail through the garden, cats that wander around, and coin trees that grow and drop coins
 - 🎛️ Voxel Avatar controls now open in their own tab
 - 🐛 Fix: narrow panel — toolbar buttons that don't fit a row now wrap to a new line instead of disappearing off the edge
 
 **v22** ✅
-- 🐝 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22) update — bees, dogs, and birds that fly, land, and roam the garden alongside the butterflies and cats
-- 🍃 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22) update — flowers and coin trees sway in the breeze, cats stretch, dogs sniff and wag their tails, and bees linger on flowers
-- 🌼 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22) update — flower clusters, placement previews, 20-step Undo, a golden pulse on changed blocks, and smarter Auto gardening
+- 🐝 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23) update — bees, dogs, and birds that fly, land, and roam the garden alongside the butterflies and cats
+- 🍃 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23) update — flowers and coin trees sway in the breeze, cats stretch, dogs sniff and wag their tails, and bees linger on flowers
+- 🌼 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23) update — flower clusters, placement previews, 20-step Undo, a golden pulse on changed blocks, and smarter Auto gardening
 - 🤖 [Codex Support](#codex-support-v22) *(VS Code only)* — avatar also reacts to Codex CLI and Codex VS Code extension activity alongside Claude Code
 - 🛠️ Modeling Toolkit — a guided image-to-model harness and Model Inspector built to design, measure, and refine every voxel model in the garden *(dev tool, not shipped in the extension)*
 
-**v23** — Now creating!
+**v23** ✅
+- ❤️ [Jev Reactions](#jev-reactions-v23) *(VS Code only)* — sentiment-based avatar reactions with 3D hearts, broken hearts, stars, fire and tears
+- 📊 [Dev Log](#dev-log-v23) *(VS Code only)* — request categories and daily, weekly and all-time history for Claude and Codex
+- ☁️ [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23) update — hamsters, mushrooms, drifting clouds and sky gradients
+
+**v24** — Coming soon!
 - 🎉 More fun updates
 
 [↑ Back to top](#ai-avatar)
@@ -870,13 +920,16 @@ Click for the YouTube demo ↓
 - 🐾 **[Catbot avatar](#catbot-v17-jp)** — Catbotコラボレーターがパネルにライブ3DのVRMアバターとして登場 *(v17)*
 - 🌀 **[Kaleidoscopeエフェクト](#kaleidoscopeエフェクト-v18)** — サイド・スピード・カラー・暖かさ・対称性・ズームをライブ調整できるアニメーション万華鏡背景 *(v18)*
 - 🗣️ **[Piper TTS](#piper-tts-v18-jp)** *（VS Code限定）* — 自動ダウンロードされるネイティブバイナリによるEN用ローカルTTS、Python不要でKokoroより高速 *(v18)*
-- 🧊 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-jp)** — アバターが歩き、地形を整地し、花を植えるMinecraft風ミニゲーム *(v19)*
-- 🌻 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-jp)** アップデート — ヒマワリとチューリップの花、花を訪れて止まるちょうちょ、虹が出る雨、手動操作時の吹き出し *(v20)*
-- 🛤️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-jp)** アップデート — 庭にレールを敷いて乗れるように、庭を歩き回るネコ、コインが育って落ちるコインツリーを追加 *(v21)*
-- 🐝 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-jp)** アップデート — ちょうちょとネコに加えて、飛んで降りて庭を歩き回るハチ・イヌ・トリを追加 *(v22)*
-- 🍃 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-jp)** アップデート — 花とCoin Treeが風に揺れ、ネコは伸びをし、イヌは匂いを嗅いでしっぽを振り、ハチは花に長く留まるように *(v22)*
-- 🌼 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-jp)** アップデート — 花のかたまり、設置プレビュー、20手戻れるUndo、変更したブロックが金色に光る演出、賢くなったAuto作業 *(v22)*
+- 🧊 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp)** — アバターが歩き、地形を整地し、花を植えるMinecraft風ミニゲーム *(v19)*
+- 🌻 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp)** アップデート — ヒマワリとチューリップの花、花を訪れて止まるちょうちょ、虹が出る雨、手動操作時の吹き出し *(v20)*
+- 🛤️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp)** アップデート — 庭にレールを敷いて乗れるように、庭を歩き回るネコ、コインが育って落ちるコインツリーを追加 *(v21)*
+- 🐝 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp)** アップデート — ちょうちょとネコに加えて、飛んで降りて庭を歩き回るハチ・イヌ・トリを追加 *(v22)*
+- 🍃 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp)** アップデート — 花とCoin Treeが風に揺れ、ネコは伸びをし、イヌは匂いを嗅いでしっぽを振り、ハチは花に長く留まるように *(v22)*
+- 🌼 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp)** アップデート — 花のかたまり、設置プレビュー、20手戻れるUndo、変更したブロックが金色に光る演出、賢くなったAuto作業 *(v22)*
 - 🤖 **[Codex Support](#codex-support-v22-jp)** *（VS Code限定）* — Claude Codeに加えて、Codex CLIとCodex VS Code拡張機能の作業にもアバターが反応 *(v22)*
+- ❤️ **[Jev Reactions](#jev-reactions-v23-jp)** *（VS Code限定）* — 感情に合わせて3Dのハート・割れたハート・星・炎・涙でアバターが反応 *(v23)*
+- 📊 **[Dev Log](#dev-log-v23-jp)** *（VS Code限定）* — ClaudeとCodexへのリクエストをカテゴリ別に記録し、日別・週別・全期間の履歴を表示 *(v23)*
+- ☁️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp)** アップデート — ハムスター・キノコ・漂う雲・空のグラデーションを追加 *(v23)*
 
 ---
 
@@ -1041,12 +1094,12 @@ Click for the YouTube demo ↓
 
   **Chrome限定：** OllamaはデフォルトでChrome拡張機能からのアクセスをブロックします。一度だけ設定が必要：
   1. Win+R → `sysdm.cpl` → 詳細設定 → 環境変数 → 新規
-  2. 変数名：`OLLAMA_ORIGINS` / 値：`*`
+  2. 変数名：`OLLAMA_ORIGINS` / 値：`chrome-extension://YOUR_EXTENSION_ID` — `YOUR_EXTENSION_ID`を`chrome://extensions`で確認したAI AvatarのIDに置き換えます（デベロッパーモードをオンにすると表示）。すべてのWebサイトを許可する`*`は使わないでください。
   3. タスクトレイのOllamaを終了 → 再起動（PCの再起動は不要）
 
 **設定**（⚙ボタン）
 - Gemini / Ollamaトグルでプロバイダーを切り替え
-- Gemini APIキーを入力（安全に保存され、コミットされません）
+- Gemini APIキーを入力（VS CodeではSecretStorage、Chromeでは拡張機能専用のIndexedDBに保存）。保存済みキーは自動入力せず、目のボタンで一時的に表示します。**Remove key**の後に**Save**を押すと保存済みキーを削除します。
 - モデル名を設定（デフォルト：`gemini-3.1-flash-lite` / `qwen2.5:3b`）
 - システムプロンプトを編集 — デフォルト：絵文字付き1文で励ます明るいコーディングコンパニオン
 
@@ -1307,11 +1360,17 @@ Piperは現在の **Gender** 設定に応じて自動的にボイスを選択し
 
 ---
 
-<a id="voxel-avatar-v19-v20-v21-v22-jp"></a>
+<a id="voxel-avatar-v19-v20-v21-v22-v23-jp"></a>
 
-## Voxel Avatar *(v19)* *(v20)* *(v21)* *(v22)*
+## Voxel Avatar *(v19)* *(v20)* *(v21)* *(v22)* *(v23)*
 
-Click for the YouTube demo v20↓
+Click for the YouTube demo v22↓
+[![AI Avatar Voxel Avatar Mode v22 Demo](https://img.youtube.com/vi/Hm1q03RXCwg/maxresdefault.jpg)](https://youtube.com/shorts/Hm1q03RXCwg)
+
+v21↓
+[![AI Avatar Voxel Avatar Mode v21 Demo](https://img.youtube.com/vi/iRlw3OASnWI/maxresdefault.jpg)](https://youtube.com/shorts/iRlw3OASnWI)
+
+v20↓
 [![AI Avatar Voxel Avatar Mode v20 Demo](https://img.youtube.com/vi/8LUaYPmRIYk/maxresdefault.jpg)](https://youtube.com/shorts/8LUaYPmRIYk)
 
 v19 ↓
@@ -1328,7 +1387,7 @@ v19 ↓
 | **Undo** | 庭またはレールの最後の編集を元に戻す（Autoの操作も含めて最大20手）；Loadすると履歴はクリアされます | v22 |
 | **Save / Load** | 現在のワールドをファイルに保存、またはファイルから読み込み（現在配置されているものを上書き） | v19 |
 | **❓ Help** | 下記の操作一覧をパネル内チートシートとして表示 — 幅が広がりスクロール可能に、右上に閉じるボタン | v19 / v22 |
-| **カウンター** | 🌸 花の本数 · 🦋 ちょうちょ · 🐝 ハチ · 🐦 トリ · 🐱 ネコ · 🐶 イヌ · 🪙 すべてのCoin Treeから今までに落ちたコインの合計（画面上の現在の数ではなく累計） | v19〜v22 |
+| **カウンター** | 🌸 花の本数 · 🍄 キノコ · 🦋 ちょうちょ · 🐝 ハチ · 🐦 トリ · 🐱 ネコ · 🐶 イヌ · 🐹 ハムスター · 🪙 すべてのCoin Treeから今までに落ちたコインの合計（画面上の現在の数ではなく累計） | v19〜v23 |
 
 ### 移動と設置
 
@@ -1344,6 +1403,7 @@ v19 ↓
 | **Flower: Pink / Red / Purple** | 地面レベルの草ブロックの上にのみ植えられます | v19 |
 | **Flower: Sunflower / Tulip** | 形の異なる2種類の花：幅広い黒い中心を持つ背の高いヒマワリと、カップ型のチューリップ；Autoモードでも植えられます | v20 |
 | **Flower: Coin Tree** | 花と同じように地上の草の上に植える；3つの枝それぞれがコインを育て、ぶら下げ、落として、また育てる、を永遠に繰り返す | v21 |
+| **Mushroom** | 草の上に1〜3本のキノコをまとめて植え、専用カウンターで数えます | v23 |
 
 ### 生きもの
 
@@ -1354,6 +1414,7 @@ v19 ↓
 | **Bird** | 空を飛び、草の上に降りてぴょんぴょん跳ねる、大きさがランダムなトリを追加 — 花が咲いているマスにも降りて花の中にたたずみます；土・石・Coin Treeの上には降りません（最大10羽） | v22 |
 | **Cat** | 庭を歩き回り、ときどき伸びをするピンクのネコを追加（最大10匹） | v21 / v22 |
 | **Dog** | 庭を散歩し、近くの花の匂いを嗅ぎ、まばたきをして、しっぽを振るイヌを追加（最大10匹） | v22 |
+| **Hamster** | 走り回り、植物の匂いを嗅ぎ、立ち上がるハムスターを追加（最大10匹） | v23 |
 
 数はいずれもワールドと一緒に保存されます。
 
@@ -1371,6 +1432,8 @@ v19 ↓
 
 ボタンを押さなくても自然に起きることです。
 
+**雲と空** — 庭の上を漂う雲と、空のグラデーションを追加。*(v23)*
+
 **天気** — ときどき雨が降ります（およそ3〜6分ごとに30〜60秒間）：空が暗くなり、ちょうちょとトリは雨がやむまで隠れ、雨上がりに虹が出ます *(v20)* *(v22)*
 
 **吹き出し** — Autoモードの吹き出しと読み上げが手動操作でも表示されます：ブロックの設置・破壊、花の植え付け、生きものの追加、天気の変化 *(v20)*
@@ -1384,6 +1447,38 @@ v19 ↓
 **金色の光** — ブロックの設置・破壊・植え付けが成功すると、そのブロックが0.5秒だけ金色に光ります；Autoの操作でも光るので、今何をしたのかが一目で分かります *(v22)*
 
 **賢くなったAuto** — 5〜10ブロック先を目標に歩き、障害物を避けて回り込み、どこへ向かうかを宣言し、たどり着けない目標は一時的にスキップします；整地と植え付けの両方ができるときは整地70%・植え付け30%で選びます *(v22)*
+
+<a id="jev-reactions-v23-jp"></a>
+
+## Jev Reactions *(v23)*
+
+Click for the YouTube demo↓
+[![AI Avatar Voxel Avatar Mode v23 Demo](https://img.youtube.com/vi/5gn6hlxRUWY/maxresdefault.jpg)](https://youtube.com/shorts/5gn6hlxRUWY)
+
+JevがClaude/Codexへの新しいリクエストの感情を判定し、アバターが反応します。VS Code限定。
+
+- **Jev API Key** — Settingsでキーを保存。目のボタンで最大15秒間表示し、**Remove key**で保存済みキーを削除します。*(v23)*
+- **Jev: On/Off** — 感情による反応を切り替えます。再起動後はOffです。*(v23)*
+
+ポジティブならハート・星・炎、ネガティブなら割れたハート・涙からランダムに表示。中立の場合は感情による反応をせず、AIの返答は判定しません。*(v23)*
+
+<a id="dev-log-v23-jp"></a>
+
+## Dev Log *(v23)*
+
+Claude/Codexへのリクエストを数え、Jevでカテゴリ分けします。完了した作業数ではありません。メッセージ本文は保存せず、件数とカテゴリをローカルに保存します。VS Code限定。
+
+| 操作 | 内容 |
+|---|---|
+| **Dev Log** | ログのタブを開きます |
+| **Record: On/Off** | アバターの反応とは別に新しいリクエストの記録を切り替えます。再起動後はOffです |
+| **Period: Day / Week / All** | 日別・月曜〜日曜の週別・全期間の集計を表示します |
+| **Tool: All / Claude / Codex** | ツール別に絞り込みます |
+| **History** | 行を選ぶと、その期間のカテゴリを表示します |
+| **Previous / Next** | 記録のある7日分・7週分ずつ切り替えます |
+| **Refresh** | 保存済みの件数を再読み込みします |
+| **Clear history** | このウィンドウの記録を停止し、確認後に保存済みの件数を削除します |
+| **Help** | 操作とカテゴリの説明を表示します |
 
 <a id="codex-support-v22-jp"></a>
 
@@ -1480,6 +1575,10 @@ Click for the YouTube demo ↓
 - **Maximum Blue** — v6でアバターを制作し、継続的にサポート。
 
 ---
+
+## プライバシー
+
+[VS Code版プライバシーポリシー](https://github.com/webdeveloperhyper/ai-avatar/blob/main/PRIVACY.md)
 
 ## ロードマップ
 
@@ -1596,7 +1695,7 @@ Click for the YouTube demo ↓
 - 🐛 バグ修正：英語表記のまま維持しているセクション名（Speech:Local、Catbot）でEN側とアンカーが衝突し、JPリンクが壊れていた問題を修正
 
 **v19** ✅
-- 🧊 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-jp) — アバターが歩き、地形を整地し、花を植えるMinecraft風ミニゲーム
+- 🧊 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp) — アバターが歩き、地形を整地し、花を植えるMinecraft風ミニゲーム
 - 🔔 [Notification Avatar](#notification-avatar-v19-jp) — AI Avatarのスピンオフ新アプリ：Claude CodeまたはCodexがあなたの入力を必要としたとき、またはタスクを完了したときに、VRMアバターが登場 (https://github.com/webdeveloperhyper/notification-avatar)
 - 🐛 バグ修正：KaleidoscopeとAI Officeを相互排他に修正
 - 🐛 バグ修正：言語がJPのままKokoro Serverを有効にするとVOICEVOXに黙って戻ってしまう問題を修正
@@ -1604,21 +1703,26 @@ Click for the YouTube demo ↓
 - 🎛️ バグ修正：モード排他制御を1つの共有テーブルに統合
 
 **v20** ✅
-- 🌻 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-jp) アップデート — ヒマワリとチューリップの花、花を訪れて止まるちょうちょ、虹が出る雨、手動操作時の吹き出し
+- 🌻 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp) アップデート — ヒマワリとチューリップの花、花を訪れて止まるちょうちょ、虹が出る雨、手動操作時の吹き出し
 
 **v21** ✅
-- 🛤️ [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-jp) アップデート — 庭にレールを敷いて乗れるように、庭を歩き回るネコ、コインが育って落ちるコインツリーを追加
+- 🛤️ [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp) アップデート — 庭にレールを敷いて乗れるように、庭を歩き回るネコ、コインが育って落ちるコインツリーを追加
 - 🎛️ Voxel Avatarのコントロールが専用タブで開くように
 - 🐛 バグ修正：パネルが狭いとき、行に収まらないツールバーのボタンが端で消えず、次の行に折り返すように修正
 
 **v22** ✅
-- 🐝 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-jp) アップデート — ちょうちょとネコに加えて、飛んで降りて庭を歩き回るハチ・イヌ・トリを追加
-- 🍃 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-jp) アップデート — 花とCoin Treeが風に揺れ、ネコは伸びをし、イヌは匂いを嗅いでしっぽを振り、ハチは花に長く留まるように
-- 🌼 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-jp) アップデート — 花のかたまり、設置プレビュー、20手戻れるUndo、変更したブロックが金色に光る演出、賢くなったAuto作業
+- 🐝 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp) アップデート — ちょうちょとネコに加えて、飛んで降りて庭を歩き回るハチ・イヌ・トリを追加
+- 🍃 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp) アップデート — 花とCoin Treeが風に揺れ、ネコは伸びをし、イヌは匂いを嗅いでしっぽを振り、ハチは花に長く留まるように
+- 🌼 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp) アップデート — 花のかたまり、設置プレビュー、20手戻れるUndo、変更したブロックが金色に光る演出、賢くなったAuto作業
 - 🤖 [Codex Support](#codex-support-v22-jp) *（VS Code限定）* — Claude Codeに加えて、Codex CLIとCodex VS Code拡張機能の作業にもアバターが反応
 - 🛠️ モデリングツールキット — 庭のボクセルモデルを設計・計測・調整するために自作した、画像→モデル生成ハーネスとModel Inspector *（開発用ツール・拡張機能には同梱されません）*
 
-**v23** — 作成中！
+**v23** ✅
+- ❤️ [Jev Reactions](#jev-reactions-v23-jp) *（VS Code限定）* — 感情に合わせて3Dのハート・割れたハート・星・炎・涙でアバターが反応
+- 📊 [Dev Log](#dev-log-v23-jp) *（VS Code限定）* — ClaudeとCodexへのリクエストをカテゴリ別に記録し、日別・週別・全期間の履歴を表示
+- ☁️ [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp) アップデート — ハムスター・キノコ・漂う雲・空のグラデーションを追加
+
+**v24** — 近日公開！
 - 🎉 さらに楽しいアップデート
 
 [↑ ページトップへ戻る](#ai-avatar)
