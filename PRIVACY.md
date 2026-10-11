@@ -1,6 +1,6 @@
 # Privacy Policy — AI Avatar VS Code Extension
 
-Last updated: 2026-09-29
+Last updated: 2026-10-11
 
 ## Data Collection
 
@@ -12,9 +12,9 @@ information with the extension developer.
 - Detects Claude Code, Codex, and GitHub Copilot activity to trigger local avatar
   animations. Claude/Codex monitoring reads local session files and can include
   other local projects, not just the open workspace.
-- Stores avatar preferences, custom prompts, and model selections in VS Code and
-  webview storage. Custom model and animation files remain in local storage or
-  locations you select. Sync or backups may copy stored data.
+- Stores avatar preferences, custom prompts, model selections, settings, and
+  records in VS Code and webview storage. Custom model and animation files remain
+  in local storage or locations you select. Sync or backups may copy stored data.
 - The Pose Capture tool optionally accesses your camera to capture body poses
   and export animation files. Camera frames are processed locally, not uploaded
   or recorded as video. Close the capture page to end camera use.
