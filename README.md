@@ -2,7 +2,7 @@
 
 ([日本語の説明は下部をご覧ください / Japanese version below](#ai-avatar日本語))
 
-AI Avatar is a free app where your VRoid (VRM) avatar cheers you with all its might.🤗 It lives in your **VS Code sidebar** (reacts to Claude Code / GitHub Copilot) or **browser side panel** (reacts to ChatGPT / Claude). Animations and speech bubbles all run without AI too.
+AI Avatar is a free app where your VRoid (VRM) avatar cheers you with all its might.🤗 It lives in your **VS Code sidebar** (reacts to Claude Code / Codex / GitHub Copilot) or **browser side panel** (reacts to ChatGPT / Claude). Animations and speech bubbles all run without AI too.
 
 **Jump to:** [✨ Features](#features) · [📖 Details](#getting-started) · [🗺️ Roadmap](#roadmap)
 
@@ -24,7 +24,7 @@ Click for the YouTube demo ↓
 - **v11,v12,v13,v14,v15** → [✨Cool Effects, TTS, and Fun Animations (AI Avatar v15: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/cool-effects-tts-and-fun-animations-ai-avatar-v15-vs-code-and-chrome-extension-3oec)
 - **v16,v17** → [😸Catbot Integration, AI Office, Cat Mode (AI Avatar v17: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/catbot-integration-ai-office-cat-mode-ai-avatar-v17-vs-code-and-chrome-extension-2f26)
 - **v18,v19,v20** → [AI Avatar v20, Cursor Avatar, Notification Avatar (Voxel Avatar)🧊](https://dev.to/webdeveloperhyper/ai-avatar-v20-cursor-avatar-notification-avatar-voxel-avatar-4dd2)
-- **v21,v22** → coming soon!
+- **v21,v22,v23,v24,v25** → coming soon!
 
 ---
 
@@ -74,6 +74,9 @@ Click for the YouTube demo ↓
 - ❤️ **[Jev Reactions](#jev-reactions-v23)** *(VS Code only)* — sentiment-based avatar reactions with 3D hearts, broken hearts, stars, fire and tears *(v23)*
 - 📊 **[Dev Log](#dev-log-v23)** *(VS Code only)* — request categories and daily, weekly and all-time history for Claude and Codex *(v23)*
 - ☁️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23)** update — hamsters, mushrooms, drifting clouds and sky gradients *(v23)*
+- 🧠 **[Muscle Brain](#muscle-brain-v24-v25)** — ultimate working memory training game that stimulates your brain *(v24)*
+- 🧠 **[Muscle Brain 3D](#muscle-brain-v24-v25)** — spatial memory training with numbers and blocks *(v25)*
+- 🎱 **[Avatar Run](#avatar-run-v25)** — tilt and rotate a clear 3D sphere to roll a marble along the winding track inside *(v25)*
 
 ---
 
@@ -84,7 +87,7 @@ No setup needed — comes with a built-in sample character.
 **VS Code**
 1. Install from the VS Code Marketplace
 2. Click the **AI Avatar icon** in the activity bar to open the sidebar
-3. Use Claude Code or GitHub Copilot — your avatar reacts automatically
+3. Use Claude Code, Codex, or GitHub Copilot — your avatar reacts automatically
 
 **Chrome**
 1. Install from the Chrome Web Store
@@ -612,6 +615,108 @@ Counts Claude/Codex requests and uses Jev to assign categories—not to measure 
 | **Clear history** | Stops recording in this window and deletes saved counts after confirmation |
 | **Help** | Shows controls and category explanations |
 
+## Muscle Brain *(v24)* *(v25)*
+
+Muscle Brain is an ultimate working memory training game that stimulates your brain. Inspired by N-back-style memory exercises, it challenges you to remember, manipulate, and recall number and letter sequences.
+
+No need to be afraid of the hard training. Mr. Brain, everyone’s hero, will support you throughout the game and save the day!
+
+Working memory helps you keep information in mind while:
+
+- Handling complex tasks
+- Keeping track of multiple steps and staying focused
+- Thinking through problems and possible solutions
+
+Open **Settings → Muscle Brain** to play in a separate VS Code editor tab or Chrome browser tab.
+
+### 2D *(v24)*
+
+Remember the starting sequence for two seconds, then shift it and add the new characters. Your answer submits automatically when complete. For example: `4259 → +5 → 2595`.
+
+| Control | What it does |
+|---|---|
+| **Digits** | Choose a sequence length from 4 to 8 |
+| **Shift Direction** | Shift left or right |
+| **Shift Count** | Replace 1, 2, or 3 characters each round |
+| **Mode** | Switch between numbers and letters |
+| **Rhythm** | Accept input only during the blue timing bar |
+| **Sound** | Turn voice feedback on or off |
+| **Language** | Switch English/Japanese; shared with 3D, like Sound |
+| **Start Game** | Start a scored game |
+| **Practice Mode** | Show answers as you type |
+| **How to Play** | Read the rules and examples |
+| **History** | View and sort saved best scores |
+| **Delete History** | Clear saved scores and streak data |
+| **Delete Settings** | Reset 2D game settings while keeping shared preferences, scores, and streaks |
+
+**Progress and celebrations** — best scores, medals, daily streaks, confetti, and animated feedback accompany your progress. *(v24)*
+
+### 3D *(v25)*
+
+Click for the YouTube demo ↓
+[![AI Avatar v25 Demo 1](https://img.youtube.com/vi/Fmc6esopt4k/maxresdefault.jpg)](https://www.youtube.com/watch?v=Fmc6esopt4k)
+
+Choose **3D** below the title to train with numbers or blocks in the same Muscle Brain tab. Language and sound are shared with 2D; other settings, score histories, and daily streaks remain separate. *(v25)*
+
+| Control | What it does |
+|---|---|
+| **Mode** | Choose Num or Block |
+| **Shift** | In Num mode, choose left or right |
+| **Blocks** | In Block mode, choose 1, 2, or 3 blocks |
+| **Operation** | In Block mode, choose Shift or Rotate |
+| **Sound** | Turn voice feedback on or off |
+| **Language** | Switch English/Japanese; shared with 2D, like Sound |
+| **Delete Settings** | Reset 3D game settings while keeping shared preferences, scores, and streaks |
+| **Start Game** | Begin memorizing the starting cube |
+| **Continue** | Begin after studying the starting cube; correct answers advance automatically after one second |
+| **Answer** | Edit or clear incomplete answers; the final digit or required block submits automatically |
+| **Back** | Return to settings; wrong answers stay visible until you choose Back |
+| **How to Play** | Read the selected mode’s rules |
+| **History** | View and sort best scores for each settings combination |
+| **Delete History** | Clear 3D scores and its daily streak |
+
+- **Num** — Remember eight digits in a **2×2×2** cube. Four new digits appear for **five seconds**. Shift one cell left or right, discard the outgoing four digits, and insert the new digits on the opposite side. Numbers do not wrap. Enter the resulting eight digits in the two layer grids. *(v25)*
+- **Block** — Remember 1–3 blocks in a **3×3×3** space. Mentally shift them one cell, wrapping at the edges, or rotate the pattern 90° around the indicated axis. Answer using the three front-view layers: **Y1 front, Y2 middle, Y3 back**. *(v25)*
+- **3D view** — Drag to look around. Axes follow Blender: **+X right, +Y back, +Z up**. *(v25)*
+- **Feedback and progress** — Each correct answer earns one point and advances after one second. New records spin Mr. Brain and randomly show gold confetti or brain emojis; other correct answers show colorful confetti. Mistakes remain visible until Back: blocks show correct positions in green and incorrect selections in red, while Num shows the correct digits. Best scores, medals, and daily streak milestones track progress. *(v25)*
+
+## Avatar Run *(v25)*
+
+Click for the YouTube demo ↓
+[![AI Avatar v25 Demo 2](https://img.youtube.com/vi/XFJPhHryzYg/maxresdefault.jpg)](https://www.youtube.com/watch?v=XFJPhHryzYg)
+
+Avatar Run is a 3D tilt-controlled track game. It starts with your mini avatar; switch Avatar off to play as a marble. A long, winding track sits inside a clear sphere — tilt and rotate the whole sphere to guide your avatar or marble from Start to Goal without falling off. Every track is generated fresh, and the sphere shows through so you can always see where the track goes next.
+
+Open **Settings → Avatar Run** to play in a separate VS Code editor tab or Chrome browser tab.
+
+| Control | What it does |
+|---|---|
+| **Drag / WASD / ↑ ↓ ← →** | Tilt the sphere |
+| **Q / E** | Rotate the sphere counterclockwise / clockwise |
+| **Scroll** | Zoom in and out |
+| **Start rolling** | Start the game |
+| **Pause / Resume** | Pause or resume the game (also **Esc**) |
+| **Restart** | Replay the same track from Start |
+| **New Track** | Generate a new track |
+| **Reset Zoom** | Return the camera to the default zoom |
+| **Mode: Normal / Rainbow** | Switch appearance without resetting your run; opens in Rainbow every time |
+| **Avatar: Off / On** | Switch between a marble and your selected mini avatar; Avatar starts On. The mini avatar uses the same tilt controls and ball physics, with skirt/hair spring motion disabled |
+| **Counters** | ⏱️ Time · 💥 Falls · 🚩 Checkpoint · 📈 Track progress |
+
+**Developer previews:** `MARBLE_DEV` in `src/shared/devFlags.ts` shows **Test A / Test B** while enabled. Each button cycles through five different trap previews and places the marble just before the selected trap. Press **Start rolling** to try it; **New Track** returns to a random course. Disable the flag and rebuild to hide these controls.
+
+### On the track
+
+The game includes:
+
+- **Traps** — five different types are randomly selected from ten: open side, narrow track, sideways conveyor, center hole, hinged bridge, swinging bumper, rotating bar, wobbling platform, seesaw bridge, and bumps. One sits in each section after checkpoint 1, including the final purple section; the opening stays clear. Hole falls also return to the last checkpoint. Restart keeps the arrangement; New Track reshuffles it.
+- **Checkpoints** — five checkpoints save your progress; fall off and the marble returns to the last one you reached, level and safe *(v25)*
+- **Feedback** — Start, fall, retry, and Goal messages appear above the sphere. A pulsing glow marks the marble at Start and after retries; reached checkpoint stripes match the track color.
+- **Goal celebration** — the remaining rainbow spheres pop in a quick red-to-purple wave, with larger shaded bubbles that drift and fade over three seconds.
+- **Normal / Rainbow** — Normal has a white background and yellow track. Rainbow has a black background, a smooth red-to-purple track, and randomly scattered floating spheres of different sizes that burst when touched. Restart or New Track restores the spheres; they do not affect the marble's motion.
+- **Marble visibility** — track sections covering the marble become see-through. You can pass either side of the center-hole platform; falling into the hole returns you to your checkpoint *(v25)*
+- **XYZ guide** — a Blender-style axis guide shows which way is up, with gravity pulling toward −Z *(v25)*
+
 ## Codex Support *(v22)*
 
 Your avatar reacts to **Codex** as well as Claude Code. There's no extra button — leave the watcher on **Claude Code** and Codex activity is picked up alongside it.
@@ -848,7 +953,14 @@ Click for the YouTube demo ↓
 - 📊 [Dev Log](#dev-log-v23) *(VS Code only)* — request categories and daily, weekly and all-time history for Claude and Codex
 - ☁️ [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23) update — hamsters, mushrooms, drifting clouds and sky gradients
 
-**v24** — Coming soon!
+**v24** ✅
+- 🧠 [Muscle Brain](#muscle-brain-v24-v25) — ultimate working memory training game that stimulates your brain
+
+**v25** ✅
+- 🧠 [Muscle Brain 3D](#muscle-brain-v24-v25) — spatial memory training with numbers and blocks
+- 🎱 [Avatar Run](#avatar-run-v25) — tilt and rotate a clear 3D sphere to roll a marble along the winding track inside
+
+**v26** — Coming soon!
 - 🎉 More fun updates
 
 [↑ Back to top](#ai-avatar)
@@ -857,7 +969,7 @@ Click for the YouTube demo ↓
 
 # AI Avatar（日本語）
 
-AI Avatarは、推し(自分のVRoid(VRM))が、あなたを全力で応援する無料アプリです。🤗 **VS Codeサイドバー**（Claude Code / GitHub Copilotに反応）または**ブラウザサイドパネル**（ChatGPT / Claudeに反応）に表示されるVRM 3Dキャラクターです。AIなしでもアニメーションや会話を楽しめます。
+AI Avatarは、推し(自分のVRoid(VRM))が、あなたを全力で応援する無料アプリです。🤗 **VS Codeサイドバー**（Claude Code / Codex / GitHub Copilotに反応）または**ブラウザサイドパネル**（ChatGPT / Claudeに反応）に表示されるVRM 3Dキャラクターです。AIなしでもアニメーションや会話を楽しめます。
 
 **セクションへ移動：** [✨ 機能一覧](#機能一覧) · [📖 詳細](#はじめ方) · [🗺️ ロードマップ](#ロードマップ)
 
@@ -880,7 +992,7 @@ Click for the YouTube demo ↓
 - **v11,v12,v13,v14,v15** → [✨おしゃれなエフェクト、TTS、楽しいアニメーション (AI Avatar v15: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/cool-effects-tts-and-fun-animations-ai-avatar-v15-vs-code-and-chrome-extension-3oec)
 - **v16,v17** → [😸Catbot統合, AI Office, Cat Mode (AI Avatar v17: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/catbot-integration-ai-office-cat-mode-ai-avatar-v17-vs-code-and-chrome-extension-2f26)
 - **v18,v19,v20** → [AI Avatar v20, Cursor Avatar, Notification Avatar (Voxel Avatar)🧊](https://dev.to/webdeveloperhyper/ai-avatar-v20-cursor-avatar-notification-avatar-voxel-avatar-4dd2)
-- **v21,v22** → coming soon!
+- **v21,v22,v23,v24,v25** → coming soon!
 
 ---
 
@@ -930,6 +1042,9 @@ Click for the YouTube demo ↓
 - ❤️ **[Jev Reactions](#jev-reactions-v23-jp)** *（VS Code限定）* — 感情に合わせて3Dのハート・割れたハート・星・炎・涙でアバターが反応 *(v23)*
 - 📊 **[Dev Log](#dev-log-v23-jp)** *（VS Code限定）* — ClaudeとCodexへのリクエストをカテゴリ別に記録し、日別・週別・全期間の履歴を表示 *(v23)*
 - ☁️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp)** アップデート — ハムスター・キノコ・漂う雲・空のグラデーションを追加 *(v23)*
+- 🧠 **[Muscle Brain](#muscle-brain-v24-v25-jp)** — 脳を刺激する究極のワーキングメモリトレーニングゲーム *(v24)*
+- 🧠 **[Muscle Brain 3D](#muscle-brain-v24-v25-jp)** — 数字とブロックで空間記憶をトレーニング *(v25)*
+- 🎱 **[Avatar Run](#avatar-run-v25-jp)** — 透明な3D球体を傾けて回し、中の曲がりくねったコースでビー玉を転がすゲーム *(v25)*
 
 ---
 
@@ -940,7 +1055,7 @@ Click for the YouTube demo ↓
 **VS Code**
 1. VS Code Marketplaceからインストール
 2. アクティビティバーの **AI Avatarアイコン** をクリックしてサイドバーを開く
-3. Claude CodeまたはGitHub Copilotを使う — アバターが自動で反応
+3. Claude Code、Codex、またはGitHub Copilotを使う — アバターが自動で反応
 
 **Chrome**
 1. Chrome ウェブストアからインストール
@@ -1480,6 +1595,110 @@ Claude/Codexへのリクエストを数え、Jevでカテゴリ分けします�
 | **Clear history** | このウィンドウの記録を停止し、確認後に保存済みの件数を削除します |
 | **Help** | 操作とカテゴリの説明を表示します |
 
+<a id="muscle-brain-v24-v25-jp"></a>
+
+## Muscle Brain *(v24)* *(v25)*
+
+Muscle Brainは、脳を刺激する究極のワーキングメモリトレーニングゲームです。N-back型の記憶トレーニングから着想を得て、数字やアルファベットの並びを覚え、操作し、思い出すことに挑戦します。
+
+ハードなトレーニングも怖がる必要はありません。みんなのヒーロー、Mr. Brainがゲームを通してあなたを応援し、ピンチを救ってくれます！
+
+ワーキングメモリは、情報を頭にとどめながら次のようなことに取り組むときに役立ちます。
+
+- 複雑な課題に取り組む
+- 複数の手順を把握し、集中する
+- 問題や解決方法を考える
+
+**Settings → Muscle Brain**から、VS Codeでは専用のエディタータブ、Chromeでは別のブラウザータブで遊べます。
+
+### 2D *(v24)*
+
+最初の数字や文字の並びを2秒間で覚え、シフトして新しい文字を追加します。必要な桁数を入力すると自動で回答が送信されます。例：`4259 → +5 → 2595`。
+
+| 操作 | 内容 |
+|---|---|
+| **桁数** | 覚える長さを4〜8桁から選択 |
+| **シフト方向** | 左または右にシフト |
+| **シフト数** | 毎回入れ替える文字数を1・2・3から選択 |
+| **モード** | 数字とアルファベットを切り替え |
+| **リズム** | 青いタイミングバーの間だけ入力を受け付ける |
+| **サウンド** | 音声フィードバックをオン・オフ |
+| **言語** | 表示と音声フィードバックを英語・日本語で切り替え |
+| **ゲーム開始** | スコアを記録するゲームを開始 |
+| **練習モード** | 入力中に答えを表示 |
+| **遊び方** | ルールと例を確認 |
+| **履歴** | 保存したベストスコアを表示・並べ替え |
+| **履歴を削除** | 保存したスコアと継続日数を削除 |
+| **設定を削除** | 2Dのゲーム設定を初期化。共有する言語・サウンド、スコア、継続日数は保持 |
+
+**記録と演出** — ベストスコア、メダル、継続日数に加え、紙吹雪やアニメーションでプレイを盛り上げます。*(v24)*
+
+### 3D *(v25)*
+
+Click for the YouTube demo ↓
+[![AI Avatar v25 Demo 1](https://img.youtube.com/vi/Fmc6esopt4k/maxresdefault.jpg)](https://www.youtube.com/watch?v=Fmc6esopt4k)
+
+タイトル下の**3D**を選ぶと、同じMuscle Brainタブで数字やブロックを使ったトレーニングができます。言語とサウンドは2Dと共有し、その他の設定・スコア履歴・継続日数は別に保存します。*(v25)*
+
+| 操作 | 内容 |
+|---|---|
+| **モード** | 数字またはブロックを選択 |
+| **シフト** | 数字モードで左または右を選択 |
+| **ブロック数** | ブロックモードで1・2・3個から選択 |
+| **操作** | ブロックモードでシフトまたは回転を選択 |
+| **サウンド** | 音声フィードバックをオン・オフ |
+| **言語** | 表示と音声フィードバックを英語・日本語で切り替え |
+| **ゲーム開始** | 最初の立体を覚えるところから開始 |
+| **次へ** | 最初の記憶後に開始。正解後は1秒で自動で進みます |
+| **回答** | 途中の入力は修正・削除可能。最後の数字やブロックで自動回答 |
+| **戻る** | 設定画面へ。不正解の結果は押すまで表示します |
+| **遊び方** | 選択中のモードのルールを確認 |
+| **履歴** | 設定の組み合わせごとのベストスコアを表示・並べ替え |
+| **履歴を削除** | 3Dのスコアと継続日数を削除 |
+| **設定を削除** | 3Dのゲーム設定を初期化。共有する言語・サウンド、スコア、継続日数は保持 |
+
+- **数字** — **2×2×2**の立体にある8個の数字を覚えます。新しい4個の数字が**5秒間**表示されます。左右に1マス動かし、端から出る4個を消して反対側に新しい数字を入れます。数字は端で折り返しません。移動後の8個を2つの層に入力します。*(v25)*
+- **ブロック** — **3×3×3**の空間にある1〜3個のブロックを覚えます。頭の中で1マス移動させるか、指定された軸を中心に90°回転させます。シフトで端を越えると反対側に戻ります。正面から見た**Y1：手前、Y2：中央、Y3：奥**の3層で回答します。*(v25)*
+- **3D表示** — ドラッグで視点を変更できます。軸はBlenderと同じで、**+Xは右、+Yは奥、+Zは上**です。*(v25)*
+- **結果と記録** — 正解で1点獲得し、1秒後に次へ進みます。新記録ではMr. Brainが回転し、金色の紙吹雪か脳の絵文字がランダムに出ます。通常の正解ではカラフルな紙吹雪が出ます。不正解は「戻る」を押すまで表示し、ブロックでは正しい位置を緑、誤った選択を赤で示し、数字では正しい数字を示します。ベストスコア、メダル、継続日数の節目で進歩を確認できます。*(v25)*
+
+<a id="avatar-run-v25-jp"></a>
+
+## Avatar Run *(v25)*
+
+Click for the YouTube demo ↓
+[![AI Avatar v25 Demo 2](https://img.youtube.com/vi/XFJPhHryzYg/maxresdefault.jpg)](https://www.youtube.com/watch?v=XFJPhHryzYg)
+
+Avatar Runは球体を傾けて遊ぶ3Dコースゲームです。ミニアバターで開始し、AvatarをOffにするとビー玉に切り替えられます。透明な球体の中に長く曲がりくねったコースがあり、球体ごと傾けて回して、落ちないようにアバターやビー玉をStartからGoalへ導きます。コースは毎回新しく生成され、球体は透けているので、次にコースがどこへ続くかいつでも見えます。
+
+**Settings → Avatar Run**から、VS Codeでは専用のエディタータブ、Chromeでは別のブラウザータブで遊べます。
+
+| 操作 | 内容 |
+|---|---|
+| **Drag / WASD / ↑ ↓ ← →** | 球体を傾ける |
+| **Q / E** | 球体を反時計回り／時計回りに回す |
+| **Scroll** | ズームイン・ズームアウト |
+| **Start rolling** | ゲームを開始 |
+| **Pause / Resume** | 一時停止・再開（**Esc**でも可） |
+| **Restart** | 同じコースをStartからやり直す |
+| **New Track** | 新しいコースを生成 |
+| **Reset Zoom** | カメラのズームを初期状態に戻す |
+| **Mode: Normal / Rainbow** | 進行状況を保ったまま見た目を切り替え。開くたびにRainbowで開始 |
+| **Avatar: Off / On** | ビー玉と選択中のミニアバターを切り替え。初期状態はOn。操作と物理挙動は同じで、ミニアバターのスカート・髪の揺れは無効 |
+| **Counters** | ⏱️ タイム · 💥 落下回数 · 🚩 チェックポイント · 📈 コースの進行度 |
+
+### コースで起きること
+
+ゲーム内の機能：
+
+- **トラップ** — 横向きコンベアや左右に揺れる足場など、10種類から5種類をランダムに選びます。最初の区間は安全で、チェックポイント1以降の各区間（最後の紫の区間を含む）に1つずつ配置します。中央の穴に落ちても最後のチェックポイントへ戻ります。Restartでは配置を保ち、New Trackで選び直します。開発用の`MARBLE_DEV`が有効なら、Test A / Test Bを押して全10種類を順番に試せます。
+- **チェックポイント** — コースに5か所。落ちても最後に到達したチェックポイントへ、水平で安全な状態で戻ります *(v25)*
+- **進行の案内** — 開始・落下・再開・ゴールのメッセージを球体の上に表示。開始時と再開時にはビー玉の周囲が光り、通過したチェックポイントの線はコースと同じ色になります。
+- **ゴール演出** — 残った虹色の球が赤から紫の順に素早く弾け、大きな立体の粒が3秒かけて広がりながら消えます。
+- **Normal / Rainbow** — Normalは白背景と黄色のコース。Rainbowは黒背景と赤から紫へ滑らかに変わるコースで、ランダムに浮かぶ大小の色付きの球に触れると弾けます。RestartまたはNew Trackで球が復活し、ビー玉の動きには影響しません。
+- **ビー玉の見やすさ** — ビー玉を隠すコースが透けて見えます。中央の穴は左右どちらからも通過でき、穴に落ちるとチェックポイントへ戻ります *(v25)*
+- **XYZガイド** — Blender風の軸ガイドで上方向を表示。重力は−Z方向にかかります *(v25)*
+
 <a id="codex-support-v22-jp"></a>
 
 ## Codex Support *(v22)*
@@ -1722,7 +1941,14 @@ Click for the YouTube demo ↓
 - 📊 [Dev Log](#dev-log-v23-jp) *（VS Code限定）* — ClaudeとCodexへのリクエストをカテゴリ別に記録し、日別・週別・全期間の履歴を表示
 - ☁️ [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp) アップデート — ハムスター・キノコ・漂う雲・空のグラデーションを追加
 
-**v24** — 近日公開！
+**v24** ✅
+- 🧠 [Muscle Brain](#muscle-brain-v24-v25-jp) — 脳を刺激する究極のワーキングメモリトレーニングゲーム
+
+**v25** ✅
+- 🧠 [Muscle Brain 3D](#muscle-brain-v24-v25-jp) — 数字とブロックで空間記憶をトレーニング
+- 🎱 [Avatar Run](#avatar-run-v25-jp) — 透明な3D球体を傾けて回し、中の曲がりくねったコースでビー玉を転がすゲーム
+
+**v26** — 近日公開！
 - 🎉 さらに楽しいアップデート
 
 [↑ ページトップへ戻る](#ai-avatar)
