@@ -24,7 +24,8 @@ Click for the YouTube demo ↓
 - **v11,v12,v13,v14,v15** → [✨Cool Effects, TTS, and Fun Animations (AI Avatar v15: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/cool-effects-tts-and-fun-animations-ai-avatar-v15-vs-code-and-chrome-extension-3oec)
 - **v16,v17** → [😸Catbot Integration, AI Office, Cat Mode (AI Avatar v17: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/catbot-integration-ai-office-cat-mode-ai-avatar-v17-vs-code-and-chrome-extension-2f26)
 - **v18,v19,v20** → [AI Avatar v20, Cursor Avatar, Notification Avatar (Voxel Avatar)🧊](https://dev.to/webdeveloperhyper/ai-avatar-v20-cursor-avatar-notification-avatar-voxel-avatar-4dd2)
-- **v21,v22,v23,v24,v25** → coming soon!
+- **v21,v22,v23,v24,v25** → [AI Avatar v25 (Avatar Run, Voxel Avatar, Muscle Brain)💪](https://dev.to/webdeveloperhyper/ai-avatar-v25-avatar-run-voxel-avatar-muscle-brain-5gi3)
+- **v26** → coming soon!
 
 ---
 
@@ -64,19 +65,20 @@ Click for the YouTube demo ↓
 - 🐾 **[Catbot avatar](#catbot-v17)** — the AI catbot collaborator appears as a live 3D VRM avatar in the panel *(v17)*
 - 🌀 **[Kaleidoscope Effect](#kaleidoscope-effect-v18)** — animated kaleidoscope background with live tuning controls (sides, speed, color, warmth, symmetry, zoom) *(v18)*
 - 🗣️ **[Piper TTS](#piper-tts-v18)** *(VS Code only)* — EN local TTS via an automatically-downloaded native binary, no Python required and faster than Kokoro *(v18)*
-- 🧊 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23)** — Minecraft-like mini-game where your avatar walks, terraforms terrain, and plants flowers *(v19)*
-- 🌻 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23)** update — Sunflower and Tulip flowers, butterflies that visit and land on flowers, rain with a rainbow, and speech bubbles for manual play *(v20)*
-- 🛤️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23)** update — build and ride a rail through the garden, cats that wander around, and coin trees that grow and drop coins *(v21)*
-- 🐝 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23)** update — bees, dogs, and birds that fly, land, and roam the garden alongside the butterflies and cats *(v22)*
-- 🍃 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23)** update — flowers and coin trees sway in the breeze, cats stretch, dogs sniff and wag their tails, and bees linger on flowers *(v22)*
-- 🌼 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23)** update — flower clusters, placement previews, 20-step Undo, a golden pulse on changed blocks, and smarter Auto gardening *(v22)*
+- 🧊 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26)** — Minecraft-like mini-game where your avatar walks, terraforms terrain, and plants flowers *(v19)*
+- 🌻 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26)** update — Sunflower and Tulip flowers, butterflies that visit and land on flowers, rain with a rainbow, and speech bubbles for manual play *(v20)*
+- 🛤️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26)** update — build and ride a rail through the garden, cats that wander around, and coin trees that grow and drop coins *(v21)*
+- 🐝 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26)** update — bees, dogs, and birds that fly, land, and roam the garden alongside the butterflies and cats *(v22)*
+- 🍃 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26)** update — flowers and coin trees sway in the breeze, cats stretch, dogs sniff and wag their tails, and bees linger on flowers *(v22)*
+- 🌼 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26)** update — flower clusters, placement previews, 20-step Undo, a golden pulse on changed blocks, and smarter Auto gardening *(v22)*
 - 🤖 **[Codex Support](#codex-support-v22)** *(VS Code only)* — avatar also reacts to Codex CLI and Codex VS Code extension activity alongside Claude Code *(v22)*
 - ❤️ **[Jev Reactions](#jev-reactions-v23)** *(VS Code only)* — sentiment-based avatar reactions with 3D hearts, broken hearts, stars, fire and tears *(v23)*
 - 📊 **[Dev Log](#dev-log-v23)** *(VS Code only)* — request categories and daily, weekly and all-time history for Claude and Codex *(v23)*
-- ☁️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23)** update — hamsters, mushrooms, drifting clouds and sky gradients *(v23)*
+- ☁️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26)** update — hamsters, mushrooms, drifting clouds and sky gradients *(v23)*
 - 🧠 **[Muscle Brain](#muscle-brain-v24-v25)** — ultimate working memory training game that stimulates your brain *(v24)*
 - 🧠 **[Muscle Brain 3D](#muscle-brain-v24-v25)** — spatial memory training with numbers and blocks *(v25)*
 - 🎱 **[Avatar Run](#avatar-run-v25)** — tilt and rotate a clear 3D sphere to roll a marble along the winding track inside *(v25)*
+- ❄️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26)** update — adds winter with falling snow and a snowy garden *(v26)*
 
 ---
 
@@ -501,9 +503,12 @@ Piper picks a voice automatically based on the current **Gender** setting, and u
 
 ---
 
-## Voxel Avatar *(v19)* *(v20)* *(v21)* *(v22)* *(v23)*
+## Voxel Avatar *(v19)* *(v20)* *(v21)* *(v22)* *(v23)* *(v26)*
 
-Click for the YouTube demo v22↓
+Click for the YouTube demo v26↓
+[![AI Avatar Voxel Avatar Mode v26 Demo](https://img.youtube.com/vi/91f_F8jbG-c/maxresdefault.jpg)](https://youtube.com/shorts/91f_F8jbG-c)
+
+v22↓
 [![AI Avatar Voxel Avatar Mode v22 Demo](https://img.youtube.com/vi/Hm1q03RXCwg/maxresdefault.jpg)](https://youtube.com/shorts/Hm1q03RXCwg)
 
 v21↓
@@ -570,6 +575,8 @@ Every count is saved with the world.
 ### In the garden
 
 Things that happen on their own, without a button.
+
+**Winter** — while the garden is active and visible, 20 minutes of normal weather alternate with 10 minutes of winter. Snow falls intermittently, and the ground, trees, mushrooms, and flower petals gradually turn snowy while keeping their original colors visible. Bees and butterflies rest on flowers, or on the ground if none remain, and resume flying afterward. Season progress is saved. *(v26)*
 
 **Clouds and sky** — drifting clouds above the garden and a gradient sky. *(v23)*
 
@@ -926,7 +933,7 @@ Click for the YouTube demo ↓
 - 🐛 Fix: broken JP links for kept-in-English section names (Speech:Local, Catbot) that collided with their EN anchor
 
 **v19** ✅
-- 🧊 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23) — Minecraft-like mini-game where your avatar walks, terraforms terrain, and plants flowers
+- 🧊 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26) — Minecraft-like mini-game where your avatar walks, terraforms terrain, and plants flowers
 - 🔔 [Notification Avatar](#notification-avatar-v19) — new spin-off desktop app: VRM avatar pops up and reacts whenever Claude Code or Codex needs your attention or finishes a task (https://github.com/webdeveloperhyper/notification-avatar)
 - 🐛 Fix: Kaleidoscope and AI Office now mutually exclusive
 - 🐛 Fix: Kokoro Server no longer silently falls back to VOICEVOX when language was left on JP
@@ -934,24 +941,24 @@ Click for the YouTube demo ↓
 - 🎛️ Fix: Mode exclusivity refactored into one shared table
 
 **v20** ✅
-- 🌻 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23) update — Sunflower and Tulip flowers, butterflies that visit and land on flowers, rain with a rainbow, and speech bubbles for manual play
+- 🌻 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26) update — Sunflower and Tulip flowers, butterflies that visit and land on flowers, rain with a rainbow, and speech bubbles for manual play
 
 **v21** ✅
-- 🛤️ [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23) update — build and ride a rail through the garden, cats that wander around, and coin trees that grow and drop coins
+- 🛤️ [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26) update — build and ride a rail through the garden, cats that wander around, and coin trees that grow and drop coins
 - 🎛️ Voxel Avatar controls now open in their own tab
 - 🐛 Fix: narrow panel — toolbar buttons that don't fit a row now wrap to a new line instead of disappearing off the edge
 
 **v22** ✅
-- 🐝 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23) update — bees, dogs, and birds that fly, land, and roam the garden alongside the butterflies and cats
-- 🍃 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23) update — flowers and coin trees sway in the breeze, cats stretch, dogs sniff and wag their tails, and bees linger on flowers
-- 🌼 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23) update — flower clusters, placement previews, 20-step Undo, a golden pulse on changed blocks, and smarter Auto gardening
+- 🐝 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26) update — bees, dogs, and birds that fly, land, and roam the garden alongside the butterflies and cats
+- 🍃 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26) update — flowers and coin trees sway in the breeze, cats stretch, dogs sniff and wag their tails, and bees linger on flowers
+- 🌼 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26) update — flower clusters, placement previews, 20-step Undo, a golden pulse on changed blocks, and smarter Auto gardening
 - 🤖 [Codex Support](#codex-support-v22) *(VS Code only)* — avatar also reacts to Codex CLI and Codex VS Code extension activity alongside Claude Code
 - 🛠️ Modeling Toolkit — a guided image-to-model harness and Model Inspector built to design, measure, and refine every voxel model in the garden *(dev tool, not shipped in the extension)*
 
 **v23** ✅
 - ❤️ [Jev Reactions](#jev-reactions-v23) *(VS Code only)* — sentiment-based avatar reactions with 3D hearts, broken hearts, stars, fire and tears
 - 📊 [Dev Log](#dev-log-v23) *(VS Code only)* — request categories and daily, weekly and all-time history for Claude and Codex
-- ☁️ [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23) update — hamsters, mushrooms, drifting clouds and sky gradients
+- ☁️ [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26) update — hamsters, mushrooms, drifting clouds and sky gradients
 
 **v24** ✅
 - 🧠 [Muscle Brain](#muscle-brain-v24-v25) — ultimate working memory training game that stimulates your brain
@@ -960,7 +967,10 @@ Click for the YouTube demo ↓
 - 🧠 [Muscle Brain 3D](#muscle-brain-v24-v25) — spatial memory training with numbers and blocks
 - 🎱 [Avatar Run](#avatar-run-v25) — tilt and rotate a clear 3D sphere to roll a marble along the winding track inside
 
-**v26** — Coming soon!
+**v26** ✅
+- ❄️ [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26) update — adds winter with falling snow and a snowy garden
+
+**v27** — Coming soon!
 - 🎉 More fun updates
 
 [↑ Back to top](#ai-avatar)
@@ -992,7 +1002,8 @@ Click for the YouTube demo ↓
 - **v11,v12,v13,v14,v15** → [✨おしゃれなエフェクト、TTS、楽しいアニメーション (AI Avatar v15: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/cool-effects-tts-and-fun-animations-ai-avatar-v15-vs-code-and-chrome-extension-3oec)
 - **v16,v17** → [😸Catbot統合, AI Office, Cat Mode (AI Avatar v17: VS Code and Chrome Extension)](https://dev.to/webdeveloperhyper/catbot-integration-ai-office-cat-mode-ai-avatar-v17-vs-code-and-chrome-extension-2f26)
 - **v18,v19,v20** → [AI Avatar v20, Cursor Avatar, Notification Avatar (Voxel Avatar)🧊](https://dev.to/webdeveloperhyper/ai-avatar-v20-cursor-avatar-notification-avatar-voxel-avatar-4dd2)
-- **v21,v22,v23,v24,v25** → coming soon!
+- **v21,v22,v23,v24,v25** → [AI Avatar v25 (Avatar Run, Voxel Avatar, Muscle Brain)💪](https://dev.to/webdeveloperhyper/ai-avatar-v25-avatar-run-voxel-avatar-muscle-brain-5gi3)
+- **v26** → coming soon!
 
 ---
 
@@ -1032,19 +1043,20 @@ Click for the YouTube demo ↓
 - 🐾 **[Catbot avatar](#catbot-v17-jp)** — Catbotコラボレーターがパネルにライブ3DのVRMアバターとして登場 *(v17)*
 - 🌀 **[Kaleidoscopeエフェクト](#kaleidoscopeエフェクト-v18)** — サイド・スピード・カラー・暖かさ・対称性・ズームをライブ調整できるアニメーション万華鏡背景 *(v18)*
 - 🗣️ **[Piper TTS](#piper-tts-v18-jp)** *（VS Code限定）* — 自動ダウンロードされるネイティブバイナリによるEN用ローカルTTS、Python不要でKokoroより高速 *(v18)*
-- 🧊 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp)** — アバターが歩き、地形を整地し、花を植えるMinecraft風ミニゲーム *(v19)*
-- 🌻 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp)** アップデート — ヒマワリとチューリップの花、花を訪れて止まるちょうちょ、虹が出る雨、手動操作時の吹き出し *(v20)*
-- 🛤️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp)** アップデート — 庭にレールを敷いて乗れるように、庭を歩き回るネコ、コインが育って落ちるコインツリーを追加 *(v21)*
-- 🐝 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp)** アップデート — ちょうちょとネコに加えて、飛んで降りて庭を歩き回るハチ・イヌ・トリを追加 *(v22)*
-- 🍃 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp)** アップデート — 花とCoin Treeが風に揺れ、ネコは伸びをし、イヌは匂いを嗅いでしっぽを振り、ハチは花に長く留まるように *(v22)*
-- 🌼 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp)** アップデート — 花のかたまり、設置プレビュー、20手戻れるUndo、変更したブロックが金色に光る演出、賢くなったAuto作業 *(v22)*
+- 🧊 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26-jp)** — アバターが歩き、地形を整地し、花を植えるMinecraft風ミニゲーム *(v19)*
+- 🌻 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26-jp)** アップデート — ヒマワリとチューリップの花、花を訪れて止まるちょうちょ、虹が出る雨、手動操作時の吹き出し *(v20)*
+- 🛤️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26-jp)** アップデート — 庭にレールを敷いて乗れるように、庭を歩き回るネコ、コインが育って落ちるコインツリーを追加 *(v21)*
+- 🐝 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26-jp)** アップデート — ちょうちょとネコに加えて、飛んで降りて庭を歩き回るハチ・イヌ・トリを追加 *(v22)*
+- 🍃 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26-jp)** アップデート — 花とCoin Treeが風に揺れ、ネコは伸びをし、イヌは匂いを嗅いでしっぽを振り、ハチは花に長く留まるように *(v22)*
+- 🌼 **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26-jp)** アップデート — 花のかたまり、設置プレビュー、20手戻れるUndo、変更したブロックが金色に光る演出、賢くなったAuto作業 *(v22)*
 - 🤖 **[Codex Support](#codex-support-v22-jp)** *（VS Code限定）* — Claude Codeに加えて、Codex CLIとCodex VS Code拡張機能の作業にもアバターが反応 *(v22)*
 - ❤️ **[Jev Reactions](#jev-reactions-v23-jp)** *（VS Code限定）* — 感情に合わせて3Dのハート・割れたハート・星・炎・涙でアバターが反応 *(v23)*
 - 📊 **[Dev Log](#dev-log-v23-jp)** *（VS Code限定）* — ClaudeとCodexへのリクエストをカテゴリ別に記録し、日別・週別・全期間の履歴を表示 *(v23)*
-- ☁️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp)** アップデート — ハムスター・キノコ・漂う雲・空のグラデーションを追加 *(v23)*
+- ☁️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26-jp)** アップデート — ハムスター・キノコ・漂う雲・空のグラデーションを追加 *(v23)*
 - 🧠 **[Muscle Brain](#muscle-brain-v24-v25-jp)** — 脳を刺激する究極のワーキングメモリトレーニングゲーム *(v24)*
 - 🧠 **[Muscle Brain 3D](#muscle-brain-v24-v25-jp)** — 数字とブロックで空間記憶をトレーニング *(v25)*
 - 🎱 **[Avatar Run](#avatar-run-v25-jp)** — 透明な3D球体を傾けて回し、中の曲がりくねったコースでビー玉を転がすゲーム *(v25)*
+- ❄️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26-jp)** アップデート — 雪が降り、庭が雪化粧する冬を追加 *(v26)*
 
 ---
 
@@ -1475,11 +1487,14 @@ Piperは現在の **Gender** 設定に応じて自動的にボイスを選択し
 
 ---
 
-<a id="voxel-avatar-v19-v20-v21-v22-v23-jp"></a>
+<a id="voxel-avatar-v19-v20-v21-v22-v23-v26-jp"></a>
 
-## Voxel Avatar *(v19)* *(v20)* *(v21)* *(v22)* *(v23)*
+## Voxel Avatar *(v19)* *(v20)* *(v21)* *(v22)* *(v23)* *(v26)*
 
-Click for the YouTube demo v22↓
+Click for the YouTube demo v26↓
+[![AI Avatar Voxel Avatar Mode v26 Demo](https://img.youtube.com/vi/91f_F8jbG-c/maxresdefault.jpg)](https://youtube.com/shorts/91f_F8jbG-c)
+
+v22↓
 [![AI Avatar Voxel Avatar Mode v22 Demo](https://img.youtube.com/vi/Hm1q03RXCwg/maxresdefault.jpg)](https://youtube.com/shorts/Hm1q03RXCwg)
 
 v21↓
@@ -1546,6 +1561,8 @@ v19 ↓
 ### 庭で起きること
 
 ボタンを押さなくても自然に起きることです。
+
+**冬** — 庭が表示されている間、通常の天気20分と冬10分を繰り返します。冬はときどき雪が降り、地面・木・キノコ・花びらが元の色を残しながら徐々に雪化粧します。ハチとちょうちょは花の上（花がなければ地面）で休み、冬が終わると再び飛びます。季節の進行状況は保存されます。*(v26)*
 
 **雲と空** — 庭の上を漂う雲と、空のグラデーションを追加。*(v23)*
 
@@ -1914,7 +1931,7 @@ Click for the YouTube demo ↓
 - 🐛 バグ修正：英語表記のまま維持しているセクション名（Speech:Local、Catbot）でEN側とアンカーが衝突し、JPリンクが壊れていた問題を修正
 
 **v19** ✅
-- 🧊 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp) — アバターが歩き、地形を整地し、花を植えるMinecraft風ミニゲーム
+- 🧊 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26-jp) — アバターが歩き、地形を整地し、花を植えるMinecraft風ミニゲーム
 - 🔔 [Notification Avatar](#notification-avatar-v19-jp) — AI Avatarのスピンオフ新アプリ：Claude CodeまたはCodexがあなたの入力を必要としたとき、またはタスクを完了したときに、VRMアバターが登場 (https://github.com/webdeveloperhyper/notification-avatar)
 - 🐛 バグ修正：KaleidoscopeとAI Officeを相互排他に修正
 - 🐛 バグ修正：言語がJPのままKokoro Serverを有効にするとVOICEVOXに黙って戻ってしまう問題を修正
@@ -1922,24 +1939,24 @@ Click for the YouTube demo ↓
 - 🎛️ バグ修正：モード排他制御を1つの共有テーブルに統合
 
 **v20** ✅
-- 🌻 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp) アップデート — ヒマワリとチューリップの花、花を訪れて止まるちょうちょ、虹が出る雨、手動操作時の吹き出し
+- 🌻 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26-jp) アップデート — ヒマワリとチューリップの花、花を訪れて止まるちょうちょ、虹が出る雨、手動操作時の吹き出し
 
 **v21** ✅
-- 🛤️ [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp) アップデート — 庭にレールを敷いて乗れるように、庭を歩き回るネコ、コインが育って落ちるコインツリーを追加
+- 🛤️ [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26-jp) アップデート — 庭にレールを敷いて乗れるように、庭を歩き回るネコ、コインが育って落ちるコインツリーを追加
 - 🎛️ Voxel Avatarのコントロールが専用タブで開くように
 - 🐛 バグ修正：パネルが狭いとき、行に収まらないツールバーのボタンが端で消えず、次の行に折り返すように修正
 
 **v22** ✅
-- 🐝 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp) アップデート — ちょうちょとネコに加えて、飛んで降りて庭を歩き回るハチ・イヌ・トリを追加
-- 🍃 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp) アップデート — 花とCoin Treeが風に揺れ、ネコは伸びをし、イヌは匂いを嗅いでしっぽを振り、ハチは花に長く留まるように
-- 🌼 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp) アップデート — 花のかたまり、設置プレビュー、20手戻れるUndo、変更したブロックが金色に光る演出、賢くなったAuto作業
+- 🐝 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26-jp) アップデート — ちょうちょとネコに加えて、飛んで降りて庭を歩き回るハチ・イヌ・トリを追加
+- 🍃 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26-jp) アップデート — 花とCoin Treeが風に揺れ、ネコは伸びをし、イヌは匂いを嗅いでしっぽを振り、ハチは花に長く留まるように
+- 🌼 [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26-jp) アップデート — 花のかたまり、設置プレビュー、20手戻れるUndo、変更したブロックが金色に光る演出、賢くなったAuto作業
 - 🤖 [Codex Support](#codex-support-v22-jp) *（VS Code限定）* — Claude Codeに加えて、Codex CLIとCodex VS Code拡張機能の作業にもアバターが反応
 - 🛠️ モデリングツールキット — 庭のボクセルモデルを設計・計測・調整するために自作した、画像→モデル生成ハーネスとModel Inspector *（開発用ツール・拡張機能には同梱されません）*
 
 **v23** ✅
 - ❤️ [Jev Reactions](#jev-reactions-v23-jp) *（VS Code限定）* — 感情に合わせて3Dのハート・割れたハート・星・炎・涙でアバターが反応
 - 📊 [Dev Log](#dev-log-v23-jp) *（VS Code限定）* — ClaudeとCodexへのリクエストをカテゴリ別に記録し、日別・週別・全期間の履歴を表示
-- ☁️ [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-jp) アップデート — ハムスター・キノコ・漂う雲・空のグラデーションを追加
+- ☁️ [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26-jp) アップデート — ハムスター・キノコ・漂う雲・空のグラデーションを追加
 
 **v24** ✅
 - 🧠 [Muscle Brain](#muscle-brain-v24-v25-jp) — 脳を刺激する究極のワーキングメモリトレーニングゲーム
@@ -1948,7 +1965,10 @@ Click for the YouTube demo ↓
 - 🧠 [Muscle Brain 3D](#muscle-brain-v24-v25-jp) — 数字とブロックで空間記憶をトレーニング
 - 🎱 [Avatar Run](#avatar-run-v25-jp) — 透明な3D球体を傾けて回し、中の曲がりくねったコースでビー玉を転がすゲーム
 
-**v26** — 近日公開！
+**v26** ✅
+- ❄️ [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26-jp) アップデート — 雪が降り、庭が雪化粧する冬を追加
+
+**v27** — 近日公開！
 - 🎉 さらに楽しいアップデート
 
 [↑ ページトップへ戻る](#ai-avatar)
