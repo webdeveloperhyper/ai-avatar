@@ -1,6 +1,6 @@
 # Privacy Policy — AI Avatar VS Code Extension
 
-Last updated: 2026-10-11
+Last updated: 2026-11-02
 
 ## Data Collection
 
@@ -18,6 +18,18 @@ information with the extension developer.
 - The Pose Capture tool optionally accesses your camera to capture body poses
   and export animation files. Camera frames are processed locally, not uploaded
   or recorded as video. Close the capture page to end camera use.
+
+## Security Feature
+
+- Security results and prompts are processed locally and are not sent to the
+  extension developer. Review preferences and your selected Betterleaks executable
+  path are saved in VS Code storage.
+- Checks run only when you request them. npm audit sends dependency information
+  to your configured registry; Betterleaks scans locally with credential validation
+  disabled and redacted output requested.
+- Preparing a prompt does not contact AI services. Copying places it on your
+  clipboard. If you use it with an AI tool, the prompt and project files it reads
+  may be sent to that tool's provider.
 
 ## Third-Party Services
 
