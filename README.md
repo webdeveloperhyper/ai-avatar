@@ -79,7 +79,8 @@ Click for the YouTube demo ↓
 - 🧠 **[Muscle Brain 3D](#muscle-brain-v24-v25)** — spatial memory training with numbers and blocks *(v25)*
 - 🎱 **[Avatar Run](#avatar-run-v25)** — tilt and rotate a clear 3D sphere to roll a marble along the winding track inside *(v25)*
 - ❄️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26)** update — adds winter with falling snow and a snowy garden *(v26)*
-- 🛡️ **[AI Avatar Security](#ai-avatar-security-v27)** — dependency and secret checks, AI review and fix prompts, and avatar reactions. *(v27)*
+- 🛡️ **[AI Avatar Security](#ai-avatar-security-v27-v28)** — dependency and secret checks, AI review and fix prompts, and avatar reactions. *(v27)*
+- 📰 **[Security News](#ai-avatar-security-v27-v28)** — view English article titles from CIS and NCSC, with links to the original articles. *(v28)*
 
 ---
 
@@ -725,9 +726,11 @@ The game includes:
 - **Marble visibility** — track sections covering the marble become see-through. You can pass either side of the center-hole platform; falling into the hole returns you to your checkpoint *(v25)*
 - **XYZ guide** — a Blender-style axis guide shows which way is up, with gravity pulling toward −Z *(v25)*
 
-## AI Avatar Security *(v27)*
+## AI Avatar Security *(v27)* *(v28)*
 
 Click for the YouTube demo↓
+[![AI Avatar Security v28 Demo](https://img.youtube.com/vi/T6rMH6Q3OcY/maxresdefault.jpg)](https://youtube.com/shorts/T6rMH6Q3OcY)
+
 [![AI Avatar Security v27 Demo](https://img.youtube.com/vi/I2uPQeGdz14/maxresdefault.jpg)](https://youtube.com/shorts/I2uPQeGdz14)
 
 > This is an experimental learning feature created by a developer who is not a security expert. Output is for reference only, and accuracy or security is not guaranteed. The author accepts no responsibility for the output or its use. See the full disclaimer below.
@@ -735,11 +738,14 @@ Click for the YouTube demo↓
 Open **Security** beside **Muscle Brain** to help prevent unauthorized access and sensitive data leakage. Tool checks and AI review are separate workflows. AI review prompts, fix prompts, and avatar reactions are available in both VS Code and Chrome. **Help** explains setup, controls, references, and coverage; **Lang: EN/JP** switches the language.
 
 - **VS Code checks** — open a trusted local project. Use **Check Dependencies** for npm audit (requires npm and a lockfile). For secrets, download and extract Betterleaks 1.9.x, select it with **Choose Betterleaks**, then use **Check Secrets**. *(v27)*
-- **Chrome checks** — choose Git Bash or PowerShell; for Betterleaks, save its executable path first. Use **Copy command**, run it in your project folder, then **Choose file** and **Check report** to read the generated JSON report (up to 2 MB). Chrome does not run the tools itself. *(v27)*
+- **Chrome checks** — choose Git Bash or PowerShell; for Betterleaks, save its executable path first. Use **Copy command**, run it in your project folder, then **Choose file** and **Check report** to read the generated JSON report (up to 2 MB). Chrome does not run the tools itself. *(v27)* Apply exclusions before copying the command. Run the command in the project folder you want to check, then select the newly generated JSON report. *(v28)*
 - **AI review** — choose a category and review cards, select **Scan only** or **Scan + test plan**, then use **Prepare AI Review** and **Copy Prompt**. Paste the instructions into Claude Code or Codex in your project. Test plans describe positive and negative cases with setup, actions, and expected results; they do not write test code or run tests. *(v27)*
 - **Fix prompts** — select findings to update the fix prompt automatically, review its preview, then use **Copy Prompt**. The instructions require approval before changing files. *(v27)*
 
-**Automatic reactions** — in normal avatar mode, findings trigger a sad expression with kawaii viruses and poison gas; no findings trigger a smile and hearts. Failed or cancelled checks show no result animation. The heart count is unchanged. *(v27)*
+- **Security News** — click **Check updates** to view English article titles from CIS and NCSC, then open the original articles. CIS focuses on software vulnerabilities; NCSC covers broader security advice. *(v28)*
+- **Secret Check Exclusions** — enter project-relative folders, one per line, then click **Apply exclusions** before scanning or copying the command. Examples: `cache/` and `tests/browser/output/`. Existing reports are unchanged. *(v28)*
+
+**Automatic reactions** — in normal avatar mode, findings trigger a sad expression with kawaii viruses and poison gas; no findings trigger a smile and hearts. Failed or cancelled checks show no result animation. The heart count is unchanged. *(v27)* Yellow sparkles also appear when a check reports no findings. *(v28)*
 
 **Privacy and limits** — npm audit sends dependency information to your configured registry. Betterleaks runs locally with credential validation disabled; see Help for excluded files and scan limits. Imported reports are processed in the Chrome tab and are not uploaded. Prompt preparation does not run an AI review or apply fixes; code read by cloud AI may be sent to its provider. Secret values are omitted from results and fix prompts. No findings is not proof that the project is secure.
 
@@ -1000,9 +1006,14 @@ Click for the YouTube demo ↓
 - ❄️ [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26) update — adds winter with falling snow and a snowy garden
 
 **v27** ✅
-- 🛡️ [AI Avatar Security](#ai-avatar-security-v27) — dependency and secret checks, AI review and fix prompts, and avatar reactions.
+- 🛡️ [AI Avatar Security](#ai-avatar-security-v27-v28) — dependency and secret checks, AI review and fix prompts, and avatar reactions.
 
-**v28** — Coming soon!
+**v28** ✅
+- 📰 [Security News](#ai-avatar-security-v27-v28) — view English article titles from CIS and NCSC, with links to the original articles.
+- ✨ [Security Sparkles](#ai-avatar-security-v27-v28) — the avatar shines when a check reports no findings.
+- 📁 [Secret Check Exclusions](#ai-avatar-security-v27-v28) — choose folders to skip when checking for secrets.
+
+**v29** — Coming soon!
 - 🎉 More fun updates
 
 [↑ Back to top](#ai-avatar)
@@ -1088,7 +1099,8 @@ Click for the YouTube demo ↓
 - 🧠 **[Muscle Brain 3D](#muscle-brain-v24-v25-jp)** — 数字とブロックで空間記憶をトレーニング *(v25)*
 - 🎱 **[Avatar Run](#avatar-run-v25-jp)** — 透明な3D球体を傾けて回し、中の曲がりくねったコースでビー玉を転がすゲーム *(v25)*
 - ❄️ **[Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26-jp)** アップデート — 雪が降り、庭が雪化粧する冬を追加 *(v26)*
-- 🛡️ **[AI Avatar Security](#ai-avatar-security-v27-jp)** — 依存関係・シークレットの検査、AIレビュー・修正プロンプト、検査結果に応じたアバターリアクション。*(v27)*
+- 🛡️ **[AI Avatar Security](#ai-avatar-security-v27-v28-jp)** — 依存関係・シークレットの検査、AIレビュー・修正プロンプト、検査結果に応じたアバターリアクション。*(v27)*
+- 📰 **[Securityニュース](#ai-avatar-security-v27-v28-jp)** — CISとNCSCの記事タイトルを英語で表示し、リンクから原文を開けます。*(v28)*
 
 ---
 
@@ -1748,11 +1760,13 @@ Avatar Runは球体を傾けて遊ぶ3Dコースゲームです。ミニアバ�
 - **ビー玉の見やすさ** — ビー玉を隠すコースが透けて見えます。中央の穴は左右どちらからも通過でき、穴に落ちるとチェックポイントへ戻ります *(v25)*
 - **XYZガイド** — Blender風の軸ガイドで上方向を表示。重力は−Z方向にかかります *(v25)*
 
-<a id="ai-avatar-security-v27-jp"></a>
+<a id="ai-avatar-security-v27-v28-jp"></a>
 
-## AI Avatar Security *(v27)*
+## AI Avatar Security *(v27)* *(v28)*
 
 Click for the YouTube demo↓
+[![AI Avatar Security v28 Demo](https://img.youtube.com/vi/T6rMH6Q3OcY/maxresdefault.jpg)](https://youtube.com/shorts/T6rMH6Q3OcY)
+
 [![AI Avatar Security v27 Demo](https://img.youtube.com/vi/I2uPQeGdz14/maxresdefault.jpg)](https://youtube.com/shorts/I2uPQeGdz14)
 
 > 本機能は、セキュリティの専門家ではない開発者が学習目的で作成した試験機能です。出力は参考情報であり、正確性や安全性を保証しません。出力およびその利用について、作者は責任を負いません。詳しくは末尾の免責事項をご確認ください。
@@ -1760,11 +1774,14 @@ Click for the YouTube demo↓
 **Muscle Brain**の隣の**Security**から、不正アクセスと機密データ漏えいの防止を支援する機能を開きます。ツール検査とAIレビューは別の操作です。AIレビュー・修正プロンプトとアバターリアクションはVS CodeとChromeの両方で使えます。**ヘルプ**で準備方法・操作・参考資料・検査範囲を確認し、**Lang: EN/JP**で言語を切り替えられます。
 
 - **VS Codeで検査** — 信頼済みのローカルプロジェクトを開き、**依存関係を検査**でnpm auditを実行します（npmとロックファイルが必要）。シークレット検査はBetterleaks 1.9.xをダウンロード・展開し、**Betterleaksを選択**で指定してから**シークレットを検査**を押します。*(v27)*
-- **Chromeで検査** — Git BashまたはPowerShellを選び、Betterleaksでは先に実行ファイルのパスを保存します。**コマンドをコピー**して対象プロジェクトで実行し、**ファイルを選択** → **レポートを確認**で作成されたJSON（2 MBまで）を読み込みます。Chrome自体はツールを実行しません。*(v27)*
+- **Chromeで検査** — Git BashまたはPowerShellを選び、Betterleaksでは先に実行ファイルのパスを保存します。**コマンドをコピー**して対象プロジェクトで実行し、**ファイルを選択** → **レポートを確認**で作成されたJSON（2 MBまで）を読み込みます。Chrome自体はツールを実行しません。*(v27)* 除外を適用してからコマンドをコピーしてください。検査したいプロジェクトのフォルダーで実行し、新しく作成されたJSONレポートを選びます。*(v28)*
 - **AIレビュー** — カテゴリーとカード、**スキャンのみ**または**スキャン＋テスト計画**を選び、**AIレビューを準備** → **プロンプトをコピー**を押します。対象プロジェクトのClaude CodeやCodexに貼り付けてください。テスト計画は正常系と拒否系の準備・操作・期待する結果を説明し、テストコードの作成や実行は行いません。*(v27)*
 - **修正プロンプト** — 報告を選ぶとプロンプトが自動更新されます。プレビューを確認して**プロンプトをコピー**を押してください。ファイルの変更前に承認を求める指示を含みます。*(v27)*
 
-**自動リアクション** — 通常アバターモードでは、報告があると悲しい表情とかわいいウイルス・毒ガス、報告がないと笑顔とハートを表示します。失敗・中止では結果アニメーションを表示せず、ハート数も変更しません。*(v27)*
+- **Securityニュース** — **更新を確認**でCISとNCSCの英語の記事タイトルを取得し、リンクから原文を開けます。CISは主にソフトウェアの脆弱性、NCSCは幅広いセキュリティ情報を扱います。*(v28)*
+- **シークレット検査の除外** — プロジェクト内の相対フォルダー名を1行に1つ入力し、検査やコマンドのコピー前に**除外を適用**を押します。例：`cache/`、`tests/browser/output/`。既存のレポートは変わりません。*(v28)*
+
+**自動リアクション** — 通常アバターモードでは、報告があると悲しい表情とかわいいウイルス・毒ガス、報告がないと笑顔とハートを表示します。失敗・中止では結果アニメーションを表示せず、ハート数も変更しません。*(v27)* 報告がない場合は、黄色いきらきらも表示します。*(v28)*
 
 **プライバシーと制限** — npm auditは依存関係の情報を設定済みレジストリへ送信します。Betterleaksは認証情報の有効性確認を無効にしてローカル実行します。除外対象や検査制限はヘルプで確認してください。Chromeのレポートはタブ内で処理し、アップロードしません。プロンプトの準備だけではAIレビューや修正は実行されず、クラウドAIが読むコードは提供元へ送信される場合があります。結果と修正プロンプトには秘密の値を含めません。報告がなくても、プロジェクト全体の安全性を証明するものではありません。
 
@@ -2031,9 +2048,14 @@ Click for the YouTube demo ↓
 - ❄️ [Voxel Avatar](#voxel-avatar-v19-v20-v21-v22-v23-v26-jp) アップデート — 雪が降り、庭が雪化粧する冬を追加
 
 **v27** ✅
-- 🛡️ [AI Avatar Security](#ai-avatar-security-v27-jp) — 依存関係・シークレットの検査、AIレビュー・修正プロンプト、検査結果に応じたアバターリアクション。
+- 🛡️ [AI Avatar Security](#ai-avatar-security-v27-v28-jp) — 依存関係・シークレットの検査、AIレビュー・修正プロンプト、検査結果に応じたアバターリアクション。
 
-**v28** — 近日公開！
+**v28** ✅
+- 📰 [Securityニュース](#ai-avatar-security-v27-v28-jp) — CISとNCSCの記事タイトルを英語で表示し、リンクから原文を開けます。
+- ✨ [Securityスパークル](#ai-avatar-security-v27-v28-jp) — 検査で報告がないとアバターがきらきら光ります。
+- 📁 [シークレット検査の除外](#ai-avatar-security-v27-v28-jp) — 検査しないフォルダーを指定できます。
+
+**v29** — 近日公開！
 - 🎉 さらに楽しいアップデート
 
 [↑ ページトップへ戻る](#ai-avatar)
