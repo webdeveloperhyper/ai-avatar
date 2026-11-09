@@ -1,6 +1,6 @@
 # Privacy Policy — AI Avatar VS Code Extension
 
-Last updated: 2026-11-02
+Last updated: 2026-11-06
 
 ## Data Collection
 
@@ -22,14 +22,16 @@ information with the extension developer.
 ## Security Feature
 
 - Security results and prompts are processed locally and are not sent to the
-  extension developer. Review preferences and your selected Betterleaks executable
-  path are saved in VS Code storage.
+  extension developer. Review preferences, excluded folders, and your selected
+  Betterleaks executable path are saved in VS Code storage.
 - Checks run only when you request them. npm audit sends dependency information
   to your configured registry; Betterleaks scans locally with credential validation
   disabled and redacted output requested.
 - Preparing a prompt does not contact AI services. Copying places it on your
   clipboard. If you use it with an AI tool, the prompt and project files it reads
   may be sent to that tool's provider.
+- Security News connects to CIS / MS-ISAC and UK NCSC only when you click Check
+  updates. No project data is sent; publishers receive normal connection information.
 
 ## Third-Party Services
 
